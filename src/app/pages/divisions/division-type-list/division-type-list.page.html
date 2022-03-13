@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar color="primary">
+		<ion-buttons slot="start">
+			<ion-back-button></ion-back-button>
+		</ion-buttons>
+		<ion-title>
+			{{type.name}}
+		</ion-title>
+  	</ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" force-overscroll="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">{{type.name}}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card *ngFor="let division of divisions">
+    <ion-card-header>
+      <ion-card-subtitle>
+        <ion-chip *ngFor="let tag of division.tags">
+          <ion-label>
+            {{tag}}
+          </ion-label>
+        </ion-chip>
+      </ion-card-subtitle>
+      <ion-card-title>{{division.name}}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>{{division.description}}</ion-card-content>
+
+    <ion-item [routerLink]="['/divisions/' + type.type + '/' + division.id]">
+      <ion-label>View Division</ion-label>
+    </ion-item>
+  </ion-card>
+</ion-content>

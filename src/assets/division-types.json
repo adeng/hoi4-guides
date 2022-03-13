@@ -1,0 +1,26 @@
+[
+    {
+        "type": "infantry",
+        "name": "Infantry Divisions",
+        "description": "Used as the backbone of each army.",
+        "divisions": [1, 2]
+    },
+    {
+        "type": "garrison",
+        "name": "Garrison Divisions",
+        "description": "Used to reduce resistance in occupied territories.",
+        "divisions": null
+    },
+    {
+        "type": "mobile",
+        "name": "Mobile Divisions",
+        "description": "Used to exploit weaknesses in enemy lines.",
+        "divisions": null
+    },
+    {
+        "type": "armored",
+        "name": "Armored Divisions",
+        "description": "Used to break through enemy lines.",
+        "divisions": null
+    }
+]

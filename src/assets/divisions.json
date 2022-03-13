@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "name": "Defensive Division",
+        "description": "Cheap defensive divisions to hold the line.",
+        "regiments": [
+            {
+                "name": "Infantry",
+                "number": 10
+            }
+        ],
+        "support": [
+            {
+                "name": "Engineer Company"
+            },
+            {
+                "name": "Support Anti-Air"
+            }
+        ],
+        "tags": [
+            "Defensive",
+            "Infantry",
+            "Cheap"
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Offensive Division",
+        "description": "Offensive infantry divisions to break enemy lines.",
+        "regiments": [
+            {
+                "name": "Infantry",
+                "number": 14
+            },
+            {
+                "name": "Artillery",
+                "number": 4
+            }
+        ],
+        "support": [
+            {
+                "name": "Engineer Company"
+            },
+            {
+                "name": "Support Anti-Air"
+            },
+            {
+                "name": "Support Artillery"
+            }
+        ],
+        "tags": [
+            "Offensive",
+            "Infantry"
+        ]
+    }
+]

@@ -1,0 +1,37 @@
+[
+    {
+        "tag": "GER",
+        "name": "German Reich",
+        "avatar": "GER_fascism.png"
+    },
+    {
+        "tag": "ITA",
+        "name": "Italy",
+        "avatar": "ITA_fascism.png"
+    },
+    {
+        "tag": "JAP",
+        "name": "Japan",
+        "avatar": "JAP_fascism.png"
+    },
+    {
+        "tag": "SOV",
+        "name": "Soviet Union",
+        "avatar": "SOV_communism.png"
+    },
+    {
+        "tag": "FRA",
+        "name": "France",
+        "avatar": "FRA_democratic.png"
+    },
+    {
+        "tag": "ENG",
+        "name": "United Kingdom",
+        "avatar": "ENG_democratic.png"
+    },
+    {
+        "tag": "USA",
+        "name": "United States",
+        "avatar": "USA_democratic.png"
+    }
+]
