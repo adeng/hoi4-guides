@@ -1,0 +1,7 @@
+{
+  "name": "hoi4-guides",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
