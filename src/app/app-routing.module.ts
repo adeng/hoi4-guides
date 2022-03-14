@@ -13,19 +13,27 @@ const routes: Routes = [
   },
   {
     path: 'divisions',
+    loadChildren: () => import('./pages/divisions/division-home/division-home.module').then( m => m.DivisionHomePageModule)
+  },
+  {
+    path: 'divisions/all',
     loadChildren: () => import('./pages/divisions/division-list/division-list.module').then( m => m.DivisionListPageModule)
   },
-  {
-    path: 'divisions/:type',
-    loadChildren: () => import('./pages/divisions/division-type-list/division-type-list.module').then( m => m.DivisionTypeListPageModule)
-  },
-  {
-    path: 'divisions/:type/:id',
-    loadChildren: () => import('./pages/divisions/division-detail/division-detail.module').then( m => m.DivisionDetailPageModule)
-  },
+  // {
+  //   path: 'divisions/:type',
+  //   loadChildren: () => import('./pages/divisions/division-type-list/division-type-list.module').then( m => m.DivisionTypeListPageModule)
+  // },
+  // {
+  //   path: 'divisions/:type/:id',
+  //   loadChildren: () => import('./pages/divisions/division-detail/division-detail.module').then( m => m.DivisionDetailPageModule)
+  // },
   {
     path: 'designer',
     loadChildren: () => import('./pages/designs/design-list/design-list-routing.module').then( m => m.DesignListPageRoutingModule)
+  },
+  {
+    path: 'divisions/designer',
+    loadChildren: () => import('./pages/divisions/division-designer/division-designer.module').then( m => m.DivisionDesignerPageModule)
   }
 ];
 

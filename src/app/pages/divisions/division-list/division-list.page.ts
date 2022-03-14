@@ -12,7 +12,7 @@ export class DivisionListPage implements OnInit {
   types: Array<DivisionType>;
 
   constructor() { 
-    this.types = types;
+    // this.types = types;
   }
 
   ngOnInit() {

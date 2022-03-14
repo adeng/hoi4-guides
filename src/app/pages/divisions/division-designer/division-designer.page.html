@@ -1,0 +1,117 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Designer</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="medium">Designer</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <p>Add regiments and support companies.</p>
+
+  <ion-button id="add-regiment">Add Regiment</ion-button>
+  <ion-modal 
+    [isOpen]="false" 
+    [breakpoints]="[0.5]" 
+    [initialBreakpoint]="0.5"
+    [swipeToClose]="false" 
+    trigger="add-regiment">
+    <ng-template>
+      <ion-content>
+        <p style="margin-top: 40px; margin-bottom: 20px"><strong>Add Regiment</strong></p>
+        <ion-list>
+          <ion-item>
+            <ion-label>Regiment Type</ion-label>
+            <ion-select placeholder="Select" [(ngModel)]="addRegimentType">
+              <ion-select-option value="infantry">Infantry</ion-select-option>
+              <ion-select-option value="paratroopers">Paratroopers</ion-select-option>
+              <ion-select-option value="mountaineers">Mountaineers</ion-select-option>
+              <ion-select-option value="artillery">Artillery</ion-select-option>
+            </ion-select>
+          </ion-item>
+          <ion-item>
+            <ion-label>Number</ion-label>
+            <ion-input type="number" [(ngModel)]="addRegimentNumber" style="text-align: right;"></ion-input>
+          </ion-item>
+        </ion-list>
+        <ion-button (click)="addRegiment()" [disabled]="addRegimentNumber == undefined || addRegimentType == undefined">Save</ion-button>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+  <ion-card id="division-card" *ngIf="regiments.length > 0">
+    <ion-card-header (click)="rename()">
+      <strong>{{divisionName}}</strong>
+      <ion-icon name="pencil" color="secondary"></ion-icon>
+      <ion-ripple-effect></ion-ripple-effect>
+    </ion-card-header>
+
+    <ion-card-content [ngSwitch]="currSegment">
+      <ion-segment (ionChange)="segmentChanged($event)" [(ngModel)]="currSegment" color="primary">
+        <ion-segment-button value="composition" checked>
+          <ion-label>Composition</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="statistics">
+          <ion-label>Statistics</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+
+      <!-- Composition Card -->
+      <ion-list *ngSwitchCase="'composition'">
+        <ion-item *ngFor="let regiment of regiments; let i = index" [lines]="i == regiments.length - 1 ? 'none' : 'inset'">
+          <ion-label>{{regiment.id | translation }}</ion-label>
+          <ion-note>{{regiment.number}}</ion-note>
+        </ion-item>
+      </ion-list>
+
+      <!-- Statistics Card -->
+      <ion-list *ngSwitchCase="'statistics'">
+        <ion-item lines="inset">
+          <ion-label>HP</ion-label>
+          <ion-note>25</ion-note>
+        </ion-item>
+        <ion-item lines="inset">
+          <ion-label>Organization</ion-label>
+          <ion-note>60</ion-note>
+        </ion-item>
+        <ion-item lines="inset">
+          <ion-label>Soft Attack</ion-label>
+          <ion-note>3</ion-note>
+        </ion-item>
+        <ion-item lines="inset">
+          <ion-label>Hard Attack</ion-label>
+          <ion-note>1</ion-note>
+        </ion-item>
+        <ion-item lines="inset">
+          <ion-label>Piercing</ion-label>
+          <ion-note>5</ion-note>
+        </ion-item>
+        <ion-item lines="inset">
+          <ion-label>Air Attack</ion-label>
+          <ion-note>7</ion-note>
+        </ion-item>
+        <ion-item lines="inset">
+          <ion-label>Hardness</ion-label>
+          <ion-note>25%</ion-note>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-label>IC Cost</ion-label>
+          <ion-note>5</ion-note>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button  [disabled]="regiments.length == 0">
+      <ion-icon name="save"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

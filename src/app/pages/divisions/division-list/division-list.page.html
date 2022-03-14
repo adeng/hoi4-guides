@@ -14,10 +14,18 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-list>
+  <!-- <ion-list>
     <ion-item [routerLink]="['/divisions/' + type.type]" *ngFor="let type of types">
       <ion-label>{{type.name}}</ion-label>
     </ion-item>
-  </ion-list>
+  </ion-list> -->
+  <div id="container">
+    <p>No designs found!</p>
+  </div>
 
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed" routerLink="../designer">
+    <ion-fab-button >
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>
