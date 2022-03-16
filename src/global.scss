@@ -30,3 +30,7 @@ ion-fab {
     margin-right: 10px;
     margin-bottom: 20px;
 }
+
+.header-md::after {
+    background-image: unset;
+}

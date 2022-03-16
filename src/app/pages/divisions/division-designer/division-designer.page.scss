@@ -11,7 +11,7 @@ ion-button {
     margin: 0 auto;
     margin-top: 15px;
     width: 50%;
-    max-width: 130px;
+    max-width: 150px;
 }
 
 #division-card {
@@ -27,7 +27,29 @@ ion-button {
         }
     }
 
-    ion-list {
+    ion-list, p {
         margin-top: 20px;
     }
+}
+
+.page-label {
+    margin-top: 20px;
+}
+
+.stats-card {
+    ion-list {
+        ion-label {
+            font-size: small;
+        }
+
+        ion-note {
+            font-size: small;
+        }
+    }
+}
+
+ion-note.md {
+    margin: 10px 0px;
+    align-self: unset;
+    font-size: medium;
 }
