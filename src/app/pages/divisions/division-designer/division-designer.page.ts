@@ -71,7 +71,7 @@ export class DivisionDesignerPage implements OnInit {
 	async validationError() {
 		const prompt = await this.alertController.create({
 			header: "Too many Regiments!",
-			message: `There is a maximum of ${this.MAX_REGIMENTS} regiments allowed. You can add ${this.MAX_REGIMENTS - this.totalRegiments} more regiments at most.`
+			message: (this.MAX_REGIMENTS - this.totalRegiments == 0 ? `You have reached the maximum of ${this.MAX_REGIMENTS} regiments!` : `There is a maximum of ${this.MAX_REGIMENTS} regiments allowed. You can add ${this.MAX_REGIMENTS - this.totalRegiments} more regiments at most.`)
 		});
 
 		await prompt.present();
@@ -119,8 +119,15 @@ export class DivisionDesignerPage implements OnInit {
 				{
 					text: "Save",
 					handler: (alertData) => {
-						this.regiments[this.regiments.indexOf(regiment)].number = alertData.newAmount;
-						this.showToast(`Updated number of ${regiment.regiment.regiment_name} battalions!`);
+						console.log(this.totalRegiments, regiment.number, alertData.newAmount);
+						if(this.totalRegiments - regiment.number + parseInt(alertData.newAmount) > this.MAX_REGIMENTS) {
+							this.validationError();
+							return;
+						} else {
+							this.totalRegiments += (parseInt(alertData.newAmount) - regiment.number);
+							this.regiments[this.regiments.indexOf(regiment)].number = parseInt(alertData.newAmount);
+							this.showToast(`Updated number of ${regiment.regiment.regiment_name} battalions!`);
+						}
 					}
 				}
 			]
