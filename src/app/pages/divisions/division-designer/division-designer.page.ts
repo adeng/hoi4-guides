@@ -10,11 +10,19 @@ import { SourceService } from 'src/app/services/source.service';
 	styleUrls: ['./division-designer.page.scss'],
 })
 export class DivisionDesignerPage implements OnInit {
+	// Regiment validation
+	MAX_REGIMENTS: number = 25;
+	totalRegiments: number = 0;
+
+	// UI variables
 	regiments: Array<DivisionChild> = [];
-	addRegimentNumber: number;
-	addRegimentType: Regiment;
 	currSegment: string = "composition";
 	divisionName: string = "New Division";
+
+	// Form related variables
+	addRegimentNumber: number;
+	addRegimentType: Regiment;
+	
 
 	valid_regiments: Array<Regiment>;
 
@@ -38,20 +46,35 @@ export class DivisionDesignerPage implements OnInit {
 	}
 
 	addRegiment(): void {
-		this.regiments.push(new DivisionChild(this.addRegimentType, this.addRegimentNumber));
-		this.addRegimentNumber = undefined;
-		this.addRegimentNumber = undefined;
+		if(this.addRegimentNumber + this.totalRegiments > this.MAX_REGIMENTS) {
+			this.validationError();
+			return;
+		}
 
+		this.regiments.push(new DivisionChild(this.addRegimentType, this.addRegimentNumber));
+		this.totalRegiments += this.addRegimentNumber;
 		console.log(this.regiments);
 
 		// Remove this regiment from valid
 		this.valid_regiments.splice(this.valid_regiments.indexOf(this.addRegimentType), 1);
+
+		this.addRegimentType = undefined;
+		this.addRegimentNumber = undefined;
 
 		this.modalController.dismiss();
 	}
 
 	segmentChanged(event: any) {
 		console.log(this.currSegment);
+	}
+
+	async validationError() {
+		const prompt = await this.alertController.create({
+			header: "Too many Regiments!",
+			message: `There is a maximum of ${this.MAX_REGIMENTS} regiments allowed. You can add ${this.MAX_REGIMENTS - this.totalRegiments} more regiments at most.`
+		});
+
+		await prompt.present();
 	}
 
 	async confirmDelete(regiment: DivisionChild) {
@@ -68,6 +91,7 @@ export class DivisionDesignerPage implements OnInit {
 					handler: (alertData) => {
 						this.regiments.splice(this.regiments.indexOf(regiment), 1);
 						this.showToast(`${regiment.regiment.regiment_name} removed!`);
+						this.totalRegiments -= regiment.number;
 					}
 				}
 			]
