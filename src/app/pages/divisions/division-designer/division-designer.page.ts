@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertController, ModalController, ToastController } from '@ionic/angular';
-import { Regiment } from 'src/app/models/regiment.model';
+import { ChooseEquipmentPage } from 'src/app/components/choose-equipment/choose-equipment.page';
+import { Equipment } from 'src/app/models/equipment.model';
+import { ArchetypeNeed, Regiment } from 'src/app/models/regiment.model';
 import { TranslationPipe } from 'src/app/pipes/translation.pipe';
 import { SourceService } from 'src/app/services/source.service';
 
@@ -23,20 +25,54 @@ export class DivisionDesignerPage implements OnInit {
 	addRegimentNumber: number;
 	addRegimentType: Regiment;
 	
+	// Data related variables
+	archetypeMap: Map<string, Array<ArchetypeNeed>>;
 
-	valid_regiments: Array<Regiment>;
+	// [regiments index, archetype id]
+	equipmentMap: Map<string, Equipment>;
+	validRegiments: Array<Regiment>;
+	currentRegiment: number;
 
 	constructor(public modalController: ModalController, public alertController: AlertController, public toastController: ToastController, public source: SourceService) {
-		this.valid_regiments = source.getValidRegiments();
+		this.archetypeMap = new Map<string, Array<ArchetypeNeed>>();
+		this.equipmentMap = new Map<string, Equipment>();
+		this.validRegiments = source.getValidRegiments();
 		this.sortRegiments();
-		console.log(this.valid_regiments);
+		console.log(this.validRegiments);
 	}
 
 	ngOnInit() {
 	}
 
+	async updateEquipment(index: number) {
+		this.currentRegiment = index;
+		let results = [];
+
+		for(let i = 0; i < this.regiments[index].regiment.equipment.length; i++) {
+			console.log([index, this.regiments[index].regiment.equipment[i].archetype_id]);
+			results[i] = this.equipmentMap.get([index, this.regiments[index].regiment.equipment[i].archetype_id].join(","));
+		}
+
+		console.log(results);
+
+		const modal = await this.modalController.create({
+			component: ChooseEquipmentPage,
+			componentProps: {
+				"equipmentMap": this.equipmentMap,
+				"archetypeMap": this.archetypeMap,
+				"currentRegiment": this.currentRegiment,
+				"regiments": this.regiments,
+				"results": results
+			}
+		});
+
+		await modal.present();
+		let { data } = await modal.onWillDismiss();
+		console.log(data);
+	}
+
 	sortRegiments(): void {
-		this.valid_regiments.sort((a: Regiment, b: Regiment) => {
+		this.validRegiments.sort((a: Regiment, b: Regiment) => {
 			if (a.regiment_name > b.regiment_name)
 				return 1;
 			else if (a.regiment_name < b.regiment_name)
@@ -56,7 +92,25 @@ export class DivisionDesignerPage implements OnInit {
 		console.log(this.regiments);
 
 		// Remove this regiment from valid
-		this.valid_regiments.splice(this.valid_regiments.indexOf(this.addRegimentType), 1);
+		this.validRegiments.splice(this.validRegiments.indexOf(this.addRegimentType), 1);
+
+		// Populate equipment
+		console.log(this.addRegimentType);
+		for(let i = 0; i < this.addRegimentType.equipment.length; i++) {
+			let archetype = this.addRegimentType.equipment[i];
+
+			if(!this.archetypeMap.has(this.addRegimentType.regiment_id))
+				this.archetypeMap.set(this.addRegimentType.regiment_id, new Array<ArchetypeNeed>());
+
+			console.log(this.archetypeMap);
+			this.archetypeMap.get(this.addRegimentType.regiment_id).push(archetype);
+			
+			if(!this.equipmentMap.has([this.regiments.length - 1, archetype.archetype_id].join(","))) {
+				this.equipmentMap.set([this.regiments.length - 1, archetype.archetype_id].join(","), this.source.getFirstValidEquipment(archetype.archetype_id));
+
+				console.log(this.equipmentMap);
+			}
+		}
 
 		this.addRegimentType = undefined;
 		this.addRegimentNumber = undefined;
@@ -65,7 +119,7 @@ export class DivisionDesignerPage implements OnInit {
 	}
 
 	segmentChanged(event: any) {
-		console.log(this.currSegment);
+		console.log(this.equipmentMap);
 	}
 
 	async validationError() {

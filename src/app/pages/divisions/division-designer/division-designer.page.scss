@@ -4,7 +4,7 @@ p {
     color: #8c8c8c;
     margin: 0;
     text-align: center;
-  }
+}
 
 ion-button {
     display: flex;
@@ -15,7 +15,7 @@ ion-button {
 }
 
 #division-card {
-    margin-top: 30px;
+    margin: 30px 20px 20px 20px;
 
     ion-card-header {
         text-align: center;
@@ -25,6 +25,10 @@ ion-button {
             font-size: 20px;
             vertical-align: bottom;
         }
+    }
+
+    ion-card-content {
+        padding: 0px;
     }
 
     ion-list, p {

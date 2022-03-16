@@ -10,11 +10,6 @@
         "archetype_id": "super_heavy_tank_destroyer_chassis",
         "archetype_name": "Super-Heavy Tank Destroyer",
         "number": 40
-      },
-      {
-        "archetype_id": "super_heavy_tank_destroyer_chassis",
-        "archetype_name": "Super-Heavy Tank Destroyer",
-        "number": 40
       }
     ]
   },
@@ -29,11 +24,6 @@
         "archetype_id": "heavy_tank_amphibious_chassis",
         "archetype_name": "Heavy Amphibious Tanks",
         "number": 50
-      },
-      {
-        "archetype_id": "heavy_tank_amphibious_chassis",
-        "archetype_name": "Heavy Amphibious Tanks",
-        "number": 50
       }
     ]
   },
@@ -44,11 +34,6 @@
     "type": "amphibious",
     "same_support_type": "",
     "equipment": [
-      {
-        "archetype_id": "light_tank_amphibious_chassis",
-        "archetype_name": "Light Amphibious Tanks",
-        "number": 50
-      },
       {
         "archetype_id": "light_tank_amphibious_chassis",
         "archetype_name": "Light Amphibious Tanks",
@@ -86,11 +71,6 @@
         "archetype_id": "medium_tank_amphibious_chassis",
         "archetype_name": "Medium Amphibious Tanks",
         "number": 50
-      },
-      {
-        "archetype_id": "medium_tank_amphibious_chassis",
-        "archetype_name": "Medium Amphibious Tanks",
-        "number": 50
       }
     ]
   },
@@ -101,11 +81,6 @@
     "type": "support",
     "same_support_type": "",
     "equipment": [
-      {
-        "archetype_id": "anti_air_equipment",
-        "archetype_name": "Towed Anti-Air",
-        "number": 20
-      },
       {
         "archetype_id": "anti_air_equipment",
         "archetype_name": "Towed Anti-Air",
@@ -124,11 +99,6 @@
         "archetype_id": "anti_air_equipment",
         "archetype_name": "Towed Anti-Air",
         "number": 30
-      },
-      {
-        "archetype_id": "anti_air_equipment",
-        "archetype_name": "Towed Anti-Air",
-        "number": 30
       }
     ]
   },
@@ -143,11 +113,6 @@
         "archetype_id": "anti_tank_equipment",
         "archetype_name": "Towed Anti-Tank",
         "number": 24
-      },
-      {
-        "archetype_id": "anti_tank_equipment",
-        "archetype_name": "Towed Anti-Tank",
-        "number": 24
       }
     ]
   },
@@ -158,11 +123,6 @@
     "type": "anti_tank",
     "same_support_type": "",
     "equipment": [
-      {
-        "archetype_id": "anti_tank_equipment",
-        "archetype_name": "Towed Anti-Tank",
-        "number": 36
-      },
       {
         "archetype_id": "anti_tank_equipment",
         "archetype_name": "Towed Anti-Tank",
@@ -195,11 +155,6 @@
         "archetype_id": "armored_car_equipment",
         "archetype_name": "Armored Car",
         "number": 24
-      },
-      {
-        "archetype_id": "armored_car_equipment",
-        "archetype_name": "Armored Car",
-        "number": 24
       }
     ]
   },
@@ -214,11 +169,6 @@
         "archetype_id": "artillery_equipment",
         "archetype_name": "Towed Artillery",
         "number": 12
-      },
-      {
-        "archetype_id": "artillery_equipment",
-        "archetype_name": "Towed Artillery",
-        "number": 12
       }
     ]
   },
@@ -229,11 +179,6 @@
     "type": "artillery",
     "same_support_type": "",
     "equipment": [
-      {
-        "archetype_id": "artillery_equipment",
-        "archetype_name": "Towed Artillery",
-        "number": 36
-      },
       {
         "archetype_id": "artillery_equipment",
         "archetype_name": "Towed Artillery",
@@ -301,26 +246,6 @@
         "number": 10
       },
       {
-        "archetype_id": "infantry_equipment",
-        "archetype_name": "Infantry Equipment",
-        "number": 10
-      },
-      {
-        "archetype_id": "infantry_equipment",
-        "archetype_name": "Infantry Equipment",
-        "number": 10
-      },
-      {
-        "archetype_id": "support_equipment",
-        "archetype_name": "Support Equipment",
-        "number": 30
-      },
-      {
-        "archetype_id": "support_equipment",
-        "archetype_name": "Support Equipment",
-        "number": 30
-      },
-      {
         "archetype_id": "support_equipment",
         "archetype_name": "Support Equipment",
         "number": 30
@@ -354,16 +279,6 @@
         "number": 20
       },
       {
-        "archetype_id": "motorized_equipment",
-        "archetype_name": "Truck",
-        "number": 20
-      },
-      {
-        "archetype_id": "support_equipment",
-        "archetype_name": "Support Equipment",
-        "number": 30
-      },
-      {
         "archetype_id": "support_equipment",
         "archetype_name": "Support Equipment",
         "number": 30
@@ -395,16 +310,6 @@
         "archetype_id": "heavy_tank_flame_chassis",
         "archetype_name": "Heavy Flame Tank",
         "number": 15
-      },
-      {
-        "archetype_id": "heavy_tank_flame_chassis",
-        "archetype_name": "Heavy Flame Tank",
-        "number": 15
-      },
-      {
-        "archetype_id": "heavy_tank_flame_chassis",
-        "archetype_name": "Heavy Flame Tank",
-        "number": 15
       }
     ]
   },
@@ -415,11 +320,6 @@
     "type": "anti_air",
     "same_support_type": "",
     "equipment": [
-      {
-        "archetype_id": "heavy_tank_aa_chassis",
-        "archetype_name": "Heavy SP Anti-Air",
-        "number": 36
-      },
       {
         "archetype_id": "heavy_tank_aa_chassis",
         "archetype_name": "Heavy SP Anti-Air",
@@ -438,11 +338,6 @@
         "archetype_id": "heavy_tank_artillery_chassis",
         "archetype_name": "Heavy SP Artillery",
         "number": 40
-      },
-      {
-        "archetype_id": "heavy_tank_artillery_chassis",
-        "archetype_name": "Heavy SP Artillery",
-        "number": 40
       }
     ]
   },
@@ -453,11 +348,6 @@
     "type": "anti_tank",
     "same_support_type": "",
     "equipment": [
-      {
-        "archetype_id": "heavy_tank_destroyer_chassis",
-        "archetype_name": "Heavy Tank Destroyer",
-        "number": 40
-      },
       {
         "archetype_id": "heavy_tank_destroyer_chassis",
         "archetype_name": "Heavy Tank Destroyer",
@@ -504,16 +394,6 @@
         "archetype_id": "light_tank_flame_chassis",
         "archetype_name": "Light Flame Tank",
         "number": 15
-      },
-      {
-        "archetype_id": "light_tank_flame_chassis",
-        "archetype_name": "Light Flame Tank",
-        "number": 15
-      },
-      {
-        "archetype_id": "light_tank_flame_chassis",
-        "archetype_name": "Light Flame Tank",
-        "number": 15
       }
     ]
   },
@@ -524,11 +404,6 @@
     "type": "anti_air",
     "same_support_type": "",
     "equipment": [
-      {
-        "archetype_id": "light_tank_aa_chassis",
-        "archetype_name": "Light SP Anti-Air",
-        "number": 36
-      },
       {
         "archetype_id": "light_tank_aa_chassis",
         "archetype_name": "Light SP Anti-Air",
@@ -547,11 +422,6 @@
         "archetype_id": "light_tank_artillery_chassis",
         "archetype_name": "Light SP Artillery",
         "number": 50
-      },
-      {
-        "archetype_id": "light_tank_artillery_chassis",
-        "archetype_name": "Light SP Artillery",
-        "number": 50
       }
     ]
   },
@@ -566,11 +436,6 @@
         "archetype_id": "light_tank_destroyer_chassis",
         "archetype_name": "Light Tank Destroyer",
         "number": 50
-      },
-      {
-        "archetype_id": "light_tank_destroyer_chassis",
-        "archetype_name": "Light Tank Destroyer",
-        "number": 50
       }
     ]
   },
@@ -581,11 +446,6 @@
     "type": "support",
     "same_support_type": "recon",
     "equipment": [
-      {
-        "archetype_id": "light_tank_chassis",
-        "archetype_name": "Light Tank",
-        "number": 24
-      },
       {
         "archetype_id": "light_tank_chassis",
         "archetype_name": "Light Tank",
@@ -606,16 +466,6 @@
         "number": 10
       },
       {
-        "archetype_id": "motorized_equipment",
-        "archetype_name": "Truck",
-        "number": 10
-      },
-      {
-        "archetype_id": "support_equipment",
-        "archetype_name": "Support Equipment",
-        "number": 20
-      },
-      {
         "archetype_id": "support_equipment",
         "archetype_name": "Support Equipment",
         "number": 20
@@ -629,11 +479,6 @@
     "type": "support",
     "same_support_type": "",
     "equipment": [
-      {
-        "archetype_id": "support_equipment",
-        "archetype_name": "Support Equipment",
-        "number": 25
-      },
       {
         "archetype_id": "support_equipment",
         "archetype_name": "Support Equipment",
@@ -699,16 +544,6 @@
         "archetype_id": "medium_tank_flame_chassis",
         "archetype_name": "Medium Flame Tank",
         "number": 15
-      },
-      {
-        "archetype_id": "medium_tank_flame_chassis",
-        "archetype_name": "Medium Flame Tank",
-        "number": 15
-      },
-      {
-        "archetype_id": "medium_tank_flame_chassis",
-        "archetype_name": "Medium Flame Tank",
-        "number": 15
       }
     ]
   },
@@ -719,11 +554,6 @@
     "type": "anti_air",
     "same_support_type": "",
     "equipment": [
-      {
-        "archetype_id": "medium_tank_aa_chassis",
-        "archetype_name": "Medium SP Anti-Air",
-        "number": 36
-      },
       {
         "archetype_id": "medium_tank_aa_chassis",
         "archetype_name": "Medium SP Anti-Air",
@@ -742,11 +572,6 @@
         "archetype_id": "medium_tank_artillery_chassis",
         "archetype_name": "Medium SP Artillery",
         "number": 50
-      },
-      {
-        "archetype_id": "medium_tank_artillery_chassis",
-        "archetype_name": "Medium SP Artillery",
-        "number": 50
       }
     ]
   },
@@ -757,11 +582,6 @@
     "type": "anti_tank",
     "same_support_type": "",
     "equipment": [
-      {
-        "archetype_id": "medium_tank_destroyer_chassis",
-        "archetype_name": "Medium Tank Destroyer",
-        "number": 50
-      },
       {
         "archetype_id": "medium_tank_destroyer_chassis",
         "archetype_name": "Medium Tank Destroyer",
@@ -780,16 +600,6 @@
         "archetype_id": "infantry_equipment",
         "archetype_name": "Infantry Equipment",
         "number": 40
-      },
-      {
-        "archetype_id": "infantry_equipment",
-        "archetype_name": "Infantry Equipment",
-        "number": 40
-      },
-      {
-        "archetype_id": "support_equipment",
-        "archetype_name": "Support Equipment",
-        "number": 10
       },
       {
         "archetype_id": "support_equipment",
@@ -823,11 +633,6 @@
         "archetype_id": "modern_tank_aa_chassis",
         "archetype_name": "Modern SP Anti-Air",
         "number": 36
-      },
-      {
-        "archetype_id": "modern_tank_aa_chassis",
-        "archetype_name": "Modern SP Anti-Air",
-        "number": 36
       }
     ]
   },
@@ -838,11 +643,6 @@
     "type": "artillery",
     "same_support_type": "",
     "equipment": [
-      {
-        "archetype_id": "modern_tank_artillery_chassis",
-        "archetype_name": "Modern SP Artillery",
-        "number": 50
-      },
       {
         "archetype_id": "modern_tank_artillery_chassis",
         "archetype_name": "Modern SP Artillery",
@@ -861,11 +661,6 @@
         "archetype_id": "modern_tank_destroyer_chassis",
         "archetype_name": "Modern Tank Destroyer",
         "number": 50
-      },
-      {
-        "archetype_id": "modern_tank_destroyer_chassis",
-        "archetype_name": "Modern Tank Destroyer",
-        "number": 50
       }
     ]
   },
@@ -880,16 +675,6 @@
         "archetype_id": "anti_air_equipment",
         "archetype_name": "Towed Anti-Air",
         "number": 30
-      },
-      {
-        "archetype_id": "anti_air_equipment",
-        "archetype_name": "Towed Anti-Air",
-        "number": 30
-      },
-      {
-        "archetype_id": "motorized_equipment",
-        "archetype_name": "Truck",
-        "number": 50
       },
       {
         "archetype_id": "motorized_equipment",
@@ -911,16 +696,6 @@
         "number": 36
       },
       {
-        "archetype_id": "anti_tank_equipment",
-        "archetype_name": "Towed Anti-Tank",
-        "number": 36
-      },
-      {
-        "archetype_id": "motorized_equipment",
-        "archetype_name": "Truck",
-        "number": 50
-      },
-      {
         "archetype_id": "motorized_equipment",
         "archetype_name": "Truck",
         "number": 50
@@ -937,16 +712,6 @@
       {
         "archetype_id": "artillery_equipment",
         "archetype_name": "Towed Artillery",
-        "number": 36
-      },
-      {
-        "archetype_id": "artillery_equipment",
-        "archetype_name": "Towed Artillery",
-        "number": 36
-      },
-      {
-        "archetype_id": "motorized_equipment",
-        "archetype_name": "Truck",
         "number": 36
       },
       {
@@ -969,24 +734,9 @@
         "number": 40
       },
       {
-        "archetype_id": "infantry_equipment",
-        "archetype_name": "Infantry Equipment",
-        "number": 40
-      },
-      {
         "archetype_id": "motorized_equipment",
         "archetype_name": "Truck",
         "number": 20
-      },
-      {
-        "archetype_id": "motorized_equipment",
-        "archetype_name": "Truck",
-        "number": 20
-      },
-      {
-        "archetype_id": "support_equipment",
-        "archetype_name": "Support Equipment",
-        "number": 10
       },
       {
         "archetype_id": "support_equipment",
@@ -1005,16 +755,6 @@
       {
         "archetype_id": "motorized_equipment",
         "archetype_name": "Truck",
-        "number": 36
-      },
-      {
-        "archetype_id": "motorized_equipment",
-        "archetype_name": "Truck",
-        "number": 36
-      },
-      {
-        "archetype_id": "rocket_artillery_equipment",
-        "archetype_name": "Towed Rocket Artillery",
         "number": 36
       },
       {
@@ -1054,26 +794,6 @@
         "archetype_id": "motorized_equipment",
         "archetype_name": "Truck",
         "number": 15
-      },
-      {
-        "archetype_id": "motorized_equipment",
-        "archetype_name": "Truck",
-        "number": 15
-      },
-      {
-        "archetype_id": "motorized_equipment",
-        "archetype_name": "Truck",
-        "number": 15
-      },
-      {
-        "archetype_id": "motorized_rocket_equipment",
-        "archetype_name": "Motorized Rocket Artillery",
-        "number": 20
-      },
-      {
-        "archetype_id": "motorized_rocket_equipment",
-        "archetype_name": "Motorized Rocket Artillery",
-        "number": 20
       },
       {
         "archetype_id": "motorized_rocket_equipment",
@@ -1151,16 +871,6 @@
         "number": 40
       },
       {
-        "archetype_id": "infantry_equipment",
-        "archetype_name": "Infantry Equipment",
-        "number": 40
-      },
-      {
-        "archetype_id": "support_equipment",
-        "archetype_name": "Support Equipment",
-        "number": 10
-      },
-      {
         "archetype_id": "support_equipment",
         "archetype_name": "Support Equipment",
         "number": 10
@@ -1174,11 +884,6 @@
     "type": "support",
     "same_support_type": "",
     "equipment": [
-      {
-        "archetype_id": "rocket_artillery_equipment",
-        "archetype_name": "Towed Rocket Artillery",
-        "number": 12
-      },
       {
         "archetype_id": "rocket_artillery_equipment",
         "archetype_name": "Towed Rocket Artillery",
@@ -1197,11 +902,6 @@
         "archetype_id": "rocket_artillery_equipment",
         "archetype_name": "Towed Rocket Artillery",
         "number": 36
-      },
-      {
-        "archetype_id": "rocket_artillery_equipment",
-        "archetype_name": "Towed Rocket Artillery",
-        "number": 36
       }
     ]
   },
@@ -1216,16 +916,6 @@
         "archetype_id": "motorized_equipment",
         "archetype_name": "Truck",
         "number": 10
-      },
-      {
-        "archetype_id": "motorized_equipment",
-        "archetype_name": "Truck",
-        "number": 10
-      },
-      {
-        "archetype_id": "support_equipment",
-        "archetype_name": "Support Equipment",
-        "number": 20
       },
       {
         "archetype_id": "support_equipment",
@@ -1259,11 +949,6 @@
         "archetype_id": "super_heavy_tank_aa_chassis",
         "archetype_name": "Super-Heavy SP Anti-Air",
         "number": 36
-      },
-      {
-        "archetype_id": "super_heavy_tank_aa_chassis",
-        "archetype_name": "Super-Heavy SP Anti-Air",
-        "number": 36
       }
     ]
   },
@@ -1278,11 +963,6 @@
         "archetype_id": "super_heavy_tank_artillery_chassis",
         "archetype_name": "Super-Heavy SP Artillery",
         "number": 40
-      },
-      {
-        "archetype_id": "super_heavy_tank_artillery_chassis",
-        "archetype_name": "Super-Heavy SP Artillery",
-        "number": 40
       }
     ]
   },
@@ -1293,11 +973,6 @@
     "type": "anti_tank",
     "same_support_type": "",
     "equipment": [
-      {
-        "archetype_id": "super_heavy_tank_destroyer_chassis",
-        "archetype_name": "Super-Heavy Tank Destroyer",
-        "number": 40
-      },
       {
         "archetype_id": "super_heavy_tank_destroyer_chassis",
         "archetype_name": "Super-Heavy Tank Destroyer",

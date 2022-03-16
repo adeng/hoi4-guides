@@ -43,8 +43,28 @@ export class SourceService {
 		}
 	}
 
+	public getFirstValidEquipment(archetype_id: string): Equipment {
+		let equipment;
+		let minYear = 2000;
+
+		for(let i = 0; i < this.ArchetypeDictionary.get(archetype_id).equipment.length; i++) {
+			let current = this.ArchetypeDictionary.get(archetype_id).equipment[i];
+			
+			if(current.year < minYear) {
+				equipment = current;
+				minYear = current.year;
+			}
+		}
+
+		return equipment;
+	}
+
+	public getEquipmentByID(equipment_id: string): Equipment {
+		return this.EquipmentDictionary.get(equipment_id);
+	}
+
 	public getValidEquipment(archetype_id: string): Array<Equipment> {
-		return this.ArchetypeDictionary[archetype_id].equipment;
+		return this.ArchetypeDictionary.get(archetype_id).equipment;
 	}
 
 	public getValidRegiments(): Array<Regiment> {

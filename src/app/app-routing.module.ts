@@ -34,6 +34,10 @@ const routes: Routes = [
   {
     path: 'divisions/designer',
     loadChildren: () => import('./pages/divisions/division-designer/division-designer.module').then( m => m.DivisionDesignerPageModule)
+  },
+  {
+    path: 'choose-equipment',
+    loadChildren: () => import('./components/choose-equipment/choose-equipment.module').then( m => m.ChooseEquipmentPageModule)
   }
 ];
 

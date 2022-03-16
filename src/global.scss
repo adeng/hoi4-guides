@@ -34,3 +34,11 @@ ion-fab {
 .header-md::after {
     background-image: unset;
 }
+
+.alert-radio-label.sc-ion-alert-md {
+    font-size: small;
+}
+
+.alert-wrapper.ion-overlay-wrapper.sc-ion-alert-md {
+    width: 100%;
+}

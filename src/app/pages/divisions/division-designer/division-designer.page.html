@@ -16,6 +16,7 @@
 
 	<p class="page-label">Add regiments and support companies.</p>
 
+	<!-- Add Regiment Modal -->
 	<ion-button id="add-regiment">Add Regiment</ion-button>
 	<ion-modal [isOpen]="false" [breakpoints]="[0.5]" [initialBreakpoint]="0.5" [swipeToClose]="false"
 		trigger="add-regiment">
@@ -26,7 +27,7 @@
 					<ion-item>
 						<ion-label>Regiment Type</ion-label>
 						<ion-select placeholder="Select" [(ngModel)]="addRegimentType">
-							<ion-select-option *ngFor="let regiment of valid_regiments" [value]="regiment">
+							<ion-select-option *ngFor="let regiment of validRegiments" [value]="regiment">
 								{{regiment.regiment_name}}</ion-select-option>
 						</ion-select>
 					</ion-item>
@@ -42,6 +43,7 @@
 		</ng-template>
 	</ion-modal>
 
+	<!-- Update Equipment Modal -->
 	<ion-card id="division-card" *ngIf="regiments.length > 0">
 		<ion-card-header (click)="rename()">
 			<strong>{{divisionName}}</strong>
@@ -50,7 +52,7 @@
 		</ion-card-header>
 
 		<ion-card-content [ngSwitch]="currSegment">
-			<ion-segment (ionChange)="segmentChanged($event)" [(ngModel)]="currSegment" color="primary">
+			<ion-segment [(ngModel)]="currSegment" color="primary">
 				<ion-segment-button value="composition" checked>
 					<ion-label>Composition</ion-label>
 				</ion-segment-button>
@@ -65,7 +67,7 @@
 				<ion-list>
 					<ion-item-sliding *ngFor="let regiment of regiments; let i = index">
 						<ion-item-options side="start">
-							<ion-item-option color="primary">Equipment</ion-item-option>
+							<ion-item-option color="primary" (click)="updateEquipment(i)">Equipment</ion-item-option>
 						</ion-item-options>
 						<ion-item [lines]="i == regiments.length - 1 ? 'none' : 'inset'">
 							<ion-label>{{regiment.regiment.regiment_name }}</ion-label>
