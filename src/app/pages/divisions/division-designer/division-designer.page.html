@@ -88,19 +88,27 @@
 						<ion-list>
 							<ion-item lines="inset">
 								<ion-label>HP</ion-label>
-								<ion-note>25</ion-note>
+								<ion-note>{{statistics.hp}}</ion-note>
 							</ion-item>
 							<ion-item lines="inset">
 								<ion-label>Organization</ion-label>
-								<ion-note>60</ion-note>
+								<ion-note>{{statistics.organization}}</ion-note>
 							</ion-item>
 							<ion-item lines="inset">
 								<ion-label>Soft Attack</ion-label>
-								<ion-note>3</ion-note>
+								<ion-note>{{statistics.soft_attack}}</ion-note>
+							</ion-item>
+							<ion-item lines="inset">
+								<ion-label>Hard Attack</ion-label>
+								<ion-note>{{statistics.hard_attack}}</ion-note>
+							</ion-item>
+							<ion-item lines="inset">
+								<ion-label>Breakthrough</ion-label>
+								<ion-note>{{statistics.breakthrough}}</ion-note>
 							</ion-item>
 							<ion-item lines="none">
-								<ion-label>Hard Attack</ion-label>
-								<ion-note>1</ion-note>
+								<ion-label>Fuel Usage</ion-label>
+								<ion-note>{{statistics.fuel_usage}}</ion-note>
 							</ion-item>
 						</ion-list>
 					</ion-col>
@@ -108,19 +116,27 @@
 						<ion-list>
 							<ion-item lines="inset">
 								<ion-label>Piercing</ion-label>
-								<ion-note>5</ion-note>
+								<ion-note>{{statistics.piercing}}</ion-note>
 							</ion-item>
 							<ion-item lines="inset">
 								<ion-label>Air Attack</ion-label>
-								<ion-note>7</ion-note>
+								<ion-note>{{statistics.air_attack}}</ion-note>
+							</ion-item>
+							<ion-item lines="inset">
+								<ion-label>Defense</ion-label>
+								<ion-note>{{statistics.defense}}</ion-note>
 							</ion-item>
 							<ion-item lines="inset">
 								<ion-label>Hardness</ion-label>
-								<ion-note>25%</ion-note>
+								<ion-note>{{statistics.hardness}}%</ion-note>
+							</ion-item>
+							<ion-item lines="inset">
+								<ion-label>Armor</ion-label>
+								<ion-note>{{statistics.armor}}</ion-note>
 							</ion-item>
 							<ion-item lines="none">
 								<ion-label>IC Cost</ion-label>
-								<ion-note>5</ion-note>
+								<ion-note>{{statistics.cost}}</ion-note>
 							</ion-item>
 						</ion-list>
 					</ion-col>

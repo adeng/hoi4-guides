@@ -17,7 +17,8 @@
         "air_attack": 0.0,
         "hardness": 0.0,
         "fuel_consumption": 0.0,
-        "cost": 70.0
+        "cost": 70.0,
+        "armor": 0.0
       },
       {
         "equipment_id": "train_equipment_2",
@@ -33,7 +34,8 @@
         "air_attack": 0.0,
         "hardness": 0.0,
         "fuel_consumption": 0.0,
-        "cost": 50.0
+        "cost": 50.0,
+        "armor": 0.0
       },
       {
         "equipment_id": "train_equipment_3",
@@ -49,7 +51,8 @@
         "air_attack": 0.0,
         "hardness": 0.0,
         "fuel_consumption": 0.0,
-        "cost": 105.0
+        "cost": 105.0,
+        "armor": 250.0
       }
     ]
   },
@@ -71,7 +74,8 @@
         "air_attack": 19.0,
         "hardness": 0.0,
         "fuel_consumption": 0.0,
-        "cost": 4.0
+        "cost": 4.0,
+        "armor": 0.0
       },
       {
         "equipment_id": "anti_air_equipment_2",
@@ -87,7 +91,8 @@
         "air_attack": 25.0,
         "hardness": 0.0,
         "fuel_consumption": 0.0,
-        "cost": 5.0
+        "cost": 5.0,
+        "armor": 0.0
       },
       {
         "equipment_id": "anti_air_equipment_3",
@@ -103,7 +108,8 @@
         "air_attack": 32.0,
         "hardness": 0.0,
         "fuel_consumption": 0.0,
-        "cost": 6.0
+        "cost": 6.0,
+        "armor": 0.0
       }
     ]
   },
@@ -125,7 +131,8 @@
         "air_attack": 0.0,
         "hardness": 0.1,
         "fuel_consumption": 0.0,
-        "cost": 4.0
+        "cost": 4.0,
+        "armor": 0.0
       },
       {
         "equipment_id": "anti_tank_equipment_2",
@@ -141,7 +148,8 @@
         "air_attack": 0.0,
         "hardness": 0.1,
         "fuel_consumption": 0.0,
-        "cost": 5.0
+        "cost": 5.0,
+        "armor": 0.0
       },
       {
         "equipment_id": "anti_tank_equipment_3",
@@ -157,7 +165,8 @@
         "air_attack": 0.0,
         "hardness": 0.1,
         "fuel_consumption": 0.0,
-        "cost": 6.0
+        "cost": 6.0,
+        "armor": 0.0
       }
     ]
   },
@@ -179,7 +188,8 @@
         "air_attack": 0.0,
         "hardness": 0.7,
         "fuel_consumption": 1.8,
-        "cost": 9.0
+        "cost": 9.0,
+        "armor": 20.0
       },
       {
         "equipment_id": "armored_car_equipment_1",
@@ -195,7 +205,8 @@
         "air_attack": 0.0,
         "hardness": 0.65,
         "fuel_consumption": 1.8,
-        "cost": 6.0
+        "cost": 6.0,
+        "armor": 10.0
       },
       {
         "equipment_id": "armored_car_equipment_2",
@@ -211,7 +222,8 @@
         "air_attack": 0.0,
         "hardness": 0.7,
         "fuel_consumption": 1.8,
-        "cost": 8.0
+        "cost": 8.0,
+        "armor": 20.0
       },
       {
         "equipment_id": "gw_armored_car_equipment",
@@ -227,7 +239,8 @@
         "air_attack": 0.0,
         "hardness": 0.65,
         "fuel_consumption": 0.8,
-        "cost": 4.0
+        "cost": 4.0,
+        "armor": 3.0
       }
     ]
   },
@@ -249,7 +262,8 @@
         "air_attack": 0.0,
         "hardness": 0.0,
         "fuel_consumption": 0.0,
-        "cost": 3.5
+        "cost": 3.5,
+        "armor": 0.0
       },
       {
         "equipment_id": "artillery_equipment_2",
@@ -265,7 +279,8 @@
         "air_attack": 0.0,
         "hardness": 0.0,
         "fuel_consumption": 0.0,
-        "cost": 4.0
+        "cost": 4.0,
+        "armor": 0.0
       },
       {
         "equipment_id": "artillery_equipment_3",
@@ -281,7 +296,8 @@
         "air_attack": 0.0,
         "hardness": 0.0,
         "fuel_consumption": 0.0,
-        "cost": 4.5
+        "cost": 4.5,
+        "armor": 0.0
       }
     ]
   },
@@ -303,7 +319,8 @@
         "air_attack": 0.0,
         "hardness": 0.0,
         "fuel_consumption": 0.0,
-        "cost": 400.0
+        "cost": 400.0,
+        "armor": 0.0
       }
     ]
   },
@@ -325,7 +342,8 @@
         "air_attack": 0.0,
         "hardness": 0.0,
         "fuel_consumption": 0.0,
-        "cost": 54.0
+        "cost": 54.0,
+        "armor": 0.0
       },
       {
         "equipment_id": "guided_missile_equipment_2",
@@ -341,7 +359,8 @@
         "air_attack": 0.0,
         "hardness": 0.0,
         "fuel_consumption": 0.0,
-        "cost": 54.0
+        "cost": 54.0,
+        "armor": 0.0
       },
       {
         "equipment_id": "guided_missile_equipment_3",
@@ -357,7 +376,8 @@
         "air_attack": 0.0,
         "hardness": 0.0,
         "fuel_consumption": 0.0,
-        "cost": 54.0
+        "cost": 54.0,
+        "armor": 0.0
       }
     ]
   },
@@ -379,7 +399,8 @@
         "air_attack": 0.0,
         "hardness": 0.0,
         "fuel_consumption": 0.0,
-        "cost": 0.43
+        "cost": 0.43,
+        "armor": 0.0
       },
       {
         "equipment_id": "infantry_equipment_1",
@@ -395,7 +416,8 @@
         "air_attack": 0.0,
         "hardness": 0.0,
         "fuel_consumption": 0.0,
-        "cost": 0.5
+        "cost": 0.5,
+        "armor": 0.0
       },
       {
         "equipment_id": "infantry_equipment_2",
@@ -411,7 +433,8 @@
         "air_attack": 0.0,
         "hardness": 0.0,
         "fuel_consumption": 0.0,
-        "cost": 0.58
+        "cost": 0.58,
+        "armor": 0.0
       },
       {
         "equipment_id": "infantry_equipment_3",
@@ -427,7 +450,8 @@
         "air_attack": 0.0,
         "hardness": 0.0,
         "fuel_consumption": 0.0,
-        "cost": 0.69
+        "cost": 0.69,
+        "armor": 0.0
       }
     ]
   },
@@ -449,7 +473,8 @@
         "air_attack": 0.0,
         "hardness": 0.6,
         "fuel_consumption": 2.4,
-        "cost": 8.0
+        "cost": 8.0,
+        "armor": 10.0
       },
       {
         "equipment_id": "mechanized_equipment_2",
@@ -465,7 +490,8 @@
         "air_attack": 0.0,
         "hardness": 0.7,
         "fuel_consumption": 2.4,
-        "cost": 10.0
+        "cost": 10.0,
+        "armor": 15.0
       },
       {
         "equipment_id": "mechanized_equipment_3",
@@ -481,7 +507,8 @@
         "air_attack": 0.0,
         "hardness": 0.75,
         "fuel_consumption": 2.4,
-        "cost": 12.0
+        "cost": 12.0,
+        "armor": 20.0
       }
     ]
   },
@@ -503,7 +530,8 @@
         "air_attack": 0.0,
         "hardness": 0.1,
         "fuel_consumption": 1.2,
-        "cost": 2.5
+        "cost": 2.5,
+        "armor": 0.0
       }
     ]
   },
@@ -525,7 +553,8 @@
         "air_attack": 0.0,
         "hardness": 0.0,
         "fuel_consumption": 0.12,
-        "cost": 12.0
+        "cost": 12.0,
+        "armor": 0.0
       }
     ]
   },
@@ -547,7 +576,8 @@
         "air_attack": 0.0,
         "hardness": 0.0,
         "fuel_consumption": 0.0,
-        "cost": 800.0
+        "cost": 800.0,
+        "armor": 0.0
       }
     ]
   },
@@ -569,7 +599,8 @@
         "air_attack": 0.0,
         "hardness": 0.0,
         "fuel_consumption": 0.0,
-        "cost": 4.0
+        "cost": 4.0,
+        "armor": 0.0
       },
       {
         "equipment_id": "rocket_artillery_equipment_2",
@@ -585,7 +616,8 @@
         "air_attack": 0.0,
         "hardness": 0.0,
         "fuel_consumption": 0.0,
-        "cost": 5.0
+        "cost": 5.0,
+        "armor": 0.0
       }
     ]
   },
@@ -607,7 +639,8 @@
         "air_attack": 0.0,
         "hardness": 0.0,
         "fuel_consumption": 0.0,
-        "cost": 4.0
+        "cost": 4.0,
+        "armor": 0.0
       }
     ]
   },
@@ -629,7 +662,8 @@
         "air_attack": 0.0,
         "hardness": 0.0,
         "fuel_consumption": 0.0,
-        "cost": 70.0
+        "cost": 70.0,
+        "armor": 0.0
       },
       {
         "equipment_id": "train_equipment_2",
@@ -645,7 +679,8 @@
         "air_attack": 0.0,
         "hardness": 0.0,
         "fuel_consumption": 0.0,
-        "cost": 50.0
+        "cost": 50.0,
+        "armor": 0.0
       },
       {
         "equipment_id": "train_equipment_3",
@@ -661,7 +696,8 @@
         "air_attack": 0.0,
         "hardness": 0.0,
         "fuel_consumption": 0.0,
-        "cost": 105.0
+        "cost": 105.0,
+        "armor": 250.0
       }
     ]
   }

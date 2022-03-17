@@ -1,6 +1,9 @@
 export class Regiment {
     regiment_id: string;
     regiment_name: string;
+    hp: number;
+    organization: number;
+    width: number;
     priority: number;
     equipment: Array<ArchetypeNeed>;
     type: string;

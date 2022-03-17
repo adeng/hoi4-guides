@@ -32,16 +32,106 @@ export class DivisionDesignerPage implements OnInit {
 	equipmentMap: Map<string, Equipment>;
 	validRegiments: Array<Regiment>;
 	currentRegiment: number;
+	
+	// Statistics
+	statistics: Object = {
+		"hp": 0,
+		"organization": 0,
+		"soft_attack": 0,
+		"hard_attack": 0,
+		"piercing": 0,
+		"defense": 0,
+		"breakthrough": 0,
+		"air_attack": 0,
+		"hardness": 0,
+		"cost": 0,
+		"width": 0,
+		"armor": 0,
+		"fuel_usage": 0
+	};
 
 	constructor(public modalController: ModalController, public alertController: AlertController, public toastController: ToastController, public source: SourceService) {
 		this.archetypeMap = new Map<string, Array<ArchetypeNeed>>();
 		this.equipmentMap = new Map<string, Equipment>();
 		this.validRegiments = source.getValidRegiments();
 		this.sortRegiments();
-		console.log(this.validRegiments);
 	}
 
 	ngOnInit() {
+	}
+	
+	average = (values) => values.reduce((a, b) => a + b)/values.length;
+
+	calculateStatistics() {
+		// Reset
+		for(let key in this.statistics) {
+			this.statistics[key] = 0;
+		}
+
+		let piercingValues = [];
+		let hardnessValues = [];
+		let armorValues = [];
+		let organizationValues = [];
+
+		for(let i = 0; i < this.regiments.length; i++) {
+			let child = this.regiments[i];
+			let num = child.number;
+			let regiment = child.regiment;
+
+			this.statistics["hp"] += (regiment.hp * num);
+			this.statistics["organization"] += (regiment.organization * num);
+			this.statistics["width"] += regiment.width;
+
+			let localPiercing = 0;
+			let localHardness = [];
+			let localFuelUsage = [];
+			let localArmor = [];
+
+			for(let j = 0; j < regiment.equipment.length; j++) {
+				let need = regiment.equipment[j];
+				let equipment = this.equipmentMap.get([i, need.archetype_id].join(","));
+
+				this.statistics["soft_attack"] += (equipment.soft_attack * num);
+				this.statistics["hard_attack"] += (equipment.hard_attack * num);
+				this.statistics["air_attack"] += (equipment.air_attack * num);
+				this.statistics["cost"] += (equipment.cost * num * need.number);
+				this.statistics["defense"] += (equipment.defense * num);
+				this.statistics["breakthrough"] += (equipment.breakthrough * num);
+
+				localPiercing += equipment.piercing;
+				localHardness.push(equipment.hardness);
+				localFuelUsage.push(equipment.fuel_consumption);
+				localArmor.push(equipment.armor);
+			}
+
+			// Repeat values for averages
+			for(let k = 0; k < num; k++) {
+				organizationValues.push(regiment.organization);
+				piercingValues.push(localPiercing);
+				hardnessValues.push(Math.max(...localHardness));
+				armorValues.push(Math.max(...localArmor));
+			}
+
+			this.statistics["fuel_usage"] += (Math.max(...localFuelUsage) * num);
+		}
+
+		this.statistics["piercing"] = Math.floor(this.calculatePiercing(piercingValues)*10)/10;
+		console.log(hardnessValues);
+		this.statistics["hardness"] = Math.floor(this.average(hardnessValues)*100);
+		this.statistics["armor"] = Math.floor(this.calculateArmor(armorValues)*10)/10;
+		this.statistics["organization"] = Math.floor(this.average(organizationValues)*10)/10;
+	}
+
+	calculateArmor(values: number[]): number {
+		let max = Math.max(...values);
+
+		return Math.floor(max * 3)/10 + Math.floor(this.average(values) * 7)/10;
+	}
+
+	calculatePiercing(values: number[]): number {
+		let max = Math.max(...values);
+
+		return Math.floor(max * 4)/10 + Math.floor(this.average(values) * 6)/10;
 	}
 
 	async updateEquipment(index: number) {
@@ -49,11 +139,8 @@ export class DivisionDesignerPage implements OnInit {
 		let results = [];
 
 		for(let i = 0; i < this.regiments[index].regiment.equipment.length; i++) {
-			console.log([index, this.regiments[index].regiment.equipment[i].archetype_id]);
 			results[i] = this.equipmentMap.get([index, this.regiments[index].regiment.equipment[i].archetype_id].join(","));
 		}
-
-		console.log(results);
 
 		const modal = await this.modalController.create({
 			component: ChooseEquipmentPage,
@@ -67,8 +154,13 @@ export class DivisionDesignerPage implements OnInit {
 		});
 
 		await modal.present();
+
 		let { data } = await modal.onWillDismiss();
-		console.log(data);
+		for(let j = 0; j < data.results.length; j++) {
+			this.equipmentMap.set([index, this.regiments[index].regiment.equipment[j].archetype_id].join(","), data.results[j])
+		}
+
+		this.calculateStatistics()
 	}
 
 	sortRegiments(): void {
@@ -89,32 +181,28 @@ export class DivisionDesignerPage implements OnInit {
 
 		this.regiments.push(new DivisionChild(this.addRegimentType, this.addRegimentNumber));
 		this.totalRegiments += this.addRegimentNumber;
-		console.log(this.regiments);
 
 		// Remove this regiment from valid
 		this.validRegiments.splice(this.validRegiments.indexOf(this.addRegimentType), 1);
 
 		// Populate equipment
-		console.log(this.addRegimentType);
 		for(let i = 0; i < this.addRegimentType.equipment.length; i++) {
 			let archetype = this.addRegimentType.equipment[i];
 
 			if(!this.archetypeMap.has(this.addRegimentType.regiment_id))
 				this.archetypeMap.set(this.addRegimentType.regiment_id, new Array<ArchetypeNeed>());
 
-			console.log(this.archetypeMap);
 			this.archetypeMap.get(this.addRegimentType.regiment_id).push(archetype);
 			
 			if(!this.equipmentMap.has([this.regiments.length - 1, archetype.archetype_id].join(","))) {
 				this.equipmentMap.set([this.regiments.length - 1, archetype.archetype_id].join(","), this.source.getFirstValidEquipment(archetype.archetype_id));
-
-				console.log(this.equipmentMap);
 			}
 		}
 
 		this.addRegimentType = undefined;
 		this.addRegimentNumber = undefined;
 
+		this.calculateStatistics()
 		this.modalController.dismiss();
 	}
 
@@ -146,6 +234,7 @@ export class DivisionDesignerPage implements OnInit {
 						this.regiments.splice(this.regiments.indexOf(regiment), 1);
 						this.showToast(`${regiment.regiment.regiment_name} removed!`);
 						this.totalRegiments -= regiment.number;
+						this.calculateStatistics()
 					}
 				}
 			]
@@ -173,13 +262,13 @@ export class DivisionDesignerPage implements OnInit {
 				{
 					text: "Save",
 					handler: (alertData) => {
-						console.log(this.totalRegiments, regiment.number, alertData.newAmount);
 						if(this.totalRegiments - regiment.number + parseInt(alertData.newAmount) > this.MAX_REGIMENTS) {
 							this.validationError();
 							return;
 						} else {
 							this.totalRegiments += (parseInt(alertData.newAmount) - regiment.number);
 							this.regiments[this.regiments.indexOf(regiment)].number = parseInt(alertData.newAmount);
+							this.calculateStatistics()
 							this.showToast(`Updated number of ${regiment.regiment.regiment_name} battalions!`);
 						}
 					}

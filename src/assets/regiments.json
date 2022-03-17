@@ -2,9 +2,12 @@
   {
     "regiment_id": "amphibious_armor",
     "regiment_name": "Amphibious Tank Battalion",
+    "hp": 2.0,
+    "organization": 10.0,
     "priority": 2501,
     "type": "armor",
     "same_support_type": "",
+    "width": 2,
     "equipment": [
       {
         "archetype_id": "super_heavy_tank_destroyer_chassis",
@@ -16,9 +19,12 @@
   {
     "regiment_id": "amphibious_heavy_armor",
     "regiment_name": "Heavy Amphibious Tank Battalion",
+    "hp": 2.0,
+    "organization": 10.0,
     "priority": 2501,
     "type": "amphibious",
     "same_support_type": "",
+    "width": 2,
     "equipment": [
       {
         "archetype_id": "heavy_tank_amphibious_chassis",
@@ -30,9 +36,12 @@
   {
     "regiment_id": "amphibious_light_armor",
     "regiment_name": "Light Amphibious Tank Battalion",
+    "hp": 2.0,
+    "organization": 10.0,
     "priority": 2501,
     "type": "amphibious",
     "same_support_type": "",
+    "width": 2,
     "equipment": [
       {
         "archetype_id": "light_tank_amphibious_chassis",
@@ -44,9 +53,12 @@
   {
     "regiment_id": "amphibious_mechanized",
     "regiment_name": "Amtrac Battalion",
+    "hp": 30.0,
+    "organization": 60.0,
     "priority": 610,
     "type": "mechanized",
     "same_support_type": "",
+    "width": 2,
     "equipment": [
       {
         "archetype_id": "amphibious_mechanized_equipment",
@@ -63,9 +75,12 @@
   {
     "regiment_id": "amphibious_medium_armor",
     "regiment_name": "Medium Amphibious Tank Battalion",
+    "hp": 2.0,
+    "organization": 10.0,
     "priority": 2501,
     "type": "amphibious",
     "same_support_type": "",
+    "width": 2,
     "equipment": [
       {
         "archetype_id": "medium_tank_amphibious_chassis",
@@ -77,9 +92,12 @@
   {
     "regiment_id": "anti_air",
     "regiment_name": "Support Anti-Air",
+    "hp": 0.2,
+    "organization": 0.0,
     "priority": 0,
     "type": "support",
     "same_support_type": "",
+    "width": 0,
     "equipment": [
       {
         "archetype_id": "anti_air_equipment",
@@ -91,9 +109,12 @@
   {
     "regiment_id": "anti_air_brigade",
     "regiment_name": "Anti-Air",
+    "hp": 0.6,
+    "organization": 0.0,
     "priority": 301,
     "type": "anti_air",
     "same_support_type": "",
+    "width": 1,
     "equipment": [
       {
         "archetype_id": "anti_air_equipment",
@@ -105,9 +126,12 @@
   {
     "regiment_id": "anti_tank",
     "regiment_name": "Support Anti-Tank",
+    "hp": 0.2,
+    "organization": 0.0,
     "priority": 0,
     "type": "support",
     "same_support_type": "",
+    "width": 0,
     "equipment": [
       {
         "archetype_id": "anti_tank_equipment",
@@ -119,9 +143,12 @@
   {
     "regiment_id": "anti_tank_brigade",
     "regiment_name": "Anti-Tank",
+    "hp": 0.6,
+    "organization": 0.0,
     "priority": 1197,
     "type": "anti_tank",
     "same_support_type": "",
+    "width": 1,
     "equipment": [
       {
         "archetype_id": "anti_tank_equipment",
@@ -133,9 +160,12 @@
   {
     "regiment_id": "armored_car",
     "regiment_name": "Armored Car",
+    "hp": 2.0,
+    "organization": 10.0,
     "priority": 501,
     "type": "motorized",
     "same_support_type": "",
+    "width": 2,
     "equipment": [
       {
         "archetype_id": "armored_car_equipment",
@@ -147,9 +177,12 @@
   {
     "regiment_id": "armored_car_recon",
     "regiment_name": "Light Armored Recon Company",
+    "hp": 2.0,
+    "organization": 20.0,
     "priority": 0,
     "type": "support",
     "same_support_type": "recon",
+    "width": 0,
     "equipment": [
       {
         "archetype_id": "armored_car_equipment",
@@ -161,9 +194,12 @@
   {
     "regiment_id": "artillery",
     "regiment_name": "Support Artillery",
+    "hp": 0.2,
+    "organization": 0.0,
     "priority": 0,
     "type": "support",
     "same_support_type": "",
+    "width": 0,
     "equipment": [
       {
         "archetype_id": "artillery_equipment",
@@ -175,9 +211,12 @@
   {
     "regiment_id": "artillery_brigade",
     "regiment_name": "Artillery",
+    "hp": 0.6,
+    "organization": 0.0,
     "priority": 1198,
     "type": "artillery",
     "same_support_type": "",
+    "width": 3,
     "equipment": [
       {
         "archetype_id": "artillery_equipment",
@@ -189,9 +228,12 @@
   {
     "regiment_id": "bicycle_battalion",
     "regiment_name": "Bicycle Battalion",
+    "hp": 25.0,
+    "organization": 60.0,
     "priority": 600,
     "type": "infantry",
     "same_support_type": "",
+    "width": 2,
     "equipment": [
       {
         "archetype_id": "infantry_equipment",
@@ -208,9 +250,12 @@
   {
     "regiment_id": "camelry",
     "regiment_name": "Camelry",
+    "hp": 30.0,
+    "organization": 70.0,
     "priority": 599,
     "type": "infantry",
     "same_support_type": "",
+    "width": 2,
     "equipment": [
       {
         "archetype_id": "infantry_equipment",
@@ -222,9 +267,12 @@
   {
     "regiment_id": "cavalry",
     "regiment_name": "Cavalry",
+    "hp": 25.0,
+    "organization": 70.0,
     "priority": 599,
     "type": "infantry",
     "same_support_type": "",
+    "width": 2,
     "equipment": [
       {
         "archetype_id": "infantry_equipment",
@@ -236,9 +284,12 @@
   {
     "regiment_id": "engineer",
     "regiment_name": "Engineer Company",
+    "hp": 2.0,
+    "organization": 20.0,
     "priority": 0,
     "type": "flame",
     "same_support_type": "",
+    "width": 0,
     "equipment": [
       {
         "archetype_id": "infantry_equipment",
@@ -255,9 +306,12 @@
   {
     "regiment_id": "fake_intel_unit",
     "regiment_name": "Fake Intel Batallion",
+    "hp": 1.0,
+    "organization": 100.0,
     "priority": 0,
     "type": "infantry",
     "same_support_type": "",
+    "width": 1,
     "equipment": [
       {
         "archetype_id": "infantry_equipment",
@@ -269,9 +323,12 @@
   {
     "regiment_id": "field_hospital",
     "regiment_name": "Field Hospital",
+    "hp": 2.0,
+    "organization": 20.0,
     "priority": 0,
     "type": "support",
     "same_support_type": "",
+    "width": 0,
     "equipment": [
       {
         "archetype_id": "motorized_equipment",
@@ -288,9 +345,12 @@
   {
     "regiment_id": "heavy_armor",
     "regiment_name": "Heavy Tank",
+    "hp": 2.0,
+    "organization": 10.0,
     "priority": 2503,
     "type": "armor",
     "same_support_type": "",
+    "width": 2,
     "equipment": [
       {
         "archetype_id": "heavy_tank_chassis",
@@ -302,9 +362,12 @@
   {
     "regiment_id": "heavy_flame_tank",
     "regiment_name": "Heavy Flame Tank Company",
+    "hp": 2.0,
+    "organization": 20.0,
     "priority": 0,
     "type": "support",
     "same_support_type": "flame",
+    "width": 0,
     "equipment": [
       {
         "archetype_id": "heavy_tank_flame_chassis",
@@ -316,9 +379,12 @@
   {
     "regiment_id": "heavy_sp_anti_air_brigade",
     "regiment_name": "Heavy SP Anti-Air",
+    "hp": 0.6,
+    "organization": 0.0,
     "priority": 301,
     "type": "anti_air",
     "same_support_type": "",
+    "width": 2,
     "equipment": [
       {
         "archetype_id": "heavy_tank_aa_chassis",
@@ -330,9 +396,12 @@
   {
     "regiment_id": "heavy_sp_artillery_brigade",
     "regiment_name": "Heavy SP Artillery",
+    "hp": 0.6,
+    "organization": 0.0,
     "priority": 1797,
     "type": "artillery",
     "same_support_type": "",
+    "width": 3,
     "equipment": [
       {
         "archetype_id": "heavy_tank_artillery_chassis",
@@ -344,9 +413,12 @@
   {
     "regiment_id": "heavy_tank_destroyer_brigade",
     "regiment_name": "Heavy Tank Destroyer",
+    "hp": 0.6,
+    "organization": 0.0,
     "priority": 1797,
     "type": "anti_tank",
     "same_support_type": "",
+    "width": 2,
     "equipment": [
       {
         "archetype_id": "heavy_tank_destroyer_chassis",
@@ -358,9 +430,12 @@
   {
     "regiment_id": "infantry",
     "regiment_name": "Infantry",
+    "hp": 25.0,
+    "organization": 60.0,
     "priority": 600,
     "type": "infantry",
     "same_support_type": "",
+    "width": 2,
     "equipment": [
       {
         "archetype_id": "infantry_equipment",
@@ -372,9 +447,12 @@
   {
     "regiment_id": "light_armor",
     "regiment_name": "Light Tank",
+    "hp": 2.0,
+    "organization": 10.0,
     "priority": 2501,
     "type": "armor",
     "same_support_type": "",
+    "width": 2,
     "equipment": [
       {
         "archetype_id": "light_tank_chassis",
@@ -386,9 +464,12 @@
   {
     "regiment_id": "light_flame_tank",
     "regiment_name": "Light Flame Tank Company",
+    "hp": 2.0,
+    "organization": 20.0,
     "priority": 0,
     "type": "support",
     "same_support_type": "flame",
+    "width": 0,
     "equipment": [
       {
         "archetype_id": "light_tank_flame_chassis",
@@ -400,9 +481,12 @@
   {
     "regiment_id": "light_sp_anti_air_brigade",
     "regiment_name": "Light SP Anti-Air",
+    "hp": 0.6,
+    "organization": 0.0,
     "priority": 301,
     "type": "anti_air",
     "same_support_type": "",
+    "width": 2,
     "equipment": [
       {
         "archetype_id": "light_tank_aa_chassis",
@@ -414,9 +498,12 @@
   {
     "regiment_id": "light_sp_artillery_brigade",
     "regiment_name": "Light SP Artillery",
+    "hp": 0.6,
+    "organization": 0.0,
     "priority": 1795,
     "type": "artillery",
     "same_support_type": "",
+    "width": 3,
     "equipment": [
       {
         "archetype_id": "light_tank_artillery_chassis",
@@ -428,9 +515,12 @@
   {
     "regiment_id": "light_tank_destroyer_brigade",
     "regiment_name": "Light Tank Destroyer",
+    "hp": 0.6,
+    "organization": 0.0,
     "priority": 1795,
     "type": "anti_tank",
     "same_support_type": "",
+    "width": 2,
     "equipment": [
       {
         "archetype_id": "light_tank_destroyer_chassis",
@@ -442,9 +532,12 @@
   {
     "regiment_id": "light_tank_recon",
     "regiment_name": "Armored Recon Company",
+    "hp": 2.0,
+    "organization": 20.0,
     "priority": 0,
     "type": "support",
     "same_support_type": "recon",
+    "width": 0,
     "equipment": [
       {
         "archetype_id": "light_tank_chassis",
@@ -456,9 +549,12 @@
   {
     "regiment_id": "logistics_company",
     "regiment_name": "Logistics Company",
+    "hp": 1.0,
+    "organization": 10.0,
     "priority": 0,
     "type": "support",
     "same_support_type": "",
+    "width": 0,
     "equipment": [
       {
         "archetype_id": "motorized_equipment",
@@ -475,9 +571,12 @@
   {
     "regiment_id": "maintenance_company",
     "regiment_name": "Maintenance Company",
+    "hp": 1.0,
+    "organization": 20.0,
     "priority": 0,
     "type": "support",
     "same_support_type": "",
+    "width": 0,
     "equipment": [
       {
         "archetype_id": "support_equipment",
@@ -489,9 +588,12 @@
   {
     "regiment_id": "marine",
     "regiment_name": "Marines",
+    "hp": 20.0,
+    "organization": 70.0,
     "priority": 601,
     "type": "infantry",
     "same_support_type": "",
+    "width": 2,
     "equipment": [
       {
         "archetype_id": "infantry_equipment",
@@ -503,9 +605,12 @@
   {
     "regiment_id": "mechanized",
     "regiment_name": "Mechanized Infantry",
+    "hp": 30.0,
+    "organization": 60.0,
     "priority": 610,
     "type": "mechanized",
     "same_support_type": "",
+    "width": 2,
     "equipment": [
       {
         "archetype_id": "infantry_equipment",
@@ -522,9 +627,12 @@
   {
     "regiment_id": "medium_armor",
     "regiment_name": "Medium Tank",
+    "hp": 2.0,
+    "organization": 10.0,
     "priority": 2502,
     "type": "armor",
     "same_support_type": "",
+    "width": 2,
     "equipment": [
       {
         "archetype_id": "medium_tank_chassis",
@@ -536,9 +644,12 @@
   {
     "regiment_id": "medium_flame_tank",
     "regiment_name": "Medium Flame Tank Company",
+    "hp": 2.0,
+    "organization": 20.0,
     "priority": 0,
     "type": "support",
     "same_support_type": "flame",
+    "width": 0,
     "equipment": [
       {
         "archetype_id": "medium_tank_flame_chassis",
@@ -550,9 +661,12 @@
   {
     "regiment_id": "medium_sp_anti_air_brigade",
     "regiment_name": "Medium SP Anti-Air",
+    "hp": 0.6,
+    "organization": 0.0,
     "priority": 301,
     "type": "anti_air",
     "same_support_type": "",
+    "width": 2,
     "equipment": [
       {
         "archetype_id": "medium_tank_aa_chassis",
@@ -564,9 +678,12 @@
   {
     "regiment_id": "medium_sp_artillery_brigade",
     "regiment_name": "Medium SP Artillery",
+    "hp": 0.6,
+    "organization": 0.0,
     "priority": 1796,
     "type": "artillery",
     "same_support_type": "",
+    "width": 3,
     "equipment": [
       {
         "archetype_id": "medium_tank_artillery_chassis",
@@ -578,9 +695,12 @@
   {
     "regiment_id": "medium_tank_destroyer_brigade",
     "regiment_name": "Medium Tank Destroyer",
+    "hp": 0.6,
+    "organization": 0.0,
     "priority": 1796,
     "type": "anti_tank",
     "same_support_type": "",
+    "width": 2,
     "equipment": [
       {
         "archetype_id": "medium_tank_destroyer_chassis",
@@ -592,9 +712,12 @@
   {
     "regiment_id": "military_police",
     "regiment_name": "Military Police",
+    "hp": 1.0,
+    "organization": 0.0,
     "priority": 0,
     "type": "support",
     "same_support_type": "",
+    "width": 0,
     "equipment": [
       {
         "archetype_id": "infantry_equipment",
@@ -611,9 +734,12 @@
   {
     "regiment_id": "modern_armor",
     "regiment_name": "Modern Tank",
+    "hp": 2.0,
+    "organization": 10.0,
     "priority": 2510,
     "type": "armor",
     "same_support_type": "",
+    "width": 2,
     "equipment": [
       {
         "archetype_id": "modern_tank_chassis",
@@ -625,9 +751,12 @@
   {
     "regiment_id": "modern_sp_anti_air_brigade",
     "regiment_name": "Modern SP Anti-Air",
+    "hp": 0.6,
+    "organization": 0.0,
     "priority": 301,
     "type": "anti_air",
     "same_support_type": "",
+    "width": 2,
     "equipment": [
       {
         "archetype_id": "modern_tank_aa_chassis",
@@ -639,9 +768,12 @@
   {
     "regiment_id": "modern_sp_artillery_brigade",
     "regiment_name": "Modern SP Artillery",
+    "hp": 0.6,
+    "organization": 0.0,
     "priority": 1796,
     "type": "artillery",
     "same_support_type": "",
+    "width": 3,
     "equipment": [
       {
         "archetype_id": "modern_tank_artillery_chassis",
@@ -653,9 +785,12 @@
   {
     "regiment_id": "modern_tank_destroyer_brigade",
     "regiment_name": "Modern Tank Destroyer",
+    "hp": 0.6,
+    "organization": 0.0,
     "priority": 1796,
     "type": "anti_tank",
     "same_support_type": "",
+    "width": 2,
     "equipment": [
       {
         "archetype_id": "modern_tank_destroyer_chassis",
@@ -667,9 +802,12 @@
   {
     "regiment_id": "mot_anti_air_brigade",
     "regiment_name": "Motorized Anti-Air",
+    "hp": 0.6,
+    "organization": 0.0,
     "priority": 301,
     "type": "anti_air",
     "same_support_type": "",
+    "width": 1,
     "equipment": [
       {
         "archetype_id": "anti_air_equipment",
@@ -686,9 +824,12 @@
   {
     "regiment_id": "mot_anti_tank_brigade",
     "regiment_name": "Motorized Anti-Tank",
+    "hp": 0.6,
+    "organization": 0.0,
     "priority": 1197,
     "type": "anti_tank",
     "same_support_type": "",
+    "width": 1,
     "equipment": [
       {
         "archetype_id": "anti_tank_equipment",
@@ -705,9 +846,12 @@
   {
     "regiment_id": "mot_artillery_brigade",
     "regiment_name": "Motorized Artillery",
+    "hp": 0.6,
+    "organization": 0.0,
     "priority": 1198,
     "type": "artillery",
     "same_support_type": "",
+    "width": 3,
     "equipment": [
       {
         "archetype_id": "artillery_equipment",
@@ -724,9 +868,12 @@
   {
     "regiment_id": "mot_recon",
     "regiment_name": "Motorized Recon Company",
+    "hp": 2.0,
+    "organization": 20.0,
     "priority": 0,
     "type": "support",
     "same_support_type": "recon",
+    "width": 0,
     "equipment": [
       {
         "archetype_id": "infantry_equipment",
@@ -748,9 +895,12 @@
   {
     "regiment_id": "mot_rocket_artillery_brigade",
     "regiment_name": "Truck-drawn Rocket Artillery",
+    "hp": 0.6,
+    "organization": 0.0,
     "priority": 1199,
     "type": "artillery",
     "same_support_type": "",
+    "width": 3,
     "equipment": [
       {
         "archetype_id": "motorized_equipment",
@@ -767,9 +917,12 @@
   {
     "regiment_id": "motorized",
     "regiment_name": "Motorized Infantry",
+    "hp": 25.0,
+    "organization": 60.0,
     "priority": 599,
     "type": "motorized",
     "same_support_type": "",
+    "width": 2,
     "equipment": [
       {
         "archetype_id": "infantry_equipment",
@@ -786,9 +939,12 @@
   {
     "regiment_id": "motorized_rocket_brigade",
     "regiment_name": "Motorized Rocket Artillery",
+    "hp": 0.6,
+    "organization": 0.0,
     "priority": 1199,
     "type": "rocket",
     "same_support_type": "",
+    "width": 3,
     "equipment": [
       {
         "archetype_id": "motorized_equipment",
@@ -805,9 +961,12 @@
   {
     "regiment_id": "mountaineers",
     "regiment_name": "Mountaineers",
+    "hp": 20.0,
+    "organization": 70.0,
     "priority": 601,
     "type": "infantry",
     "same_support_type": "",
+    "width": 2,
     "equipment": [
       {
         "archetype_id": "infantry_equipment",
@@ -819,9 +978,12 @@
   {
     "regiment_id": "paratrooper",
     "regiment_name": "Paratroopers",
+    "hp": 22.0,
+    "organization": 70.0,
     "priority": 2,
     "type": "infantry",
     "same_support_type": "",
+    "width": 2,
     "equipment": [
       {
         "archetype_id": "infantry_equipment",
@@ -833,9 +995,12 @@
   {
     "regiment_id": "penal_battalion",
     "regiment_name": "Penal Battalion",
+    "hp": 15.0,
+    "organization": 70.0,
     "priority": 400,
     "type": "infantry",
     "same_support_type": "",
+    "width": 2,
     "equipment": [
       {
         "archetype_id": "infantry_equipment",
@@ -847,9 +1012,12 @@
   {
     "regiment_id": "railway_gun",
     "regiment_name": "",
+    "hp": 2000.0,
+    "organization": 0.0,
     "priority": 1,
     "type": "railway_gun",
     "same_support_type": "",
+    "width": 0,
     "equipment": [
       {
         "archetype_id": "railway_gun_equipment",
@@ -861,9 +1029,12 @@
   {
     "regiment_id": "recon",
     "regiment_name": "Cavalry Recon Detachment",
+    "hp": 2.0,
+    "organization": 20.0,
     "priority": 0,
     "type": "support",
     "same_support_type": "recon",
+    "width": 0,
     "equipment": [
       {
         "archetype_id": "infantry_equipment",
@@ -880,9 +1051,12 @@
   {
     "regiment_id": "rocket_artillery",
     "regiment_name": "Support Rocket Artillery",
+    "hp": 0.2,
+    "organization": 0.0,
     "priority": 0,
     "type": "support",
     "same_support_type": "",
+    "width": 0,
     "equipment": [
       {
         "archetype_id": "rocket_artillery_equipment",
@@ -894,9 +1068,12 @@
   {
     "regiment_id": "rocket_artillery_brigade",
     "regiment_name": "Rocket Artillery",
+    "hp": 0.6,
+    "organization": 0.0,
     "priority": 1199,
     "type": "artillery",
     "same_support_type": "",
+    "width": 3,
     "equipment": [
       {
         "archetype_id": "rocket_artillery_equipment",
@@ -908,9 +1085,12 @@
   {
     "regiment_id": "signal_company",
     "regiment_name": "Signal Company",
+    "hp": 1.0,
+    "organization": 20.0,
     "priority": 0,
     "type": "support",
     "same_support_type": "",
+    "width": 0,
     "equipment": [
       {
         "archetype_id": "motorized_equipment",
@@ -927,9 +1107,12 @@
   {
     "regiment_id": "super_heavy_armor",
     "regiment_name": "Super-Heavy Tank",
+    "hp": 2.0,
+    "organization": 10.0,
     "priority": 2520,
     "type": "armor",
     "same_support_type": "",
+    "width": 2,
     "equipment": [
       {
         "archetype_id": "super_heavy_tank_chassis",
@@ -941,9 +1124,12 @@
   {
     "regiment_id": "super_heavy_sp_anti_air_brigade",
     "regiment_name": "Super Heavy SP Anti-Air",
+    "hp": 0.6,
+    "organization": 0.0,
     "priority": 301,
     "type": "anti_air",
     "same_support_type": "",
+    "width": 2,
     "equipment": [
       {
         "archetype_id": "super_heavy_tank_aa_chassis",
@@ -955,9 +1141,12 @@
   {
     "regiment_id": "super_heavy_sp_artillery_brigade",
     "regiment_name": "Super Heavy SP Artillery",
+    "hp": 0.6,
+    "organization": 0.0,
     "priority": 1798,
     "type": "artillery",
     "same_support_type": "",
+    "width": 3,
     "equipment": [
       {
         "archetype_id": "super_heavy_tank_artillery_chassis",
@@ -969,9 +1158,12 @@
   {
     "regiment_id": "super_heavy_tank_destroyer_brigade",
     "regiment_name": "Super Heavy Tank Destroyer",
+    "hp": 0.6,
+    "organization": 0.0,
     "priority": 1798,
     "type": "anti_tank",
     "same_support_type": "",
+    "width": 2,
     "equipment": [
       {
         "archetype_id": "super_heavy_tank_destroyer_chassis",

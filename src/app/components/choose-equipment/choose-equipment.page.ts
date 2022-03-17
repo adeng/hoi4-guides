@@ -27,9 +27,6 @@ export class ChooseEquipmentPage implements OnInit {
 			let x = this.sortEquipment(this.source.getValidEquipment(this.archetypeMap.get(this.regiments[this.currentRegiment].regiment.regiment_id)[i].archetype_id));
 			this.localEquipmentMap.push(x);
 		}
-
-		console.log(this.results);
-		console.log(this.localEquipmentMap);
 	}
 
 	
@@ -51,6 +48,7 @@ export class ChooseEquipmentPage implements OnInit {
 	}
 
 	dismiss() {
+		console.log(this.results);
 		this.modalController.dismiss({
 			"results": this.results
 		});

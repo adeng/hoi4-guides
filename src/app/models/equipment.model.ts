@@ -19,4 +19,5 @@ export class Equipment {
     hardness: number;
     fuel_consumption: number;
     cost: number;
+    armor: number;
 }
