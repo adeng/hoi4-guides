@@ -27,17 +27,26 @@ ion-button {
         }
     }
 
-    ion-card-content.md {
+    ion-card-content {
         padding: 0px;
     }
 
     ion-list, p {
         margin-top: 20px;
     }
+
+    ion-segment {
+        width: 90%;
+        margin: 0 auto;
+    }
 }
 
 .page-label {
     margin-top: 20px;
+}
+
+.composition-card {
+    margin: 20px;
 }
 
 .stats-card {

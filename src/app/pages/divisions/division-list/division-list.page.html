@@ -1,31 +1,54 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title>Divisions</ion-title>
-  </ion-toolbar>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-menu-button></ion-menu-button>
+		</ion-buttons>
+		<ion-title>Divisions</ion-title>
+	</ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true" force-overscroll="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Divisions</ion-title>
-    </ion-toolbar>
-  </ion-header>
+	<ion-header collapse="condense">
+		<ion-toolbar>
+			<ion-title size="large">Divisions</ion-title>
+		</ion-toolbar>
+	</ion-header>
 
-  <!-- <ion-list>
-    <ion-item [routerLink]="['/divisions/' + type.type]" *ngFor="let type of types">
-      <ion-label>{{type.name}}</ion-label>
-    </ion-item>
-  </ion-list> -->
-  <div id="container">
+	<!-- <div id="container" *ngIf="divisions.length == 0">
     <p>No designs found!</p>
-  </div>
+  </div> -->
 
-  <ion-fab vertical="bottom" horizontal="end" slot="fixed" routerLink="../designer">
-    <ion-fab-button >
-      <ion-icon name="add"></ion-icon>
-    </ion-fab-button>
-  </ion-fab>
+	<!-- <ion-list *ngIf="divisions.length > 0"> -->
+	<ion-card>
+		<ion-card-header>
+			<ion-card-subtitle>Infantry</ion-card-subtitle>
+			<ion-card-title>Division Name</ion-card-title>
+		</ion-card-header>
+		<ion-card-content>
+			<ion-chip>
+				<ion-avatar>
+					<p class="chip-avatar">1</p>
+				</ion-avatar>
+				<ion-label>Infantry</ion-label>
+			</ion-chip>
+			<ion-chip>
+				<ion-avatar>
+					<p class="chip-avatar">1</p>
+				</ion-avatar>
+				<ion-label>a</ion-label>
+			</ion-chip>
+			<ion-chip>
+				<ion-avatar>
+					<p class="chip-avatar">1</p>
+				</ion-avatar>
+				<ion-label>Infantry</ion-label>
+			</ion-chip>
+		</ion-card-content>
+	</ion-card>
+
+	<ion-fab vertical="bottom" horizontal="end" slot="fixed" routerLink="../designer">
+		<ion-fab-button>
+			<ion-icon name="add"></ion-icon>
+		</ion-fab-button>
+	</ion-fab>
 </ion-content>

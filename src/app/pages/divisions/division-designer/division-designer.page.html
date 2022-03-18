@@ -63,7 +63,9 @@
 
 			<!-- Composition Card -->
 			<div *ngSwitchCase="'composition'">
-				<p>Slide regiment sideways to edit number or equipment.</p>
+				<div class="composition-card">
+					<p>Slide regiment sideways to edit number or equipment.</p>
+				</div>
 				<ion-list>
 					<ion-item-sliding *ngFor="let regiment of regiments; let i = index">
 						<ion-item-options side="start">
@@ -146,7 +148,7 @@
 	</ion-card>
 
 	<ion-fab vertical="bottom" horizontal="end" slot="fixed">
-		<ion-fab-button [disabled]="regiments.length == 0">
+		<ion-fab-button [disabled]="regiments.length == 0" (click)="saveDivision()">
 			<ion-icon name="save"></ion-icon>
 		</ion-fab-button>
 	</ion-fab>

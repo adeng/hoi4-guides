@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { AlertController, ModalController, ToastController } from '@ionic/angular';
+import { AlertController, ModalController, NavController, ToastController } from '@ionic/angular';
 import { ChooseEquipmentPage } from 'src/app/components/choose-equipment/choose-equipment.page';
 import { Equipment } from 'src/app/models/equipment.model';
 import { ArchetypeNeed, Regiment } from 'src/app/models/regiment.model';
-import { TranslationPipe } from 'src/app/pipes/translation.pipe';
+import { DivisionsService } from 'src/app/services/divisions.service';
+import { Division } from 'src/app/models/division.model';
 import { SourceService } from 'src/app/services/source.service';
+import { StorageService } from 'src/app/services/storage.service';
 
 @Component({
 	selector: 'app-division-designer',
@@ -32,6 +34,7 @@ export class DivisionDesignerPage implements OnInit {
 	equipmentMap: Map<string, Equipment>;
 	validRegiments: Array<Regiment>;
 	currentRegiment: number;
+	divisionType: string;
 	
 	// Statistics
 	statistics: Object = {
@@ -50,7 +53,8 @@ export class DivisionDesignerPage implements OnInit {
 		"fuel_usage": 0
 	};
 
-	constructor(public modalController: ModalController, public alertController: AlertController, public toastController: ToastController, public source: SourceService) {
+	constructor(private modalController: ModalController, private alertController: AlertController, 
+		private toastController: ToastController, private source: SourceService, private storage: StorageService, private navController: NavController) {
 		this.archetypeMap = new Map<string, Array<ArchetypeNeed>>();
 		this.equipmentMap = new Map<string, Equipment>();
 		this.validRegiments = source.getValidRegiments();
@@ -115,8 +119,9 @@ export class DivisionDesignerPage implements OnInit {
 			this.statistics["fuel_usage"] += (Math.max(...localFuelUsage) * num);
 		}
 
+		this.statistics["hp"] = this.statistics["hp"].toFixed(1);
 		this.statistics["piercing"] = Math.floor(this.calculatePiercing(piercingValues)*10)/10;
-		console.log(hardnessValues);
+		this.statistics["fuel_usage"] = Math.floor(this.statistics["fuel_usage"] * 10)/10;
 		this.statistics["hardness"] = Math.floor(this.average(hardnessValues)*100);
 		this.statistics["armor"] = Math.floor(this.calculateArmor(armorValues)*10)/10;
 		this.statistics["organization"] = Math.floor(this.average(organizationValues)*10)/10;
@@ -203,6 +208,7 @@ export class DivisionDesignerPage implements OnInit {
 		this.addRegimentNumber = undefined;
 
 		this.calculateStatistics()
+		this.divisionType = this.getDivisionType();
 		this.modalController.dismiss();
 	}
 
@@ -235,6 +241,7 @@ export class DivisionDesignerPage implements OnInit {
 						this.showToast(`${regiment.regiment.regiment_name} removed!`);
 						this.totalRegiments -= regiment.number;
 						this.calculateStatistics()
+						this.divisionType = this.getDivisionType();
 					}
 				}
 			]
@@ -282,7 +289,7 @@ export class DivisionDesignerPage implements OnInit {
 	async rename() {
 		const prompt = await this.alertController.create({
 			header: "Rename",
-			message: "Change the division name",
+			message: "Choose a division name",
 			inputs: [
 				{
 					name: "divisionName",
@@ -314,6 +321,32 @@ export class DivisionDesignerPage implements OnInit {
 		});
 
 		toast.present();
+	}
+
+	getDivisionType(): string {
+		let maxPriority = 0;
+		let divisionType = "";
+		for(let i = 0; i < this.regiments.length; i++) {
+			let regiment = this.regiments[i];
+			if(maxPriority < regiment.regiment.priority) {
+				maxPriority = regiment.regiment.priority;
+				divisionType = regiment.regiment.regiment_name;
+			}
+		}
+
+		return divisionType;
+	}
+
+	async saveDivision() {
+		let id = this.storage.getNextDivisionID();
+
+		let division = new Division(id, this.divisionName, this.getDivisionType(), this.statistics["hp"], this.statistics["organization"], 
+				this.statistics["soft_attack"], this.statistics["hard_attack"], this.statistics["piercing"], this.statistics["defense"], 
+				this.statistics["breakthrough"], this.statistics["air_attack"], this.statistics["hardness"], this.statistics["cost"], 
+				this.statistics["width"], this.statistics["armor"], this.statistics["fuel_usage"]);
+
+		this.storage.addDivision(division);
+		this.navController.back();
 	}
 }
 
