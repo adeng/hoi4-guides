@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertController, ModalController, NavController, ToastController } from '@ionic/angular';
 import { ChooseEquipmentPage } from 'src/app/components/choose-equipment/choose-equipment.page';
+import { Division, DivisionChild } from 'src/app/models/division.model';
 import { Equipment } from 'src/app/models/equipment.model';
 import { ArchetypeNeed, Regiment } from 'src/app/models/regiment.model';
 import { DivisionsService } from 'src/app/services/divisions.service';
-import { Division } from 'src/app/models/division.model';
 import { SourceService } from 'src/app/services/source.service';
-import { StorageService } from 'src/app/services/storage.service';
 
 @Component({
 	selector: 'app-division-designer',
@@ -54,7 +53,7 @@ export class DivisionDesignerPage implements OnInit {
 	};
 
 	constructor(private modalController: ModalController, private alertController: AlertController, 
-		private toastController: ToastController, private source: SourceService, private storage: StorageService, private navController: NavController) {
+		private toastController: ToastController, private source: SourceService, private divisions: DivisionsService, private navController: NavController) {
 		this.archetypeMap = new Map<string, Array<ArchetypeNeed>>();
 		this.equipmentMap = new Map<string, Equipment>();
 		this.validRegiments = source.getValidRegiments();
@@ -328,8 +327,8 @@ export class DivisionDesignerPage implements OnInit {
 		let divisionType = "";
 		for(let i = 0; i < this.regiments.length; i++) {
 			let regiment = this.regiments[i];
-			if(maxPriority < regiment.regiment.priority) {
-				maxPriority = regiment.regiment.priority;
+			if(maxPriority < regiment.regiment.priority * regiment.number) {
+				maxPriority = regiment.regiment.priority * regiment.number;
 				divisionType = regiment.regiment.regiment_name;
 			}
 		}
@@ -338,24 +337,16 @@ export class DivisionDesignerPage implements OnInit {
 	}
 
 	async saveDivision() {
-		let id = this.storage.getNextDivisionID();
-
-		let division = new Division(id, this.divisionName, this.getDivisionType(), this.statistics["hp"], this.statistics["organization"], 
+		this.divisions.getNextDivisionID().then((data: number) => {
+			let division = new Division(data, this.divisionName, this.getDivisionType(), this.statistics["hp"], this.statistics["organization"], 
 				this.statistics["soft_attack"], this.statistics["hard_attack"], this.statistics["piercing"], this.statistics["defense"], 
 				this.statistics["breakthrough"], this.statistics["air_attack"], this.statistics["hardness"], this.statistics["cost"], 
-				this.statistics["width"], this.statistics["armor"], this.statistics["fuel_usage"]);
+				this.statistics["width"], this.statistics["armor"], this.statistics["fuel_usage"], this.regiments);
 
-		this.storage.addDivision(division);
-		this.navController.back();
-	}
-}
+			this.divisions.addDivision(division);
+			this.navController.back();
+		});
 
-export class DivisionChild {
-	regiment: Regiment;
-	number: number;
-
-	constructor(regiment: Regiment, number: number) {
-		this.regiment = regiment;
-		this.number = number;
+		
 	}
 }

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Country } from 'src/app/services/models.service';
 
 import countries from "../../../../assets/countries.json";
 
@@ -10,10 +9,10 @@ import countries from "../../../../assets/countries.json";
 })
 export class CountryListPage implements OnInit {
 
-  countries: Array<Country>;
+  // countries: Array<Country>;
 
   constructor() {
-    this.countries = countries;
+    // this.countries = countries;
   }
 
   ngOnInit() {

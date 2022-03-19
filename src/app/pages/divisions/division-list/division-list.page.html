@@ -19,29 +19,17 @@
   </div> -->
 
 	<!-- <ion-list *ngIf="divisions.length > 0"> -->
-	<ion-card>
+	<ion-card *ngFor="let division of divisions" class="division-card">
 		<ion-card-header>
-			<ion-card-subtitle>Infantry</ion-card-subtitle>
-			<ion-card-title>Division Name</ion-card-title>
+			<ion-card-subtitle>{{division.type}} Division</ion-card-subtitle>
+			<ion-card-title>{{division.name}}</ion-card-title>
 		</ion-card-header>
 		<ion-card-content>
-			<ion-chip>
+			<ion-chip *ngFor="let chip of division.regiments">
 				<ion-avatar>
-					<p class="chip-avatar">1</p>
+					<p class="chip-avatar">{{chip.number}}</p>
 				</ion-avatar>
-				<ion-label>Infantry</ion-label>
-			</ion-chip>
-			<ion-chip>
-				<ion-avatar>
-					<p class="chip-avatar">1</p>
-				</ion-avatar>
-				<ion-label>a</ion-label>
-			</ion-chip>
-			<ion-chip>
-				<ion-avatar>
-					<p class="chip-avatar">1</p>
-				</ion-avatar>
-				<ion-label>Infantry</ion-label>
+				<ion-label>{{chip.regiment.regiment_name}}</ion-label>
 			</ion-chip>
 		</ion-card-content>
 	</ion-card>

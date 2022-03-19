@@ -1,8 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
+import { DivisionChild } from 'src/app/models/division.model';
 import { Equipment } from 'src/app/models/equipment.model';
 import { ArchetypeNeed } from 'src/app/models/regiment.model';
-import { DivisionChild } from 'src/app/pages/divisions/division-designer/division-designer.page';
 import { SourceService } from 'src/app/services/source.service';
 
 @Component({

@@ -10,6 +10,7 @@ export class DivisionHomePage implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    
   }
 
 }

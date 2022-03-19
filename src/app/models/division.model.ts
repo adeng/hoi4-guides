@@ -1,3 +1,5 @@
+import { Regiment } from "./regiment.model";
+
 export class Division {
     id: number;
     name: string;
@@ -15,10 +17,11 @@ export class Division {
 	width: number;
 	armor: number;
 	fuel_usage: number;
+	regiments: Array<DivisionChild>;
 
 	constructor(id: number, name: string, type: string, hp: number, organization: number, soft_attack: number, hard_attack: number,
 		piercing: number, defense: number, breakthrough: number, air_attack: number, hardness: number, cost: number, width: number, 
-		armor: number, fuel_usage: number) {
+		armor: number, fuel_usage: number, regiments: Array<DivisionChild>) {
 			this.id = id;
 			this.name = name;
 			this.type = type;
@@ -35,5 +38,17 @@ export class Division {
 			this.width = width;
 			this.armor = armor;
 			this.fuel_usage;
+			this.regiments = regiments;
 		}
+}
+
+
+export class DivisionChild {
+	regiment: Regiment;
+	number: number;
+
+	constructor(regiment: Regiment, number: number) {
+		this.regiment = regiment;
+		this.number = number;
+	}
 }
