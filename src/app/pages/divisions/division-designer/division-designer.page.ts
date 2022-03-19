@@ -167,7 +167,6 @@ export class DivisionDesignerPage implements OnInit {
 		const modal = await this.modalController.create({
 			component: ChooseEquipmentPage,
 			componentProps: {
-				"equipmentMap": this.equipmentMap,
 				"archetypeMap": this.archetypeMap,
 				"currentRegiment": this.currentRegiment,
 				"regiments": this.regiments,

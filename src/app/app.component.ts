@@ -6,9 +6,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public appPages = [
-    { title: 'Divisions', url: '/divisions', icon: 'mail' },
-    { title: 'Designer', url: '/designer', icon: 'paper-plane' },
-    { title: 'Countries', url: '/countries', icon: 'heart' }
+    { title: 'Divisions', url: '/divisions', icon: 'clipboard' },
+    { title: 'Combat Simulator', url: '/simulator', icon: 'stats-chart' },
+    { title: 'Tank Designer', url: '/designer', icon: 'hammer' },
+    { title: 'Naval Designer', url: '/designer', icon: 'boat' },
+    { title: 'Country Guides', url: '/countries', icon: 'flag' }
   ];
   public labels = [];
   constructor() {}

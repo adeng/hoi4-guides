@@ -13,7 +13,6 @@ import { SourceService } from 'src/app/services/source.service';
 export class ChooseEquipmentPage implements OnInit {
 	@Input() archetypeMap: Map<string, Array<ArchetypeNeed>>;
 	@Input() currentRegiment: number;
-	@Input() equipmentMap: Map<string, Equipment>;
 	@Input() regiments: Array<DivisionChild>;
 	@Input() results: Array<Equipment>;
 	localEquipmentMap: Array<Array<Equipment>>;
@@ -49,7 +48,6 @@ export class ChooseEquipmentPage implements OnInit {
 	}
 	
 	segmentChanged(event: any) {
-		console.log(this.equipmentMap);
 	}
 
 	dismiss() {
