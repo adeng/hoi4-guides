@@ -14,12 +14,12 @@
 		</ion-toolbar>
 	</ion-header>
 
-	<!-- <div id="container" *ngIf="divisions.length == 0">
-    <p>No designs found!</p>
-  </div> -->
+	<div id="container" *ngIf="divisions == null || divisions.length == 0">
+		<p>No designs found!</p>
+	</div>
 
 	<!-- <ion-list *ngIf="divisions.length > 0"> -->
-	<ion-card *ngFor="let division of divisions" class="division-card">
+	<ion-card *ngFor="let division of divisions" class="division-card" [routerLink]="['/divisions/designer', division.id]">
 		<ion-card-header>
 			<ion-card-subtitle>{{division.type}} Division</ion-card-subtitle>
 			<ion-card-title>{{division.name}}</ion-card-title>

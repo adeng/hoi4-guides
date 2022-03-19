@@ -1,4 +1,5 @@
-import { Regiment } from "./regiment.model";
+import { Equipment } from "./equipment.model";
+import { ArchetypeNeed, Regiment } from "./regiment.model";
 
 export class Division {
     id: number;
@@ -18,10 +19,12 @@ export class Division {
 	armor: number;
 	fuel_usage: number;
 	regiments: Array<DivisionChild>;
+	equipmentMap: Map<string, Equipment>;
+	archetypeMap: Map<string, Array<ArchetypeNeed>>;
 
 	constructor(id: number, name: string, type: string, hp: number, organization: number, soft_attack: number, hard_attack: number,
 		piercing: number, defense: number, breakthrough: number, air_attack: number, hardness: number, cost: number, width: number, 
-		armor: number, fuel_usage: number, regiments: Array<DivisionChild>) {
+		armor: number, fuel_usage: number, regiments: Array<DivisionChild>, equipmentMap: Map<string, Equipment>, archetypeMap: Map<string, Array<ArchetypeNeed>>) {
 			this.id = id;
 			this.name = name;
 			this.type = type;
@@ -39,6 +42,8 @@ export class Division {
 			this.armor = armor;
 			this.fuel_usage;
 			this.regiments = regiments;
+			this.equipmentMap = equipmentMap;
+			this.archetypeMap = archetypeMap;
 		}
 }
 

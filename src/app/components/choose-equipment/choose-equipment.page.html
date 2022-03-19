@@ -24,10 +24,10 @@
 					<ion-label>
 						{{archetype.archetype_name}}
 					</ion-label>
-					<ion-select [(ngModel)]="results[i]"
+					<ion-select [(ngModel)]="localResults[i]"
 						(ionChange)="segmentChanged($event)">
 						<ion-select-option *ngFor="let equipment of localEquipmentMap[i]"
-							[value]="equipment">{{equipment.equipment_name}} ({{equipment.year}})</ion-select-option>
+							[value]="equipment.equipment_id">{{equipment.equipment_name}} ({{equipment.year}})</ion-select-option>
 					</ion-select>
 				</ion-item>
 			</ion-list>

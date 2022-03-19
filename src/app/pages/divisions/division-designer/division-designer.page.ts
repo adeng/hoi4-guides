@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { AlertController, ModalController, NavController, ToastController } from '@ionic/angular';
 import { ChooseEquipmentPage } from 'src/app/components/choose-equipment/choose-equipment.page';
 import { Division, DivisionChild } from 'src/app/models/division.model';
@@ -34,6 +35,8 @@ export class DivisionDesignerPage implements OnInit {
 	validRegiments: Array<Regiment>;
 	currentRegiment: number;
 	divisionType: string;
+	editing: boolean;
+	currentId: number;
 	
 	// Statistics
 	statistics: Object = {
@@ -53,11 +56,26 @@ export class DivisionDesignerPage implements OnInit {
 	};
 
 	constructor(private modalController: ModalController, private alertController: AlertController, 
-		private toastController: ToastController, private source: SourceService, private divisions: DivisionsService, private navController: NavController) {
-		this.archetypeMap = new Map<string, Array<ArchetypeNeed>>();
-		this.equipmentMap = new Map<string, Equipment>();
-		this.validRegiments = source.getValidRegiments();
-		this.sortRegiments();
+		private toastController: ToastController, private source: SourceService, private divisions: DivisionsService, private navController: NavController,
+		private route: ActivatedRoute) {
+			if(this.route.snapshot.params["id"] != undefined) {
+				this.editing = true;
+				this.divisions.getDivision(this.route.snapshot.params["id"]).then((data: Division) => {
+					this.currentId = data.id;
+					this.archetypeMap = data.archetypeMap;
+					this.equipmentMap = data.equipmentMap;
+					this.regiments = data.regiments;
+					this.divisionName = data.name;
+					this.validRegiments = source.getValidRegiments();
+					this.sortRegiments();
+				});
+			} else {
+				this.editing = false;
+				this.archetypeMap = new Map<string, Array<ArchetypeNeed>>();
+				this.equipmentMap = new Map<string, Equipment>();
+				this.validRegiments = source.getValidRegiments();
+				this.sortRegiments();
+			}
 	}
 
 	ngOnInit() {
@@ -311,6 +329,7 @@ export class DivisionDesignerPage implements OnInit {
 		});
 
 		await prompt.present();
+		return prompt;
 	}
 
 	async showToast(message: string) {
@@ -336,17 +355,36 @@ export class DivisionDesignerPage implements OnInit {
 		return divisionType;
 	}
 
-	async saveDivision() {
-		this.divisions.getNextDivisionID().then((data: number) => {
-			let division = new Division(data, this.divisionName, this.getDivisionType(), this.statistics["hp"], this.statistics["organization"], 
-				this.statistics["soft_attack"], this.statistics["hard_attack"], this.statistics["piercing"], this.statistics["defense"], 
-				this.statistics["breakthrough"], this.statistics["air_attack"], this.statistics["hardness"], this.statistics["cost"], 
-				this.statistics["width"], this.statistics["armor"], this.statistics["fuel_usage"], this.regiments);
-
-			this.divisions.addDivision(division);
+	updateDivisionData() {
+		if(!this.editing) {
+			this.divisions.getNextDivisionID().then((data: number) => {
+				let division = new Division(data, this.divisionName, this.getDivisionType(), this.statistics["hp"], this.statistics["organization"], 
+					this.statistics["soft_attack"], this.statistics["hard_attack"], this.statistics["piercing"], this.statistics["defense"], 
+					this.statistics["breakthrough"], this.statistics["air_attack"], this.statistics["hardness"], this.statistics["cost"], 
+					this.statistics["width"], this.statistics["armor"], this.statistics["fuel_usage"], this.regiments, this.equipmentMap, this.archetypeMap);
+	
+				this.divisions.addDivision(division);
+				this.navController.back();
+			});
+		} else {
+			let division = new Division(this.currentId, this.divisionName, this.getDivisionType(), this.statistics["hp"], this.statistics["organization"], 
+					this.statistics["soft_attack"], this.statistics["hard_attack"], this.statistics["piercing"], this.statistics["defense"], 
+					this.statistics["breakthrough"], this.statistics["air_attack"], this.statistics["hardness"], this.statistics["cost"], 
+					this.statistics["width"], this.statistics["armor"], this.statistics["fuel_usage"], this.regiments, this.equipmentMap, this.archetypeMap);
+	
+			this.divisions.updateDivision(this.currentId, division);
 			this.navController.back();
-		});
+		}
+	}
 
-		
+	async saveDivision() {
+		if(this.divisionName == "New Division") {
+			let prompt = await this.rename();
+			await prompt.onDidDismiss();
+
+			this.updateDivisionData();
+		}
+		else
+			this.updateDivisionData();				
 	}
 }

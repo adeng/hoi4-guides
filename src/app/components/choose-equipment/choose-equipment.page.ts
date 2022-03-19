@@ -13,10 +13,11 @@ import { SourceService } from 'src/app/services/source.service';
 export class ChooseEquipmentPage implements OnInit {
 	@Input() archetypeMap: Map<string, Array<ArchetypeNeed>>;
 	@Input() currentRegiment: number;
-	@Input() equipmentMap: Map<[number, string], Equipment>;
+	@Input() equipmentMap: Map<string, Equipment>;
 	@Input() regiments: Array<DivisionChild>;
 	@Input() results: Array<Equipment>;
 	localEquipmentMap: Array<Array<Equipment>>;
+	localResults: Array<string>;
 
 	constructor(private modalController: ModalController, private source: SourceService) {
 		this.localEquipmentMap = new Array<Array<Equipment>>();
@@ -27,8 +28,12 @@ export class ChooseEquipmentPage implements OnInit {
 			let x = this.sortEquipment(this.source.getValidEquipment(this.archetypeMap.get(this.regiments[this.currentRegiment].regiment.regiment_id)[i].archetype_id));
 			this.localEquipmentMap.push(x);
 		}
-	}
 
+		this.localResults = new Array<string>();
+		for(let j = 0; j < this.results.length; j++) {
+			this.localResults.push(this.results[j].equipment_id);
+		}
+	}
 	
 	sortEquipment(equipments: Array<Equipment>): Array<Equipment> {
 		let temp = equipments;
@@ -48,9 +53,14 @@ export class ChooseEquipmentPage implements OnInit {
 	}
 
 	dismiss() {
-		console.log(this.results);
+		let newResults = new Array<Equipment>();
+		for(let i = 0; i < this.localResults.length; i++) {
+			let equipments = this.localEquipmentMap[i];
+			newResults.push(equipments.find((equipment) => equipment.equipment_id == this.localResults[i]));
+		}
+
 		this.modalController.dismiss({
-			"results": this.results
+			"results": newResults
 		});
 	}
 

@@ -31,6 +31,20 @@ export class DivisionsService {
 		});
 	}
 
+	public getDivision(id: number): Promise<Division> {
+		return this.storage.get("division-list").then((data: Array<Division>) => {
+			return data[id];
+		});
+	}
+
+	public updateDivision(id: number, division: Division): Promise<void> {
+		return this.storage.get("division-list").then((data: Array<Division>) => {
+			let divisions = data;
+			divisions[id] = division;
+			this.storage.set("division-list", divisions);
+		});
+	}
+
 	public getNextDivisionID(): Promise<number> {
 		return this.storage.get("division-list").then((data: Array<Division>) => {
 			if(data == null)
