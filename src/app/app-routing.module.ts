@@ -15,6 +15,22 @@ const routes: Routes = [
     path: 'divisions',
     loadChildren: () => import('./pages/divisions/division-list/division-list.module').then( m => m.DivisionListPageModule)
   },
+  {
+    path: 'divisions/designer',
+    loadChildren: () => import('./pages/divisions/division-designer/division-designer.module').then( m => m.DivisionDesignerPageModule)
+  },
+  {
+    path: 'divisions/designer/:id',
+    loadChildren: () => import('./pages/divisions/division-designer/division-designer.module').then( m => m.DivisionDesignerPageModule)
+  },
+  {
+    path: 'simulator',
+    loadChildren: () => import('./pages/simulator/simulator-options/simulator-options.module').then( m => m.SimulatorOptionsPageModule)
+  },
+  {
+    path: 'simulator/results',
+    loadChildren: () => import('./pages/simulator/simulator-results/simulator-results.module').then( m => m.SimulatorResultsPageModule)
+  }
   // {
   //   path: 'divisions/all',
   //   loadChildren: () => import('./pages/divisions/division-list/division-list.module').then( m => m.DivisionListPageModule)
@@ -31,18 +47,6 @@ const routes: Routes = [
   //   path: 'designer',
   //   loadChildren: () => import('./pages/designs/design-list/design-list-routing.module').then( m => m.DesignListPageRoutingModule)
   // },
-  {
-    path: 'divisions/designer',
-    loadChildren: () => import('./pages/divisions/division-designer/division-designer.module').then( m => m.DivisionDesignerPageModule)
-  },
-  {
-    path: 'divisions/designer/:id',
-    loadChildren: () => import('./pages/divisions/division-designer/division-designer.module').then( m => m.DivisionDesignerPageModule)
-  },
-  {
-    path: 'choose-equipment',
-    loadChildren: () => import('./components/choose-equipment/choose-equipment.module').then( m => m.ChooseEquipmentPageModule)
-  }
 ];
 
 @NgModule({

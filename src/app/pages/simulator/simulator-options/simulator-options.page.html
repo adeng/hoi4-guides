@@ -1,0 +1,126 @@
+<ion-header [translucent]="true">
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-menu-button></ion-menu-button>
+		</ion-buttons>
+		<ion-title>Combat Simulator</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-header collapse="condense">
+		<ion-toolbar>
+			<ion-title size="large">Combat Simulator</ion-title>
+		</ion-toolbar>
+	</ion-header>
+
+	<div class="description">
+		<p>Choose two divisions to pit against each other:</p>
+	</div>
+
+	<ion-card class="attacker-card division-card">
+		<ion-card-header>
+			<ion-card-subtitle>Attacker</ion-card-subtitle>
+		</ion-card-header>
+		<ion-card-content>
+			<ion-list>
+				<ion-item>
+					<ion-label>Attacking Division</ion-label>
+					<ion-select [(ngModel)]="attackingDivision" *ngFor="let division of divisions">
+						<ion-select-option [value]="division">{{division.name}}</ion-select-option>
+					</ion-select>
+				</ion-item>
+				<ion-item>
+					<ion-label>Experience</ion-label>
+					<ion-select [disabled]="true" value="1">
+						<ion-select-option value="0">Green</ion-select-option>
+						<ion-select-option value="1">Trained</ion-select-option>
+						<ion-select-option value="2">Regular</ion-select-option>
+						<ion-select-option value="3">Seasoned</ion-select-option>
+						<ion-select-option value="4">Veterans</ion-select-option>
+					</ion-select>
+				</ion-item>
+			</ion-list>
+			<ion-accordion-group>
+				<ion-accordion>
+					<ion-item slot="header">
+						<ion-label>Modifiers</ion-label>
+					</ion-item>
+					<ion-list slot="content">
+						<ion-item>
+							<label>Air Superiority</label>
+							<ion-checkbox color="secondary" slot="end" [disabled]="true"></ion-checkbox>
+						</ion-item>
+						<ion-item>
+							<label>Shore Bombardment</label>
+							<ion-checkbox color="secondary" slot="end" [disabled]="true"></ion-checkbox>
+						</ion-item>
+						<ion-item>
+							<label>Railway Gun</label>
+							<ion-checkbox color="secondary" slot="end" [disabled]="true"></ion-checkbox>
+						</ion-item>
+					</ion-list>
+				</ion-accordion>
+			</ion-accordion-group>
+		</ion-card-content>
+	</ion-card>
+	
+	<ion-card class="defender-card division-card">
+		<ion-card-header>
+			<ion-card-subtitle>Defender</ion-card-subtitle>
+		</ion-card-header>
+		<ion-card-content>
+			<ion-list>
+				<ion-item>
+					<ion-label>Defending Division</ion-label>
+					<ion-select [(ngModel)]="defendingDivision" *ngFor="let division of divisions">
+						<ion-select-option [value]="division">{{division.name}}</ion-select-option>
+					</ion-select>
+				</ion-item>
+				<ion-item>
+					<ion-label>Experience</ion-label>
+					<ion-select [disabled]="true" value="1">
+						<ion-select-option value="0">Green</ion-select-option>
+						<ion-select-option value="1">Trained</ion-select-option>
+						<ion-select-option value="2">Regular</ion-select-option>
+						<ion-select-option value="3">Seasoned</ion-select-option>
+						<ion-select-option value="4">Veterans</ion-select-option>
+					</ion-select>
+				</ion-item>
+			</ion-list>
+		</ion-card-content>
+	</ion-card>
+	
+	<ion-card class="division-card">
+		<ion-card-header>
+			<ion-card-subtitle>Modifiers</ion-card-subtitle>
+		</ion-card-header>
+		<ion-card-content>
+			<ion-list>
+				<ion-item>
+					<ion-label>Terrain</ion-label>
+					<ion-select [disabled]=true>
+						<ion-select-option value="forest">Forest</ion-select-option>
+						<ion-select-option value="hills">Hills</ion-select-option>
+						<ion-select-option value="mountain">Mountain</ion-select-option>
+						<ion-select-option value="plains">Plains</ion-select-option>
+						<ion-select-option value="urban">Urban</ion-select-option>
+						<ion-select-option value="jungle">Jungle</ion-select-option>
+						<ion-select-option value="marsh">Marsh</ion-select-option>
+						<ion-select-option value="desert">Desert</ion-select-option>
+						<ion-select-option value="river">River</ion-select-option>
+						<ion-select-option value="amphibious">Amphibious</ion-select-option>
+						<ion-select-option value="fort">Fort</ion-select-option>
+					</ion-select>
+				</ion-item>
+			</ion-list>
+		</ion-card-content>
+	</ion-card>
+
+	<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+		<ion-fab-button [disabled]="attackingDivision == null || defendingDivision == null"
+			[routerLink]="['/simulator/results']" [queryParams]="{ attacker: attackingDivision, defender: defendingDivision }">
+			<ion-icon name="play"></ion-icon>
+		</ion-fab-button>
+	</ion-fab>
+</ion-content>

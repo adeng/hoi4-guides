@@ -68,6 +68,7 @@ export class DivisionDesignerPage implements OnInit {
 					this.divisionName = data.name;
 					this.validRegiments = source.getValidRegiments();
 					this.sortRegiments();
+					this.calculateStatistics()
 				});
 			} else {
 				this.editing = false;

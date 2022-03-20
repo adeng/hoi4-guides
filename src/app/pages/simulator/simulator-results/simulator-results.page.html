@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+	<ion-toolbar *ngIf="!loading">
+		<ion-buttons slot="start">
+			<ion-menu-button></ion-menu-button>
+		</ion-buttons>
+		<ion-title>Combat Simulator</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-header collapse="condense" *ngIf="!loading">
+		<ion-toolbar>
+			<ion-title size="large">Combat Simulator</ion-title>
+		</ion-toolbar>
+	</ion-header>
+
+	<div id="container" *ngIf="loading">
+		<ion-spinner color="secondary"></ion-spinner>
+		<p>Calculating combat results...</p>
+	</div>
+</ion-content>
