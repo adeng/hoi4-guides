@@ -13,6 +13,7 @@ import { SourceService } from 'src/app/services/source.service';
 export class ChooseEquipmentPage implements OnInit {
 	@Input() archetypeMap: Map<string, Array<ArchetypeNeed>>;
 	@Input() currentRegiment: number;
+	@Input() equipmentMap: Map<string, Equipment>;
 	@Input() regiments: Array<DivisionChild>;
 	@Input() results: Array<Equipment>;
 	localEquipmentMap: Array<Array<Equipment>>;
@@ -27,6 +28,8 @@ export class ChooseEquipmentPage implements OnInit {
 			let x = this.sortEquipment(this.source.getValidEquipment(this.archetypeMap.get(this.regiments[this.currentRegiment].regiment.regiment_id)[i].archetype_id));
 			this.localEquipmentMap.push(x);
 		}
+
+		console.log(this.localEquipmentMap);
 
 		this.localResults = new Array<string>();
 		for(let j = 0; j < this.results.length; j++) {
@@ -48,6 +51,7 @@ export class ChooseEquipmentPage implements OnInit {
 	}
 	
 	segmentChanged(event: any) {
+		console.log(this.equipmentMap);
 	}
 
 	dismiss() {

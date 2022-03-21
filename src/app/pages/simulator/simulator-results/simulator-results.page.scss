@@ -12,11 +12,57 @@
         transform: scale(2);
         margin-bottom: 5%;
     }
+}
+
+p {
+    font-size: 16px;
+    line-height: 22px;
+    color: #8c8c8c;
+    text-align: center;
+}
+
+ion-card {
+    margin: 20px;
+}
+
+.win-chart {
+    height: 200px;
+    margin-bottom: 15px;
+}
+
+.stat-chart {
+    height: 250px;
+}
+
+.win-list {
+    .win-list-header {
+        text-align: center;
+        font-size: normal;
+        font-weight: bold;
+    }
+
+    ion-label {
+        font-size: small;
+    }
+
+    ion-note {
+        font-size: small;
+    }
+}
+
+.header-list {
+    ion-col {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    ion-col:nth-child(odd) {
+        font-weight: bold;
+    }
 
     p {
-        font-size: 16px;
-        line-height: 22px;
-        color: #8c8c8c;
-        text-align: center;
+        font-size: x-small;
     }
 }

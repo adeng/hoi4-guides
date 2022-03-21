@@ -23,4 +23,11 @@ export class SimulatorOptionsPage implements OnInit {
 	ngOnInit() {
 	}
 
+	getQueryParams(): Object {
+		return {
+			attacker: JSON.stringify(this.attackingDivision),
+			defender: JSON.stringify(this.defendingDivision)
+		};
+	}
+
 }

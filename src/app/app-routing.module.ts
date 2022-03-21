@@ -30,6 +30,10 @@ const routes: Routes = [
   {
     path: 'simulator/results',
     loadChildren: () => import('./pages/simulator/simulator-results/simulator-results.module').then( m => m.SimulatorResultsPageModule)
+  },
+  {
+    path: 'choose-equipment',
+    loadChildren: () => import('./components/choose-equipment/choose-equipment.module').then( m => m.ChooseEquipmentPageModule)
   }
   // {
   //   path: 'divisions/all',
