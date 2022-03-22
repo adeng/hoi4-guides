@@ -137,7 +137,8 @@ export class DivisionDesignerPage implements OnInit {
 			this.statistics["fuel_usage"] += (Math.max(...localFuelUsage) * num);
 		}
 
-		this.statistics["hp"] = this.statistics["hp"].toFixed(1);
+		this.statistics["hp"] = Math.round(this.statistics["hp"]);
+		this.statistics["cost"] = Math.round(this.statistics["cost"]);
 		this.statistics["piercing"] = Math.floor(this.calculatePiercing(piercingValues)*10)/10;
 		this.statistics["fuel_usage"] = Math.floor(this.statistics["fuel_usage"] * 10)/10;
 		this.statistics["hardness"] = Math.floor(this.average(hardnessValues)*100);
@@ -305,6 +306,9 @@ export class DivisionDesignerPage implements OnInit {
 	}
 
 	async rename() {
+		if(this.editing)
+			return;
+
 		const prompt = await this.alertController.create({
 			header: "Rename",
 			message: "Choose a division name",

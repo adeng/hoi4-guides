@@ -47,7 +47,7 @@
 	<ion-card id="division-card" *ngIf="regiments.length > 0">
 		<ion-card-header (click)="rename()">
 			<strong>{{divisionName}}</strong>
-			<ion-icon name="pencil" color="secondary"></ion-icon>
+			<ion-icon name="pencil" color="secondary" *ngIf="!editing"></ion-icon>
 			<ion-ripple-effect></ion-ripple-effect>
 		</ion-card-header>
 

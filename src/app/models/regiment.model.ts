@@ -15,3 +15,15 @@ export class ArchetypeNeed {
     archetype_name: string;
     number: number;
 }
+
+export class TerrainModifier {
+    terrain: string;
+    regiments: Array<RegimentTerrainModifier>;
+}
+
+export class RegimentTerrainModifier {
+    regiment_id: string;
+    attack: number;
+    defense: number;
+    movement: number;
+}

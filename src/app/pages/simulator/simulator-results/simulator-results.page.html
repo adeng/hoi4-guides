@@ -69,7 +69,7 @@
 
 	<ion-card *ngIf="!loading">
 		<ion-card-header>
-			<ion-card-subtitle>Post-Battle Results</ion-card-subtitle>
+			<ion-card-subtitle>Post-Battle Losses</ion-card-subtitle>
 		</ion-card-header>
 		<ion-card-content>
 			<div class="stat-chart">
@@ -88,11 +88,11 @@
 						</ion-item>
 						<ion-item lines="inset">
 							<ion-label>Remaining HP</ion-label>
-							<ion-note>50%</ion-note>
+							<ion-note>{{attackerRemainingHP/100 | percent}}</ion-note>
 						</ion-item>
 						<ion-item lines="none">
 							<ion-label>Remaining Org</ion-label>
-							<ion-note>50%</ion-note>
+							<ion-note>{{attackerRemainingOrg/100 | percent}}</ion-note>
 						</ion-item>
 					</ion-list>
 				</ion-col>
@@ -103,15 +103,29 @@
 						</ion-item>
 						<ion-item lines="inset">
 							<ion-label>Remaining HP</ion-label>
-							<ion-note>50%</ion-note>
+							<ion-note>{{defenderRemainingHP/100 | percent}}</ion-note>
 						</ion-item>
 						<ion-item lines="none">
 							<ion-label>Remaining Org</ion-label>
-							<ion-note>50%</ion-note>
+							<ion-note>{{defenderRemainingOrg/100 | percent}}</ion-note>
 						</ion-item>
 					</ion-list>				
 				</ion-col>
 			</ion-row>
 		</ion-grid>
 	</ion-card>
+
+	<!-- <ion-card *ngIf="!loading">
+		<ion-card-header>
+			<ion-card-subtitle>Division Comparison</ion-card-subtitle>
+		</ion-card-header>
+		<ion-card-content>
+			<div class="compare-chart">
+				<canvas baseChart
+						[data]="compareChartData"
+						[type]="compareChartType"
+						[options]="compareChartOptions"></canvas>
+			</div>
+		</ion-card-content>
+	</ion-card> -->
 </ion-content>

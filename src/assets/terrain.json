@@ -1,0 +1,2343 @@
+[
+  {
+    "terrain": "amphibious",
+    "regiments": [
+      {
+        "regiment_id": "amphibious_armor",
+        "attack": 0.6,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "amphibious_heavy_armor",
+        "attack": 0.6,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "amphibious_light_armor",
+        "attack": 0.6,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "amphibious_mechanized",
+        "attack": 0.5,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "amphibious_medium_armor",
+        "attack": 0.6,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "anti_air_brigade",
+        "attack": -0.4,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "anti_tank_brigade",
+        "attack": -0.4,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "armored_car",
+        "attack": -0.4,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "artillery_brigade",
+        "attack": -0.4,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "bicycle_battalion",
+        "attack": 0.0,
+        "defense": 0.0,
+        "movement": -0.05
+      },
+      {
+        "regiment_id": "camelry",
+        "attack": -0.4,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "cavalry",
+        "attack": -0.4,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "engineer",
+        "attack": 0.25,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "heavy_armor",
+        "attack": -0.9,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "heavy_flame_tank",
+        "attack": 0.1,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "heavy_sp_anti_air_brigade",
+        "attack": -0.8,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "heavy_sp_artillery_brigade",
+        "attack": -0.8,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "heavy_tank_destroyer_brigade",
+        "attack": -0.8,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "light_armor",
+        "attack": -0.4,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "light_flame_tank",
+        "attack": 0.1,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "light_sp_anti_air_brigade",
+        "attack": -0.6,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "light_sp_artillery_brigade",
+        "attack": -0.6,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "light_tank_destroyer_brigade",
+        "attack": -0.6,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "marine",
+        "attack": 0.5,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "mechanized",
+        "attack": -0.4,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "medium_armor",
+        "attack": -0.8,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "medium_flame_tank",
+        "attack": 0.1,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "medium_sp_anti_air_brigade",
+        "attack": -0.7,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "medium_sp_artillery_brigade",
+        "attack": -0.7,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "medium_tank_destroyer_brigade",
+        "attack": -0.7,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "modern_armor",
+        "attack": -0.7,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "modern_sp_anti_air_brigade",
+        "attack": -0.7,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "modern_sp_artillery_brigade",
+        "attack": -0.7,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "modern_tank_destroyer_brigade",
+        "attack": -0.7,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "mot_anti_air_brigade",
+        "attack": -0.4,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "mot_anti_tank_brigade",
+        "attack": -0.4,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "mot_artillery_brigade",
+        "attack": -0.4,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "mot_rocket_artillery_brigade",
+        "attack": -0.4,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "motorized",
+        "attack": -0.2,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "motorized_rocket_brigade",
+        "attack": -0.4,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "rocket_artillery_brigade",
+        "attack": -0.4,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "super_heavy_armor",
+        "attack": -1.0,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "super_heavy_sp_anti_air_brigade",
+        "attack": -1.0,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "super_heavy_sp_artillery_brigade",
+        "attack": -1.0,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "super_heavy_tank_destroyer_brigade",
+        "attack": -1.0,
+        "defense": 0.0,
+        "movement": 0.0
+      }
+    ]
+  },
+  {
+    "terrain": "desert",
+    "regiments": [
+      {
+        "regiment_id": "armored_car",
+        "attack": 0.0,
+        "defense": 0.0,
+        "movement": 0.15
+      },
+      {
+        "regiment_id": "armored_car_recon",
+        "attack": 0.0,
+        "defense": 0.0,
+        "movement": 0.15
+      },
+      {
+        "regiment_id": "bicycle_battalion",
+        "attack": 0.0,
+        "defense": 0.0,
+        "movement": 0.05
+      },
+      {
+        "regiment_id": "camelry",
+        "attack": 0.05,
+        "defense": 0.0,
+        "movement": 0.1
+      },
+      {
+        "regiment_id": "light_tank_recon",
+        "attack": 0.0,
+        "defense": 0.0,
+        "movement": 0.1
+      },
+      {
+        "regiment_id": "mot_recon",
+        "attack": 0.0,
+        "defense": 0.0,
+        "movement": 0.2
+      },
+      {
+        "regiment_id": "recon",
+        "attack": 0.0,
+        "defense": 0.0,
+        "movement": 0.05
+      }
+    ]
+  },
+  {
+    "terrain": "forest",
+    "regiments": [
+      {
+        "regiment_id": "amphibious_armor",
+        "attack": -0.2,
+        "defense": 0.0,
+        "movement": -0.4
+      },
+      {
+        "regiment_id": "amphibious_heavy_armor",
+        "attack": -0.2,
+        "defense": 0.0,
+        "movement": -0.4
+      },
+      {
+        "regiment_id": "amphibious_light_armor",
+        "attack": -0.2,
+        "defense": 0.0,
+        "movement": -0.4
+      },
+      {
+        "regiment_id": "amphibious_mechanized",
+        "attack": -0.2,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "amphibious_medium_armor",
+        "attack": -0.2,
+        "defense": 0.0,
+        "movement": -0.4
+      },
+      {
+        "regiment_id": "anti_air_brigade",
+        "attack": -0.1,
+        "defense": 0.0,
+        "movement": -0.1
+      },
+      {
+        "regiment_id": "anti_tank_brigade",
+        "attack": -0.2,
+        "defense": 0.0,
+        "movement": -0.2
+      },
+      {
+        "regiment_id": "armored_car",
+        "attack": -0.2,
+        "defense": 0.0,
+        "movement": -0.4
+      },
+      {
+        "regiment_id": "armored_car_recon",
+        "attack": 0.0,
+        "defense": 0.0,
+        "movement": 0.05
+      },
+      {
+        "regiment_id": "artillery_brigade",
+        "attack": -0.2,
+        "defense": 0.0,
+        "movement": -0.2
+      },
+      {
+        "regiment_id": "bicycle_battalion",
+        "attack": 0.0,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "camelry",
+        "attack": -0.05,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "cavalry",
+        "attack": -0.05,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "engineer",
+        "attack": 0.0,
+        "defense": 0.0,
+        "movement": 0.05
+      },
+      {
+        "regiment_id": "heavy_armor",
+        "attack": -0.4,
+        "defense": 0.0,
+        "movement": -0.4
+      },
+      {
+        "regiment_id": "heavy_flame_tank",
+        "attack": 0.15,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "heavy_sp_anti_air_brigade",
+        "attack": -0.4,
+        "defense": 0.0,
+        "movement": -0.4
+      },
+      {
+        "regiment_id": "heavy_sp_artillery_brigade",
+        "attack": -0.4,
+        "defense": 0.0,
+        "movement": -0.4
+      },
+      {
+        "regiment_id": "heavy_tank_destroyer_brigade",
+        "attack": -0.4,
+        "defense": 0.0,
+        "movement": -0.4
+      },
+      {
+        "regiment_id": "light_armor",
+        "attack": -0.2,
+        "defense": 0.0,
+        "movement": -0.4
+      },
+      {
+        "regiment_id": "light_flame_tank",
+        "attack": 0.15,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "light_sp_anti_air_brigade",
+        "attack": -0.2,
+        "defense": 0.0,
+        "movement": -0.4
+      },
+      {
+        "regiment_id": "light_sp_artillery_brigade",
+        "attack": -0.2,
+        "defense": 0.0,
+        "movement": -0.4
+      },
+      {
+        "regiment_id": "light_tank_destroyer_brigade",
+        "attack": -0.2,
+        "defense": 0.0,
+        "movement": -0.4
+      },
+      {
+        "regiment_id": "light_tank_recon",
+        "attack": 0.0,
+        "defense": 0.0,
+        "movement": 0.1
+      },
+      {
+        "regiment_id": "mechanized",
+        "attack": -0.2,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "medium_armor",
+        "attack": -0.3,
+        "defense": 0.0,
+        "movement": -0.4
+      },
+      {
+        "regiment_id": "medium_flame_tank",
+        "attack": 0.15,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "medium_sp_anti_air_brigade",
+        "attack": -0.3,
+        "defense": 0.0,
+        "movement": -0.4
+      },
+      {
+        "regiment_id": "medium_sp_artillery_brigade",
+        "attack": -0.3,
+        "defense": 0.0,
+        "movement": -0.4
+      },
+      {
+        "regiment_id": "medium_tank_destroyer_brigade",
+        "attack": -0.3,
+        "defense": 0.0,
+        "movement": -0.4
+      },
+      {
+        "regiment_id": "modern_armor",
+        "attack": -0.3,
+        "defense": 0.0,
+        "movement": -0.4
+      },
+      {
+        "regiment_id": "modern_sp_anti_air_brigade",
+        "attack": -0.3,
+        "defense": 0.0,
+        "movement": -0.4
+      },
+      {
+        "regiment_id": "modern_sp_artillery_brigade",
+        "attack": -0.3,
+        "defense": 0.0,
+        "movement": -0.4
+      },
+      {
+        "regiment_id": "modern_tank_destroyer_brigade",
+        "attack": -0.3,
+        "defense": 0.0,
+        "movement": -0.4
+      },
+      {
+        "regiment_id": "mot_anti_air_brigade",
+        "attack": -0.1,
+        "defense": 0.0,
+        "movement": -0.5
+      },
+      {
+        "regiment_id": "mot_anti_tank_brigade",
+        "attack": -0.2,
+        "defense": 0.0,
+        "movement": -0.5
+      },
+      {
+        "regiment_id": "mot_artillery_brigade",
+        "attack": -0.2,
+        "defense": 0.0,
+        "movement": -0.5
+      },
+      {
+        "regiment_id": "mot_recon",
+        "attack": 0.0,
+        "defense": 0.0,
+        "movement": 0.05
+      },
+      {
+        "regiment_id": "mot_rocket_artillery_brigade",
+        "attack": -0.2,
+        "defense": 0.0,
+        "movement": -0.5
+      },
+      {
+        "regiment_id": "motorized",
+        "attack": -0.1,
+        "defense": 0.0,
+        "movement": -0.5
+      },
+      {
+        "regiment_id": "motorized_rocket_brigade",
+        "attack": -0.1,
+        "defense": 0.0,
+        "movement": -0.5
+      },
+      {
+        "regiment_id": "recon",
+        "attack": 0.0,
+        "defense": 0.0,
+        "movement": 0.05
+      },
+      {
+        "regiment_id": "rocket_artillery_brigade",
+        "attack": -0.2,
+        "defense": 0.0,
+        "movement": -0.2
+      },
+      {
+        "regiment_id": "super_heavy_armor",
+        "attack": -0.5,
+        "defense": 0.0,
+        "movement": -0.4
+      },
+      {
+        "regiment_id": "super_heavy_sp_anti_air_brigade",
+        "attack": -0.5,
+        "defense": 0.0,
+        "movement": -0.4
+      },
+      {
+        "regiment_id": "super_heavy_sp_artillery_brigade",
+        "attack": -0.5,
+        "defense": 0.0,
+        "movement": -0.4
+      },
+      {
+        "regiment_id": "super_heavy_tank_destroyer_brigade",
+        "attack": -0.5,
+        "defense": 0.0,
+        "movement": -0.4
+      }
+    ]
+  },
+  {
+    "terrain": "fort",
+    "regiments": [
+      {
+        "regiment_id": "anti_tank_brigade",
+        "attack": 0.1,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "artillery_brigade",
+        "attack": 0.1,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "engineer",
+        "attack": 0.1,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "heavy_armor",
+        "attack": 0.1,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "heavy_flame_tank",
+        "attack": 0.2,
+        "defense": 0.0,
+        "movement": 0.1
+      },
+      {
+        "regiment_id": "heavy_tank_destroyer_brigade",
+        "attack": 0.05,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "light_flame_tank",
+        "attack": 0.25,
+        "defense": 0.0,
+        "movement": 0.1
+      },
+      {
+        "regiment_id": "medium_flame_tank",
+        "attack": 0.25,
+        "defense": 0.0,
+        "movement": 0.1
+      },
+      {
+        "regiment_id": "mot_anti_tank_brigade",
+        "attack": 0.1,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "mot_artillery_brigade",
+        "attack": 0.1,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "mot_rocket_artillery_brigade",
+        "attack": 0.1,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "motorized_rocket_brigade",
+        "attack": 0.1,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "rocket_artillery_brigade",
+        "attack": 0.1,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "super_heavy_armor",
+        "attack": 0.5,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "super_heavy_tank_destroyer_brigade",
+        "attack": 0.3,
+        "defense": 0.0,
+        "movement": 0.0
+      }
+    ]
+  },
+  {
+    "terrain": "hills",
+    "regiments": [
+      {
+        "regiment_id": "anti_tank_brigade",
+        "attack": 0.0,
+        "defense": 0.0,
+        "movement": -0.05
+      },
+      {
+        "regiment_id": "armored_car_recon",
+        "attack": 0.0,
+        "defense": 0.0,
+        "movement": 0.1
+      },
+      {
+        "regiment_id": "artillery_brigade",
+        "attack": 0.0,
+        "defense": 0.0,
+        "movement": -0.05
+      },
+      {
+        "regiment_id": "bicycle_battalion",
+        "attack": 0.0,
+        "defense": 0.0,
+        "movement": 0.1
+      },
+      {
+        "regiment_id": "camelry",
+        "attack": -0.05,
+        "defense": 0.0,
+        "movement": -0.05
+      },
+      {
+        "regiment_id": "cavalry",
+        "attack": -0.05,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "engineer",
+        "attack": 0.0,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "heavy_armor",
+        "attack": -0.2,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "heavy_flame_tank",
+        "attack": 0.05,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "heavy_sp_anti_air_brigade",
+        "attack": -0.2,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "heavy_sp_artillery_brigade",
+        "attack": -0.2,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "heavy_tank_destroyer_brigade",
+        "attack": -0.2,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "light_flame_tank",
+        "attack": 0.05,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "light_tank_recon",
+        "attack": 0.0,
+        "defense": 0.0,
+        "movement": 0.1
+      },
+      {
+        "regiment_id": "medium_armor",
+        "attack": -0.1,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "medium_flame_tank",
+        "attack": 0.05,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "medium_sp_anti_air_brigade",
+        "attack": -0.1,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "medium_sp_artillery_brigade",
+        "attack": -0.1,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "medium_tank_destroyer_brigade",
+        "attack": -0.1,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "modern_armor",
+        "attack": -0.1,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "modern_sp_anti_air_brigade",
+        "attack": -0.1,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "modern_sp_artillery_brigade",
+        "attack": -0.1,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "modern_tank_destroyer_brigade",
+        "attack": -0.1,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "mot_anti_tank_brigade",
+        "attack": 0.0,
+        "defense": 0.0,
+        "movement": -0.05
+      },
+      {
+        "regiment_id": "mot_artillery_brigade",
+        "attack": 0.0,
+        "defense": 0.0,
+        "movement": -0.05
+      },
+      {
+        "regiment_id": "mot_recon",
+        "attack": 0.0,
+        "defense": 0.0,
+        "movement": 0.1
+      },
+      {
+        "regiment_id": "mot_rocket_artillery_brigade",
+        "attack": 0.0,
+        "defense": 0.0,
+        "movement": -0.05
+      },
+      {
+        "regiment_id": "motorized_rocket_brigade",
+        "attack": 0.0,
+        "defense": 0.0,
+        "movement": -0.05
+      },
+      {
+        "regiment_id": "mountaineers",
+        "attack": 0.2,
+        "defense": 0.0,
+        "movement": 0.1
+      },
+      {
+        "regiment_id": "recon",
+        "attack": 0.0,
+        "defense": 0.0,
+        "movement": 0.1
+      },
+      {
+        "regiment_id": "rocket_artillery_brigade",
+        "attack": 0.0,
+        "defense": 0.0,
+        "movement": -0.05
+      },
+      {
+        "regiment_id": "super_heavy_armor",
+        "attack": -0.3,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "super_heavy_sp_anti_air_brigade",
+        "attack": -0.3,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "super_heavy_sp_artillery_brigade",
+        "attack": -0.3,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "super_heavy_tank_destroyer_brigade",
+        "attack": -0.3,
+        "defense": 0.0,
+        "movement": 0.0
+      }
+    ]
+  },
+  {
+    "terrain": "jungle",
+    "regiments": [
+      {
+        "regiment_id": "amphibious_armor",
+        "attack": -0.3,
+        "defense": 0.0,
+        "movement": -0.4
+      },
+      {
+        "regiment_id": "amphibious_heavy_armor",
+        "attack": -0.3,
+        "defense": 0.0,
+        "movement": -0.4
+      },
+      {
+        "regiment_id": "amphibious_light_armor",
+        "attack": -0.3,
+        "defense": 0.0,
+        "movement": -0.4
+      },
+      {
+        "regiment_id": "amphibious_mechanized",
+        "attack": -0.3,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "amphibious_medium_armor",
+        "attack": -0.3,
+        "defense": 0.0,
+        "movement": -0.4
+      },
+      {
+        "regiment_id": "anti_air_brigade",
+        "attack": -0.2,
+        "defense": 0.0,
+        "movement": -0.2
+      },
+      {
+        "regiment_id": "anti_tank_brigade",
+        "attack": -0.25,
+        "defense": 0.0,
+        "movement": -0.2
+      },
+      {
+        "regiment_id": "armored_car",
+        "attack": -0.3,
+        "defense": 0.0,
+        "movement": -0.5
+      },
+      {
+        "regiment_id": "armored_car_recon",
+        "attack": 0.0,
+        "defense": 0.0,
+        "movement": 0.05
+      },
+      {
+        "regiment_id": "artillery_brigade",
+        "attack": -0.25,
+        "defense": 0.0,
+        "movement": -0.2
+      },
+      {
+        "regiment_id": "camelry",
+        "attack": -0.1,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "cavalry",
+        "attack": -0.1,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "engineer",
+        "attack": 0.0,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "heavy_armor",
+        "attack": -0.6,
+        "defense": 0.0,
+        "movement": -0.4
+      },
+      {
+        "regiment_id": "heavy_flame_tank",
+        "attack": 0.2,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "heavy_sp_anti_air_brigade",
+        "attack": -0.6,
+        "defense": 0.0,
+        "movement": -0.4
+      },
+      {
+        "regiment_id": "heavy_sp_artillery_brigade",
+        "attack": -0.6,
+        "defense": 0.0,
+        "movement": -0.4
+      },
+      {
+        "regiment_id": "heavy_tank_destroyer_brigade",
+        "attack": -0.6,
+        "defense": 0.0,
+        "movement": -0.4
+      },
+      {
+        "regiment_id": "light_armor",
+        "attack": -0.3,
+        "defense": 0.0,
+        "movement": -0.4
+      },
+      {
+        "regiment_id": "light_flame_tank",
+        "attack": 0.2,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "light_sp_anti_air_brigade",
+        "attack": -0.3,
+        "defense": 0.0,
+        "movement": -0.4
+      },
+      {
+        "regiment_id": "light_sp_artillery_brigade",
+        "attack": -0.3,
+        "defense": 0.0,
+        "movement": -0.4
+      },
+      {
+        "regiment_id": "light_tank_destroyer_brigade",
+        "attack": -0.3,
+        "defense": 0.0,
+        "movement": -0.4
+      },
+      {
+        "regiment_id": "light_tank_recon",
+        "attack": 0.0,
+        "defense": 0.0,
+        "movement": 0.1
+      },
+      {
+        "regiment_id": "mechanized",
+        "attack": -0.3,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "medium_armor",
+        "attack": -0.4,
+        "defense": 0.0,
+        "movement": -0.4
+      },
+      {
+        "regiment_id": "medium_flame_tank",
+        "attack": 0.2,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "medium_sp_anti_air_brigade",
+        "attack": -0.4,
+        "defense": 0.0,
+        "movement": -0.4
+      },
+      {
+        "regiment_id": "medium_sp_artillery_brigade",
+        "attack": -0.4,
+        "defense": 0.0,
+        "movement": -0.4
+      },
+      {
+        "regiment_id": "medium_tank_destroyer_brigade",
+        "attack": -0.4,
+        "defense": 0.0,
+        "movement": -0.4
+      },
+      {
+        "regiment_id": "modern_armor",
+        "attack": -0.4,
+        "defense": 0.0,
+        "movement": -0.4
+      },
+      {
+        "regiment_id": "modern_sp_anti_air_brigade",
+        "attack": -0.4,
+        "defense": 0.0,
+        "movement": -0.4
+      },
+      {
+        "regiment_id": "modern_sp_artillery_brigade",
+        "attack": -0.4,
+        "defense": 0.0,
+        "movement": -0.4
+      },
+      {
+        "regiment_id": "modern_tank_destroyer_brigade",
+        "attack": -0.4,
+        "defense": 0.0,
+        "movement": -0.4
+      },
+      {
+        "regiment_id": "mot_anti_air_brigade",
+        "attack": -0.2,
+        "defense": 0.0,
+        "movement": -0.5
+      },
+      {
+        "regiment_id": "mot_anti_tank_brigade",
+        "attack": -0.25,
+        "defense": 0.0,
+        "movement": -0.5
+      },
+      {
+        "regiment_id": "mot_artillery_brigade",
+        "attack": -0.25,
+        "defense": 0.0,
+        "movement": -0.5
+      },
+      {
+        "regiment_id": "mot_recon",
+        "attack": 0.0,
+        "defense": 0.0,
+        "movement": 0.05
+      },
+      {
+        "regiment_id": "mot_rocket_artillery_brigade",
+        "attack": -0.25,
+        "defense": 0.0,
+        "movement": -0.5
+      },
+      {
+        "regiment_id": "motorized",
+        "attack": -0.2,
+        "defense": 0.0,
+        "movement": -0.5
+      },
+      {
+        "regiment_id": "motorized_rocket_brigade",
+        "attack": -0.25,
+        "defense": 0.0,
+        "movement": -0.5
+      },
+      {
+        "regiment_id": "recon",
+        "attack": 0.0,
+        "defense": 0.0,
+        "movement": 0.1
+      },
+      {
+        "regiment_id": "rocket_artillery_brigade",
+        "attack": -0.25,
+        "defense": 0.0,
+        "movement": -0.2
+      },
+      {
+        "regiment_id": "super_heavy_armor",
+        "attack": -0.7,
+        "defense": 0.0,
+        "movement": -0.4
+      },
+      {
+        "regiment_id": "super_heavy_sp_anti_air_brigade",
+        "attack": -0.7,
+        "defense": 0.0,
+        "movement": -0.4
+      },
+      {
+        "regiment_id": "super_heavy_sp_artillery_brigade",
+        "attack": -0.7,
+        "defense": 0.0,
+        "movement": -0.4
+      },
+      {
+        "regiment_id": "super_heavy_tank_destroyer_brigade",
+        "attack": -0.7,
+        "defense": 0.0,
+        "movement": -0.4
+      }
+    ]
+  },
+  {
+    "terrain": "marsh",
+    "regiments": [
+      {
+        "regiment_id": "amphibious_armor",
+        "attack": 0.3,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "amphibious_heavy_armor",
+        "attack": 0.3,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "amphibious_light_armor",
+        "attack": 0.3,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "amphibious_mechanized",
+        "attack": 0.2,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "amphibious_medium_armor",
+        "attack": 0.3,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "anti_air_brigade",
+        "attack": -0.2,
+        "defense": 0.0,
+        "movement": -0.2
+      },
+      {
+        "regiment_id": "anti_tank_brigade",
+        "attack": -0.2,
+        "defense": 0.0,
+        "movement": -0.3
+      },
+      {
+        "regiment_id": "armored_car",
+        "attack": -0.1,
+        "defense": 0.0,
+        "movement": -0.2
+      },
+      {
+        "regiment_id": "artillery_brigade",
+        "attack": -0.2,
+        "defense": 0.0,
+        "movement": -0.3
+      },
+      {
+        "regiment_id": "bicycle_battalion",
+        "attack": 0.0,
+        "defense": 0.0,
+        "movement": 0.05
+      },
+      {
+        "regiment_id": "camelry",
+        "attack": 0.0,
+        "defense": 0.0,
+        "movement": 0.05
+      },
+      {
+        "regiment_id": "engineer",
+        "attack": 0.0,
+        "defense": 0.0,
+        "movement": 0.2
+      },
+      {
+        "regiment_id": "heavy_armor",
+        "attack": -0.4,
+        "defense": 0.0,
+        "movement": -0.2
+      },
+      {
+        "regiment_id": "heavy_flame_tank",
+        "attack": 0.05,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "heavy_sp_anti_air_brigade",
+        "attack": -0.4,
+        "defense": 0.0,
+        "movement": -0.2
+      },
+      {
+        "regiment_id": "heavy_sp_artillery_brigade",
+        "attack": -0.4,
+        "defense": 0.0,
+        "movement": -0.2
+      },
+      {
+        "regiment_id": "heavy_tank_destroyer_brigade",
+        "attack": -0.4,
+        "defense": 0.0,
+        "movement": -0.2
+      },
+      {
+        "regiment_id": "light_armor",
+        "attack": -0.1,
+        "defense": 0.0,
+        "movement": -0.1
+      },
+      {
+        "regiment_id": "light_flame_tank",
+        "attack": 0.05,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "light_sp_anti_air_brigade",
+        "attack": -0.1,
+        "defense": 0.0,
+        "movement": -0.1
+      },
+      {
+        "regiment_id": "light_sp_artillery_brigade",
+        "attack": -0.1,
+        "defense": 0.0,
+        "movement": -0.1
+      },
+      {
+        "regiment_id": "light_tank_destroyer_brigade",
+        "attack": -0.1,
+        "defense": 0.0,
+        "movement": -0.1
+      },
+      {
+        "regiment_id": "light_tank_recon",
+        "attack": 0.0,
+        "defense": 0.0,
+        "movement": 0.1
+      },
+      {
+        "regiment_id": "marine",
+        "attack": 0.3,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "mechanized",
+        "attack": -0.1,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "medium_armor",
+        "attack": -0.1,
+        "defense": 0.0,
+        "movement": -0.1
+      },
+      {
+        "regiment_id": "medium_flame_tank",
+        "attack": 0.05,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "medium_sp_anti_air_brigade",
+        "attack": -0.1,
+        "defense": 0.0,
+        "movement": -0.1
+      },
+      {
+        "regiment_id": "medium_sp_artillery_brigade",
+        "attack": -0.1,
+        "defense": 0.0,
+        "movement": -0.1
+      },
+      {
+        "regiment_id": "medium_tank_destroyer_brigade",
+        "attack": -0.1,
+        "defense": 0.0,
+        "movement": -0.1
+      },
+      {
+        "regiment_id": "modern_armor",
+        "attack": -0.1,
+        "defense": 0.0,
+        "movement": -0.1
+      },
+      {
+        "regiment_id": "modern_sp_anti_air_brigade",
+        "attack": -0.1,
+        "defense": 0.0,
+        "movement": -0.1
+      },
+      {
+        "regiment_id": "modern_sp_artillery_brigade",
+        "attack": -0.1,
+        "defense": 0.0,
+        "movement": -0.1
+      },
+      {
+        "regiment_id": "modern_tank_destroyer_brigade",
+        "attack": -0.1,
+        "defense": 0.0,
+        "movement": -0.1
+      },
+      {
+        "regiment_id": "mot_anti_air_brigade",
+        "attack": -0.2,
+        "defense": 0.0,
+        "movement": -0.2
+      },
+      {
+        "regiment_id": "mot_anti_tank_brigade",
+        "attack": -0.2,
+        "defense": 0.0,
+        "movement": -0.3
+      },
+      {
+        "regiment_id": "mot_artillery_brigade",
+        "attack": -0.2,
+        "defense": 0.0,
+        "movement": -0.3
+      },
+      {
+        "regiment_id": "mot_recon",
+        "attack": 0.0,
+        "defense": 0.0,
+        "movement": 0.1
+      },
+      {
+        "regiment_id": "mot_rocket_artillery_brigade",
+        "attack": -0.2,
+        "defense": 0.0,
+        "movement": -0.3
+      },
+      {
+        "regiment_id": "motorized",
+        "attack": -0.1,
+        "defense": 0.0,
+        "movement": -0.3
+      },
+      {
+        "regiment_id": "motorized_rocket_brigade",
+        "attack": -0.2,
+        "defense": 0.0,
+        "movement": -0.5
+      },
+      {
+        "regiment_id": "recon",
+        "attack": 0.0,
+        "defense": 0.0,
+        "movement": 0.1
+      },
+      {
+        "regiment_id": "rocket_artillery_brigade",
+        "attack": -0.2,
+        "defense": 0.0,
+        "movement": -0.3
+      },
+      {
+        "regiment_id": "super_heavy_armor",
+        "attack": -0.5,
+        "defense": 0.0,
+        "movement": -0.2
+      },
+      {
+        "regiment_id": "super_heavy_sp_anti_air_brigade",
+        "attack": -0.5,
+        "defense": 0.0,
+        "movement": -0.2
+      },
+      {
+        "regiment_id": "super_heavy_sp_artillery_brigade",
+        "attack": -0.5,
+        "defense": 0.0,
+        "movement": -0.2
+      },
+      {
+        "regiment_id": "super_heavy_tank_destroyer_brigade",
+        "attack": -0.5,
+        "defense": 0.0,
+        "movement": -0.2
+      }
+    ]
+  },
+  {
+    "terrain": "mountain",
+    "regiments": [
+      {
+        "regiment_id": "amphibious_armor",
+        "attack": -0.1,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "amphibious_heavy_armor",
+        "attack": -0.1,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "amphibious_light_armor",
+        "attack": -0.1,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "amphibious_mechanized",
+        "attack": -0.05,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "amphibious_medium_armor",
+        "attack": -0.1,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "anti_tank_brigade",
+        "attack": 0.0,
+        "defense": 0.0,
+        "movement": -0.2
+      },
+      {
+        "regiment_id": "armored_car",
+        "attack": -0.1,
+        "defense": 0.0,
+        "movement": -0.1
+      },
+      {
+        "regiment_id": "armored_car_recon",
+        "attack": 0.0,
+        "defense": 0.0,
+        "movement": 0.05
+      },
+      {
+        "regiment_id": "artillery_brigade",
+        "attack": 0.0,
+        "defense": 0.0,
+        "movement": -0.2
+      },
+      {
+        "regiment_id": "bicycle_battalion",
+        "attack": 0.0,
+        "defense": 0.0,
+        "movement": 0.05
+      },
+      {
+        "regiment_id": "camelry",
+        "attack": -0.1,
+        "defense": 0.0,
+        "movement": -0.05
+      },
+      {
+        "regiment_id": "cavalry",
+        "attack": -0.1,
+        "defense": 0.0,
+        "movement": -0.05
+      },
+      {
+        "regiment_id": "heavy_armor",
+        "attack": -0.3,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "heavy_flame_tank",
+        "attack": 0.05,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "heavy_sp_anti_air_brigade",
+        "attack": -0.3,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "heavy_sp_artillery_brigade",
+        "attack": -0.3,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "heavy_tank_destroyer_brigade",
+        "attack": -0.3,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "light_armor",
+        "attack": -0.1,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "light_flame_tank",
+        "attack": 0.05,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "light_sp_anti_air_brigade",
+        "attack": -0.1,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "light_sp_artillery_brigade",
+        "attack": -0.1,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "light_tank_destroyer_brigade",
+        "attack": -0.1,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "light_tank_recon",
+        "attack": 0.0,
+        "defense": 0.0,
+        "movement": 0.1
+      },
+      {
+        "regiment_id": "mechanized",
+        "attack": -0.05,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "medium_armor",
+        "attack": -0.2,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "medium_flame_tank",
+        "attack": 0.05,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "medium_sp_anti_air_brigade",
+        "attack": -0.2,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "medium_sp_artillery_brigade",
+        "attack": -0.2,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "medium_tank_destroyer_brigade",
+        "attack": -0.2,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "modern_armor",
+        "attack": -0.2,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "modern_sp_anti_air_brigade",
+        "attack": -0.2,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "modern_sp_artillery_brigade",
+        "attack": -0.2,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "modern_tank_destroyer_brigade",
+        "attack": -0.2,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "mot_anti_tank_brigade",
+        "attack": 0.0,
+        "defense": 0.0,
+        "movement": -0.2
+      },
+      {
+        "regiment_id": "mot_artillery_brigade",
+        "attack": 0.0,
+        "defense": 0.0,
+        "movement": -0.2
+      },
+      {
+        "regiment_id": "mot_recon",
+        "attack": 0.0,
+        "defense": 0.0,
+        "movement": 0.1
+      },
+      {
+        "regiment_id": "mot_rocket_artillery_brigade",
+        "attack": 0.0,
+        "defense": 0.0,
+        "movement": -0.2
+      },
+      {
+        "regiment_id": "motorized",
+        "attack": -0.05,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "motorized_rocket_brigade",
+        "attack": 0.0,
+        "defense": 0.0,
+        "movement": -0.2
+      },
+      {
+        "regiment_id": "mountaineers",
+        "attack": 0.35,
+        "defense": 0.0,
+        "movement": 0.2
+      },
+      {
+        "regiment_id": "recon",
+        "attack": 0.0,
+        "defense": 0.0,
+        "movement": 0.1
+      },
+      {
+        "regiment_id": "rocket_artillery_brigade",
+        "attack": 0.0,
+        "defense": 0.0,
+        "movement": -0.2
+      },
+      {
+        "regiment_id": "super_heavy_armor",
+        "attack": -0.4,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "super_heavy_sp_anti_air_brigade",
+        "attack": -0.4,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "super_heavy_sp_artillery_brigade",
+        "attack": -0.4,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "super_heavy_tank_destroyer_brigade",
+        "attack": -0.4,
+        "defense": 0.0,
+        "movement": 0.0
+      }
+    ]
+  },
+  {
+    "terrain": "plains",
+    "regiments": [
+      {
+        "regiment_id": "amphibious_armor",
+        "attack": -0.1,
+        "defense": 0.0,
+        "movement": -0.1
+      },
+      {
+        "regiment_id": "amphibious_heavy_armor",
+        "attack": -0.1,
+        "defense": 0.0,
+        "movement": -0.1
+      },
+      {
+        "regiment_id": "amphibious_light_armor",
+        "attack": -0.1,
+        "defense": 0.0,
+        "movement": -0.1
+      },
+      {
+        "regiment_id": "amphibious_medium_armor",
+        "attack": -0.1,
+        "defense": 0.0,
+        "movement": -0.1
+      },
+      {
+        "regiment_id": "armored_car_recon",
+        "attack": 0.0,
+        "defense": 0.0,
+        "movement": 0.15
+      },
+      {
+        "regiment_id": "bicycle_battalion",
+        "attack": 0.0,
+        "defense": 0.0,
+        "movement": 0.2
+      },
+      {
+        "regiment_id": "camelry",
+        "attack": 0.0,
+        "defense": 0.0,
+        "movement": 0.15
+      },
+      {
+        "regiment_id": "light_tank_recon",
+        "attack": 0.0,
+        "defense": 0.0,
+        "movement": 0.1
+      },
+      {
+        "regiment_id": "mot_recon",
+        "attack": 0.0,
+        "defense": 0.0,
+        "movement": 0.15
+      },
+      {
+        "regiment_id": "recon",
+        "attack": 0.0,
+        "defense": 0.0,
+        "movement": 0.05
+      }
+    ]
+  },
+  {
+    "terrain": "river",
+    "regiments": [
+      {
+        "regiment_id": "amphibious_armor",
+        "attack": 0.4,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "amphibious_heavy_armor",
+        "attack": 0.4,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "amphibious_light_armor",
+        "attack": 0.4,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "amphibious_mechanized",
+        "attack": 0.3,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "amphibious_medium_armor",
+        "attack": 0.4,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "anti_air_brigade",
+        "attack": -0.2,
+        "defense": 0.0,
+        "movement": -0.2
+      },
+      {
+        "regiment_id": "anti_tank_brigade",
+        "attack": -0.2,
+        "defense": 0.0,
+        "movement": -0.2
+      },
+      {
+        "regiment_id": "armored_car",
+        "attack": -0.2,
+        "defense": 0.0,
+        "movement": -0.2
+      },
+      {
+        "regiment_id": "armored_car_recon",
+        "attack": 0.0,
+        "defense": 0.0,
+        "movement": 0.1
+      },
+      {
+        "regiment_id": "artillery_brigade",
+        "attack": -0.2,
+        "defense": 0.0,
+        "movement": -0.2
+      },
+      {
+        "regiment_id": "bicycle_battalion",
+        "attack": 0.0,
+        "defense": 0.0,
+        "movement": -0.05
+      },
+      {
+        "regiment_id": "engineer",
+        "attack": 0.0,
+        "defense": 0.0,
+        "movement": 0.25
+      },
+      {
+        "regiment_id": "heavy_armor",
+        "attack": -0.4,
+        "defense": 0.0,
+        "movement": -0.4
+      },
+      {
+        "regiment_id": "heavy_flame_tank",
+        "attack": 0.1,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "heavy_sp_anti_air_brigade",
+        "attack": -0.4,
+        "defense": 0.0,
+        "movement": -0.4
+      },
+      {
+        "regiment_id": "heavy_sp_artillery_brigade",
+        "attack": -0.4,
+        "defense": 0.0,
+        "movement": -0.4
+      },
+      {
+        "regiment_id": "heavy_tank_destroyer_brigade",
+        "attack": -0.4,
+        "defense": 0.0,
+        "movement": -0.4
+      },
+      {
+        "regiment_id": "light_armor",
+        "attack": -0.2,
+        "defense": 0.0,
+        "movement": -0.2
+      },
+      {
+        "regiment_id": "light_flame_tank",
+        "attack": 0.1,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "light_sp_anti_air_brigade",
+        "attack": -0.2,
+        "defense": 0.0,
+        "movement": -0.2
+      },
+      {
+        "regiment_id": "light_sp_artillery_brigade",
+        "attack": -0.2,
+        "defense": 0.0,
+        "movement": -0.2
+      },
+      {
+        "regiment_id": "light_tank_destroyer_brigade",
+        "attack": -0.2,
+        "defense": 0.0,
+        "movement": -0.2
+      },
+      {
+        "regiment_id": "light_tank_recon",
+        "attack": 0.0,
+        "defense": 0.0,
+        "movement": 0.1
+      },
+      {
+        "regiment_id": "marine",
+        "attack": 0.3,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "mechanized",
+        "attack": -0.2,
+        "defense": 0.0,
+        "movement": -0.2
+      },
+      {
+        "regiment_id": "medium_armor",
+        "attack": -0.2,
+        "defense": 0.0,
+        "movement": -0.2
+      },
+      {
+        "regiment_id": "medium_flame_tank",
+        "attack": 0.1,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "medium_sp_anti_air_brigade",
+        "attack": -0.2,
+        "defense": 0.0,
+        "movement": -0.2
+      },
+      {
+        "regiment_id": "medium_sp_artillery_brigade",
+        "attack": -0.2,
+        "defense": 0.0,
+        "movement": -0.2
+      },
+      {
+        "regiment_id": "medium_tank_destroyer_brigade",
+        "attack": -0.2,
+        "defense": 0.0,
+        "movement": -0.2
+      },
+      {
+        "regiment_id": "modern_armor",
+        "attack": -0.2,
+        "defense": 0.0,
+        "movement": -0.2
+      },
+      {
+        "regiment_id": "modern_sp_anti_air_brigade",
+        "attack": -0.2,
+        "defense": 0.0,
+        "movement": -0.2
+      },
+      {
+        "regiment_id": "modern_sp_artillery_brigade",
+        "attack": -0.2,
+        "defense": 0.0,
+        "movement": -0.2
+      },
+      {
+        "regiment_id": "modern_tank_destroyer_brigade",
+        "attack": -0.2,
+        "defense": 0.0,
+        "movement": -0.2
+      },
+      {
+        "regiment_id": "mot_anti_air_brigade",
+        "attack": -0.2,
+        "defense": 0.0,
+        "movement": -0.2
+      },
+      {
+        "regiment_id": "mot_anti_tank_brigade",
+        "attack": -0.2,
+        "defense": 0.0,
+        "movement": -0.2
+      },
+      {
+        "regiment_id": "mot_artillery_brigade",
+        "attack": -0.2,
+        "defense": 0.0,
+        "movement": -0.2
+      },
+      {
+        "regiment_id": "mot_recon",
+        "attack": 0.0,
+        "defense": 0.0,
+        "movement": 0.1
+      },
+      {
+        "regiment_id": "mot_rocket_artillery_brigade",
+        "attack": -0.2,
+        "defense": 0.0,
+        "movement": -0.2
+      },
+      {
+        "regiment_id": "motorized",
+        "attack": -0.1,
+        "defense": 0.0,
+        "movement": -0.1
+      },
+      {
+        "regiment_id": "motorized_rocket_brigade",
+        "attack": -0.2,
+        "defense": 0.0,
+        "movement": -0.2
+      },
+      {
+        "regiment_id": "recon",
+        "attack": 0.0,
+        "defense": 0.0,
+        "movement": 0.1
+      },
+      {
+        "regiment_id": "rocket_artillery_brigade",
+        "attack": -0.2,
+        "defense": 0.0,
+        "movement": -0.2
+      },
+      {
+        "regiment_id": "super_heavy_armor",
+        "attack": -0.5,
+        "defense": 0.0,
+        "movement": -0.5
+      },
+      {
+        "regiment_id": "super_heavy_sp_anti_air_brigade",
+        "attack": -0.5,
+        "defense": 0.0,
+        "movement": -0.4
+      },
+      {
+        "regiment_id": "super_heavy_sp_artillery_brigade",
+        "attack": -0.5,
+        "defense": 0.0,
+        "movement": -0.5
+      },
+      {
+        "regiment_id": "super_heavy_tank_destroyer_brigade",
+        "attack": -0.5,
+        "defense": 0.0,
+        "movement": -0.5
+      }
+    ]
+  },
+  {
+    "terrain": "urban",
+    "regiments": [
+      {
+        "regiment_id": "amphibious_armor",
+        "attack": -0.4,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "amphibious_heavy_armor",
+        "attack": -0.4,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "amphibious_light_armor",
+        "attack": -0.4,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "amphibious_mechanized",
+        "attack": -0.2,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "amphibious_medium_armor",
+        "attack": -0.4,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "armored_car",
+        "attack": -0.3,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "bicycle_battalion",
+        "attack": 0.0,
+        "defense": 0.0,
+        "movement": 0.2
+      },
+      {
+        "regiment_id": "camelry",
+        "attack": -0.05,
+        "defense": 0.0,
+        "movement": -0.05
+      },
+      {
+        "regiment_id": "cavalry",
+        "attack": -0.05,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "heavy_armor",
+        "attack": -0.5,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "heavy_flame_tank",
+        "attack": 0.2,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "heavy_sp_anti_air_brigade",
+        "attack": -0.5,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "heavy_sp_artillery_brigade",
+        "attack": -0.5,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "heavy_tank_destroyer_brigade",
+        "attack": -0.5,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "light_armor",
+        "attack": -0.4,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "light_flame_tank",
+        "attack": 0.2,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "light_sp_anti_air_brigade",
+        "attack": -0.4,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "light_sp_artillery_brigade",
+        "attack": -0.4,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "light_tank_destroyer_brigade",
+        "attack": -0.4,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "mechanized",
+        "attack": -0.2,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "medium_armor",
+        "attack": -0.4,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "medium_flame_tank",
+        "attack": 0.2,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "medium_sp_anti_air_brigade",
+        "attack": -0.4,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "medium_sp_artillery_brigade",
+        "attack": -0.4,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "medium_tank_destroyer_brigade",
+        "attack": -0.4,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "modern_armor",
+        "attack": -0.4,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "modern_sp_anti_air_brigade",
+        "attack": -0.4,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "modern_sp_artillery_brigade",
+        "attack": -0.4,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "modern_tank_destroyer_brigade",
+        "attack": -0.4,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "motorized",
+        "attack": -0.1,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "super_heavy_armor",
+        "attack": -0.6,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "super_heavy_sp_anti_air_brigade",
+        "attack": -0.6,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "super_heavy_sp_artillery_brigade",
+        "attack": -0.6,
+        "defense": 0.0,
+        "movement": 0.0
+      },
+      {
+        "regiment_id": "super_heavy_tank_destroyer_brigade",
+        "attack": -0.6,
+        "defense": 0.0,
+        "movement": 0.0
+      }
+    ]
+  }
+]

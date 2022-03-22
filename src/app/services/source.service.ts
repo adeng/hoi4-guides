@@ -1,9 +1,12 @@
 import { Injectable } from '@angular/core';
 import { Archetype, Equipment } from '../models/equipment.model';
-import { Regiment } from '../models/regiment.model';
+import { Regiment, RegimentTerrainModifier } from '../models/regiment.model';
 
 import equipment_source from "../../assets/equipment.json";
 import regiment_source from "../../assets/regiments.json";
+import terrain_source from "../../assets/terrain.json";
+import country_source from "../../assets/countries.json";
+import { Country, CountryFlag } from '../models/country.model';
 
 @Injectable({
 	providedIn: 'root'
@@ -12,12 +15,19 @@ export class SourceService {
 	ArchetypeDictionary: Map<string, Archetype>;
 	EquipmentDictionary: Map<string, Equipment>;
 	RegimentDictionary: Map<string, Regiment>;
+	CountryDictionary: Map<string, Country>;
+	CountryFlagDictionary: Map<string, CountryFlag>;
+	TerrainModifierDictionary: Map<string, Map<string, RegimentTerrainModifier>>;
 
 	constructor() {
 		this.ArchetypeDictionary = new Map<string, Archetype>();
 		this.EquipmentDictionary = new Map<string, Equipment>();
 		this.RegimentDictionary = new Map<string, Regiment>();
+		this.CountryDictionary = new Map<string, Country>();
+		this.CountryFlagDictionary = new Map<string, CountryFlag>();
+		this.TerrainModifierDictionary = new Map<string, Map<string, RegimentTerrainModifier>>();
 
+		// Load equipment json
 		for (let i = 0; i < equipment_source.length; i++) {
 			let archetype = equipment_source[i];
 
@@ -32,6 +42,7 @@ export class SourceService {
 			}
 		}
 
+		// Load regiment json
 		for (let i = 0; i < regiment_source.length; i++) {
 			let regiment = regiment_source[i];
 
@@ -40,6 +51,51 @@ export class SourceService {
 
 			if (!this.RegimentDictionary.has(regiment.regiment_id))
 				this.RegimentDictionary.set(regiment.regiment_id, regiment);
+		}
+
+		// Load terrain json
+		for(let i = 0; i < terrain_source.length; i++) {
+			let terrain = terrain_source[i];
+
+			if(!this.TerrainModifierDictionary.has(terrain.terrain))
+				this.TerrainModifierDictionary.set(terrain.terrain, new Map<string, RegimentTerrainModifier>());
+
+			for(let j = 0; j < terrain.regiments.length; j++) {
+				let regiment = terrain.regiments[j];
+				this.TerrainModifierDictionary.get(terrain.terrain).set(regiment.regiment_id, regiment);
+			}
+		}
+
+		// Load countries json
+		for(let i = 0; i < country_source.length; i++) {
+			let country = country_source[i];
+
+			if(!this.CountryDictionary.has(country.tag))
+				this.CountryDictionary.set(country.tag, country);
+			
+			for(let j = 0; j < country.flags.length; j++) {
+				let flag = country.flags[j];
+				let key = [flag.flag_name, flag.size].join(",");
+
+				if(!this.CountryFlagDictionary.has(key))
+					this.CountryFlagDictionary.set(key, flag);
+			}
+		}
+	}
+
+	public getCountry(tag: string): Country {
+		return this.CountryDictionary.get(tag);
+	}
+
+	public getCountryFlag(tag: string, size: string): CountryFlag {
+		return this.CountryFlagDictionary.get([tag, size].join(","));
+	}
+
+	public getRegimentTerrainModifier(terrain: string, regiment_id: string): RegimentTerrainModifier {
+		try {
+			return this.TerrainModifierDictionary.get(terrain).get(regiment_id);
+		} catch {
+			return null;
 		}
 	}
 

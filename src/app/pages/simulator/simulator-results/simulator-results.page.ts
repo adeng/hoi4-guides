@@ -26,6 +26,10 @@ export class SimulatorResultsPage implements OnInit {
 
 	// Display stats
 	winPercentage: number;
+	attackerRemainingHP: number;
+	attackerRemainingOrg: number;
+	defenderRemainingHP: number;
+	defenderRemainingOrg: number;
 
 	// Win Chart
 	winChartType: ChartType = "doughnut";
@@ -61,22 +65,37 @@ export class SimulatorResultsPage implements OnInit {
 		maintainAspectRatio: false
 	}
 
+	// Compare Stats Chart
+	compareChartType: ChartType = "radar";
+	compareChartData: ChartData<"radar">;
+	compareChartOptions: ChartConfiguration["options"] = {
+		responsive: true,
+		plugins: {
+			legend: {
+				display: false
+			}
+		},
+		maintainAspectRatio: false
+	}
+
 	constructor(private loadingController: LoadingController, private route: ActivatedRoute, private simulator: SimulatorService) {
 		this.loading = true;
 
-		this.route.queryParams.subscribe(params => {
-			this.attacker = JSON.parse(params["attacker"]);
-			this.defender = JSON.parse(params["defender"]);
-			console.log(this.attacker);
-
-			// Calculate results
-			let results = simulator.calculateAllCombats(this.attacker, this.defender, this.SIMULATION_COUNT);
-			console.log(results);
-			this.analytics = results[0];
-			this.results = results[1];
-			this.loading = false;
-
-			this.updateCharts();
+		new Promise( resolve => setTimeout(resolve, 1500)).then(() => {
+			this.route.queryParams.subscribe(params => {
+				this.attacker = JSON.parse(params["attacker"]);
+				this.defender = JSON.parse(params["defender"]);
+				console.log(this.attacker);
+	
+				// Calculate results
+				let results = simulator.calculateAllCombats(this.attacker, this.defender, this.SIMULATION_COUNT);
+				console.log(results);
+				this.analytics = results[0];
+				this.results = results[1];
+				this.loading = false;
+	
+				this.updateCharts();
+			});
 		});
 	}
 
@@ -96,6 +115,10 @@ export class SimulatorResultsPage implements OnInit {
 		};
 
 		this.winPercentage = Math.floor(this.analytics.averageWinPercentage * 100);
+		this.attackerRemainingHP = 100 - (this.attacker.hp - this.analytics.averageRemainingAttackerHP) * 100/this.attacker.hp;
+		this.attackerRemainingOrg = 100 - (this.attacker.organization - Math.max(0, this.analytics.averageRemainingAttackerOrg)) * 100/this.attacker.organization;
+		this.defenderRemainingHP = 100 - (this.defender.hp - this.analytics.averageRemainingDefenderHP) * 100/this.defender.hp;
+		this.defenderRemainingOrg = 100 - (this.defender.organization - Math.max(0, this.analytics.averageRemainingDefenderOrg)) * 100/this.defender.organization;
 
 		this.statChartData = {
 			labels: ["Attacker HP", "Attacker Org", "Defender HP", "Defender Org"],
@@ -122,6 +145,18 @@ export class SimulatorResultsPage implements OnInit {
 					hoverBackgroundColor: ["#F44336"],
 					label: "Losses"
 				},
+			]
+		}
+
+		this.compareChartData = {
+			labels: ["HP", "Organization", "Soft Attack", "Hard Attack", "Defense", "Breakthrough", "Piercing", "Armor", "Hardness", "Air Attack"],
+			datasets: [
+				{
+					data: [this.attacker.hp, this.attacker.organization, this.attacker.soft_attack, this.attacker.hard_attack, this.attacker.defense, this.attacker.breakthrough, this.attacker.piercing, this.attacker.armor, this.attacker.hardness, this.attacker.air_attack], label: "Attacker"
+				},
+				{
+					data: [this.defender.hp, this.defender.organization, this.defender.soft_attack, this.defender.hard_attack, this.defender.defense, this.defender.breakthrough, this.defender.piercing, this.defender.armor, this.defender.hardness, this.defender.air_attack], label: "Defender"
+				}
 			]
 		}
 	}

@@ -10,9 +10,9 @@
     "width": 2,
     "equipment": [
       {
-        "archetype_id": "super_heavy_tank_destroyer_chassis",
-        "archetype_name": "Super-Heavy Tank Destroyer",
-        "number": 40
+        "archetype_id": "amphibious_tank_chassis",
+        "archetype_name": "Amphibious Tank Chassis",
+        "number": 50
       }
     ]
   },
