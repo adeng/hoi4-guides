@@ -1,0 +1,45 @@
+.country-card {
+    ion-card-header {
+        padding-left: 0px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        display: flex;
+        
+        ion-card-title {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            font-size: medium;
+            margin-left: 20px;
+            font-weight: 500;
+            font-size: 18px;
+        }
+
+        ion-chip {
+            position: absolute;
+            top: 18%;
+            right: 15px;
+        }
+    }
+
+    img {
+        height: 60px;
+        width: 95px;
+    }
+
+    .img-gradient {
+        height: 60px;
+        width: 95px;
+    }
+
+    .img-gradient::after {
+        display: block;
+        position: relative;
+        background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0, #fff 100%);
+        margin-top: -150px;
+        height: 150px;
+        width: 95px;
+        content: '';
+    }
+}

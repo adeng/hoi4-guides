@@ -29,5 +29,17 @@
         font-size: 22px;
     }
 
+    ion-card-header {
+        padding-bottom: 0px;
+    }
+
     margin: 20px;
+
+    ion-row {
+        text-align: center;
+
+        ion-button {
+            height: 25px;
+        }
+    }
 }

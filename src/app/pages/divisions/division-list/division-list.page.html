@@ -19,20 +19,30 @@
 	</div>
 
 	<!-- <ion-list *ngIf="divisions.length > 0"> -->
-	<ion-card *ngFor="let division of divisions" class="division-card" [routerLink]="['/divisions/designer', division.id]">
+	<ion-card *ngFor="let division of divisions" class="division-card">
 		<ion-card-header>
 			<ion-card-subtitle>{{division.type}} Division</ion-card-subtitle>
 			<ion-card-title>{{division.name}}</ion-card-title>
 		</ion-card-header>
-		<ion-card-content>
+		<!-- <ion-card-content>
 			<ion-chip *ngFor="let chip of division.regiments">
 				<ion-avatar>
 					<p class="chip-avatar">{{chip.number}}</p>
 				</ion-avatar>
 				<ion-label>{{chip.regiment.regiment_name}}</ion-label>
 			</ion-chip>
-		</ion-card-content>
-		<ion-ripple-effect></ion-ripple-effect>
+		</ion-card-content> -->
+		<ion-grid>
+			<ion-row>
+				<ion-col>
+					<ion-button fill="clear">View</ion-button>
+				</ion-col>
+				<ion-col>
+					<ion-button fill="clear" [routerLink]="['/divisions/designer', division.id]">Edit</ion-button>
+				</ion-col>
+			</ion-row>
+		</ion-grid>
+		<!-- <ion-ripple-effect></ion-ripple-effect> -->
 	</ion-card>
 
 	<ion-fab vertical="bottom" horizontal="end" slot="fixed" [routerLink]="['/divisions/designer']">

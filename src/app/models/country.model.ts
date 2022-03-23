@@ -9,3 +9,23 @@ export class CountryFlag {
     bitmap: string;
     size: string;
 }
+
+export class CountryGuide {
+    tag: string;
+    difficulty: string;
+    flag_name: string;
+    tags: Array<string>;
+    strategies: Array<CountryStrategy>;
+}
+
+export class CountryStrategy {
+    name: string;
+    description: string;
+    flag_name: string;
+    focuses: Array<string>;
+    research: Array<string>;
+    allies: Array<string>;
+    allies_description: string;
+    enemies: Array<string>;
+    enemies_description: string;
+}

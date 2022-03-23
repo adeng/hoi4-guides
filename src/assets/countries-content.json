@@ -1,0 +1,90 @@
+[
+    {
+        "tag": "GER",
+        "difficulty": "Easy",
+        "flag_name": "GER_fascism",
+        "tags": [
+            "fascist"
+        ],
+        "strategies": [
+            {
+                "name": "Fascist (Historical)",
+                "flag_name": "GER_fascism",
+                "description": "Easy path for beginners. This is a description of what it's like to play Germany.",
+                "focuses": [
+                    "Around Maginot",
+                    "Rhineland",
+                    "Four Year Plan",
+                    "Westwall",
+                    "Autarky",
+                    "Anti-Comintern Pact",
+                    "Hermann Göring-Werke"
+                ],
+                "research": [
+                    "Concentrated Industry",
+                    "Construction I",
+                    "Electronic Mechanical Engineering"
+                ],
+                "allies": ["Italy", "Romania", "Hungary"],
+                "allies_description": "Once WWII starts, Italy will be your best friend. You can also ally Hungary and Romania through focuses.",
+                "enemies": ["Austria", "Czechoslovakia", "France", "United Kingdom", "Poland", "Soviet Union", "United States"],
+                "enemies_description": "You should acquire Austria through the Anschluss. If your military isn't large enough, they may decline, requiring you to take it by force. Czechoslovakia will be similar - if you have a large enough military, you can annex it through focuses. Poland, the UK, and France will be your first and primary enemies."
+            },
+            {
+                "name": "Democratic",
+                "description": "Easy path for beginners. This is a description of what it's like to play Germany.",
+                "flag_name": "GER_democratic",
+                "focuses": [
+                    "Around Maginot",
+                    "Rhineland",
+                    "Four Year Plan",
+                    "Westwall",
+                    "Autarky",
+                    "Anti-Comintern Pact",
+                    "Hermann Göring-Werke"
+                ],
+                "research": [
+                    "Concentrated Industry",
+                    "Construction I",
+                    "Electronic Mechanical Engineering"
+                ],
+                "allies": ["Italy", "Romania", "Hungary"],
+                "allies_description": "Once WWII starts, Italy will be your best friend. You can also ally Hungary and Romania through focuses.",
+                "enemies": ["Austria", "Czechoslovakia", "France", "United Kingdom", "Poland", "Soviet Union", "United States"],
+                "enemies_description": "You should acquire Austria through the Anschluss. If your military isn't large enough, they may decline, requiring you to take it by force. Czechoslovakia will be similar - if you have a large enough military, you can annex it through focuses. Poland, the UK, and France will be your first and primary enemies."
+            },
+            {
+                "name": "Kaiserreich (Non-Aligned)",
+                "description": "Easy path for beginners. This is a description of what it's like to play Germany.",
+                "flag_name": "GER_neutrality",
+                "focuses": [
+                    "Around Maginot",
+                    "Rhineland",
+                    "Four Year Plan",
+                    "Westwall",
+                    "Autarky",
+                    "Anti-Comintern Pact",
+                    "Hermann Göring-Werke"
+                ],
+                "research": [
+                    "Concentrated Industry",
+                    "Construction I",
+                    "Electronic Mechanical Engineering"
+                ],
+                "allies": ["Italy", "Romania", "Hungary"],
+                "allies_description": "Once WWII starts, Italy will be your best friend. You can also ally Hungary and Romania through focuses.",
+                "enemies": ["Austria", "Czechoslovakia", "France", "United Kingdom", "Poland", "Soviet Union", "United States"],
+                "enemies_description": "You should acquire Austria through the Anschluss. If your military isn't large enough, they may decline, requiring you to take it by force. Czechoslovakia will be similar - if you have a large enough military, you can annex it through focuses. Poland, the UK, and France will be your first and primary enemies."
+            }
+        ]
+    },
+    {
+        "tag": "JAP",
+        "difficulty": "Medium",
+        "flag_name": "JAP_fascism",
+        "tags": [
+            "fascist"
+        ],
+        "strategies": []
+    }
+]

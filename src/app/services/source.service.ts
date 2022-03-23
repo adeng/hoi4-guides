@@ -1,17 +1,21 @@
 import { Injectable } from '@angular/core';
 import { Archetype, Equipment } from '../models/equipment.model';
 import { Regiment, RegimentTerrainModifier } from '../models/regiment.model';
+import { Country, CountryFlag, CountryGuide } from '../models/country.model';
 
 import equipment_source from "../../assets/equipment.json";
 import regiment_source from "../../assets/regiments.json";
 import terrain_source from "../../assets/terrain.json";
 import country_source from "../../assets/countries.json";
-import { Country, CountryFlag } from '../models/country.model';
+import guide_source from "../../assets/countries-content.json";
+
+
 
 @Injectable({
 	providedIn: 'root'
 })
 export class SourceService {
+	CountryGuideList: Array<CountryGuide>;
 	ArchetypeDictionary: Map<string, Archetype>;
 	EquipmentDictionary: Map<string, Equipment>;
 	RegimentDictionary: Map<string, Regiment>;
@@ -26,6 +30,7 @@ export class SourceService {
 		this.CountryDictionary = new Map<string, Country>();
 		this.CountryFlagDictionary = new Map<string, CountryFlag>();
 		this.TerrainModifierDictionary = new Map<string, Map<string, RegimentTerrainModifier>>();
+		this.CountryGuideList = new Array<CountryGuide>();
 
 		// Load equipment json
 		for (let i = 0; i < equipment_source.length; i++) {
@@ -81,14 +86,23 @@ export class SourceService {
 					this.CountryFlagDictionary.set(key, flag);
 			}
 		}
+
+		// Load strategies
+		for(let i = 0; i < guide_source.length; i++) {
+			this.CountryGuideList.push(guide_source[i]);
+		}
+	}
+
+	public getCountryGuides(): Array<CountryGuide> {
+		return this.CountryGuideList;
 	}
 
 	public getCountry(tag: string): Country {
 		return this.CountryDictionary.get(tag);
 	}
 
-	public getCountryFlag(tag: string, size: string): CountryFlag {
-		return this.CountryFlagDictionary.get([tag, size].join(","));
+	public getCountryFlag(flag_name: string, size: string): CountryFlag {
+		return this.CountryFlagDictionary.get([flag_name, size].join(","));
 	}
 
 	public getRegimentTerrainModifier(terrain: string, regiment_id: string): RegimentTerrainModifier {
