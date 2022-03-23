@@ -34,13 +34,13 @@
 		</ion-card-header>
 	</ion-card>
 
-	<ion-modal trigger="trigger-card" [isOpen]="false" [breakpoints]="[0.6]" [initialBreakpoint]="0.6" [swipeToClose]="false" class="modal-backdrop">
+	<ion-modal trigger="trigger-card" [isOpen]="false" [breakpoints]="[0.6]" [initialBreakpoint]="0.6" [swipeToClose]="true" class="modal-backdrop">
 		<ng-template>
 			<ion-content [ngStyle]="{'background-color': countryColor, 'text-align': 'center'}">
 				<p style="margin-top: 40px; margin-bottom: 20px"><strong>Routes</strong></p>
 				<!-- <ion-button *ngFor="let strategy of currentStrategies">{{strategy.name}}</ion-button> -->
 				<ion-list>
-					<ion-item *ngFor="let strategy of currentStrategies" button>
+					<ion-item *ngFor="let strategy of currentStrategies; index as i" button [routerLink]="['/countries/', currentTag, i]">
 						<ion-label>{{strategy.name}}</ion-label>
 						<img [src]="'data:image/png;base64,' + countryFlags.get(strategy.flag_name).bitmap"
 							style="transform: scale(0.65)" />

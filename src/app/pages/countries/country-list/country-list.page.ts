@@ -15,6 +15,7 @@ export class CountryListPage implements OnInit {
 	countryFlags: Map<string, CountryFlag>;
 	strategies: Map<string, Array<CountryStrategy>>;
 	currentStrategies: Array<CountryStrategy>;
+	currentTag: string;
 
 	constructor(private source: SourceService) {
 		this.guides = this.source.getCountryGuides();
@@ -47,6 +48,7 @@ export class CountryListPage implements OnInit {
 	setGuide(tag: string): void {
 		this.currentStrategies = this.strategies.get(tag);
 		this.countryColor = "'" + this.countries.get(tag).color + "'";
+		this.currentTag = tag;
 	}
 }
 

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Archetype, Equipment } from '../models/equipment.model';
 import { Regiment, RegimentTerrainModifier } from '../models/regiment.model';
-import { Country, CountryFlag, CountryGuide } from '../models/country.model';
+import { Country, CountryFlag, CountryGuide, CountryStrategy } from '../models/country.model';
 
 import equipment_source from "../../assets/equipment.json";
 import regiment_source from "../../assets/regiments.json";
@@ -16,6 +16,7 @@ import guide_source from "../../assets/countries-content.json";
 })
 export class SourceService {
 	CountryGuideList: Array<CountryGuide>;
+	CountryStrategyDictionary: Map<string, Array<CountryStrategy>>;
 	ArchetypeDictionary: Map<string, Archetype>;
 	EquipmentDictionary: Map<string, Equipment>;
 	RegimentDictionary: Map<string, Regiment>;
@@ -31,6 +32,7 @@ export class SourceService {
 		this.CountryFlagDictionary = new Map<string, CountryFlag>();
 		this.TerrainModifierDictionary = new Map<string, Map<string, RegimentTerrainModifier>>();
 		this.CountryGuideList = new Array<CountryGuide>();
+		this.CountryStrategyDictionary = new Map<string, Array<CountryStrategy>>();
 
 		// Load equipment json
 		for (let i = 0; i < equipment_source.length; i++) {
@@ -90,11 +92,16 @@ export class SourceService {
 		// Load strategies
 		for(let i = 0; i < guide_source.length; i++) {
 			this.CountryGuideList.push(guide_source[i]);
+			this.CountryStrategyDictionary.set(guide_source[i].tag, guide_source[i].strategies);
 		}
 	}
 
 	public getCountryGuides(): Array<CountryGuide> {
 		return this.CountryGuideList;
+	}
+
+	public getCountryStrategy(tag: string, strategy: number): CountryStrategy {
+		return this.CountryStrategyDictionary.get(tag)[strategy];
 	}
 
 	public getCountry(tag: string): Country {

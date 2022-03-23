@@ -1,0 +1,46 @@
+.description {
+    padding: 20px;
+    text-align: center;
+    
+    #image-box {
+        display: flex;
+        justify-content: center;
+    }
+
+    h2 {
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 22px;
+        color: #8c8c8c;
+        margin: 0;
+    }
+}
+
+.checklist-card {
+    ion-card-content {
+        padding: 0px;
+    }
+}
+
+.allies-card {
+    ion-chip {
+        background-color: #A5D6A7;
+    }
+}
+
+.enemies-card {
+    ion-chip {
+        background-color: #FFCDD2;
+    }
+}
+
+.countries-card {
+    div {
+        text-align: center;
+        margin-top: 10px;
+    }
+}

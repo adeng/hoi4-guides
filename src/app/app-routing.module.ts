@@ -12,6 +12,10 @@ const routes: Routes = [
     loadChildren: () => import('./pages/countries/country-list/country-list.module').then( m => m.CountryListPageModule)
   },
   {
+    path: 'countries/:tag/:strategy',
+    loadChildren: () => import('./pages/countries/country-detail/country-detail.module').then( m => m.CountryDetailPageModule)
+  },
+  {
     path: 'divisions',
     loadChildren: () => import('./pages/divisions/division-list/division-list.module').then( m => m.DivisionListPageModule)
   },
