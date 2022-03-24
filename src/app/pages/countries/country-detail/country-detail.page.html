@@ -42,7 +42,7 @@
 						<ion-label>National Focuses</ion-label>
 					</ion-item>
 					<ion-list slot="content">
-						<ion-item *ngFor="let focus of strategy.focuses; index as fi" [lines]="fi == strategy.focuses.length - 1 ? 'none' : 'inset'">
+						<ion-item class="checklist-text" *ngFor="let focus of strategy.focuses; index as fi" [lines]="fi == strategy.focuses.length - 1 ? 'none' : 'inset'">
 							<ion-checkbox slot="start" color="secondary"></ion-checkbox>
 							<ion-label>{{focus}}</ion-label>
 						</ion-item>
@@ -53,9 +53,10 @@
 						<ion-label>Research</ion-label>
 					</ion-item>
 					<ion-list slot="content">
-						<ion-item *ngFor="let res of strategy.research; index as ri" [lines]="ri == strategy.research.length - 1 ? 'none' : 'inset'">
+						<ion-item class="checklist-text"  *ngFor="let res of strategy.research; index as ri" [lines]="ri == strategy.research.length - 1 ? 'none' : 'inset'">
 							<ion-checkbox slot="start" color="secondary"></ion-checkbox>
-							<ion-label>{{res}}</ion-label>
+							<ion-label>{{res.name}}</ion-label>
+							<ion-chip slot="end">{{res.required | titlecase}}</ion-chip>
 						</ion-item>
 					</ion-list>
 				</ion-accordion>

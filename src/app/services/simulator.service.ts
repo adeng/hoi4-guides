@@ -14,7 +14,7 @@ export class SimulatorService {
 
 	constructor(private division: DivisionsService) { }
 
-	public calculateAllCombats(attacker: Division, defender: Division, simulations: number): [CombatAnalytics, Array<CombatResults>] {
+	public calculateAllCombats(attacker: Division, defender: Division, simulations: number, modifiers: CombatModifiers): [CombatAnalytics, Array<CombatResults>] {
 		let results = new Array<CombatResults>();
 
 		let sumAttackerOrg = 0;
@@ -25,7 +25,7 @@ export class SimulatorService {
 		let sumWins = 0;
 
 		for(let i = 0; i < simulations; i++) {
-			let result = this.calculateCombat(attacker, defender);
+			let result = this.calculateCombat(attacker, defender, modifiers);
 			sumWins += Number(result.win);
 			sumTicks += result.ticks;
 			sumAttackerOrg += result.attackerOrgRemaining;
@@ -40,7 +40,7 @@ export class SimulatorService {
 		return [analytics, results];
 	}
 
-	private calculateCombat(attacker: Division, defender: Division): CombatResults {
+	private calculateCombat(attacker: Division, defender: Division, modifiers: CombatModifiers): CombatResults {
 		let ticks = 0;
 		let attackerOrg = attacker.organization;
 		let defenderOrg = defender.organization;
@@ -53,7 +53,7 @@ export class SimulatorService {
 			let defenderPierced = defender.piercing > attacker.armor;
 
 			// Calculate hits
-			let combat = this.calculateAllCombat(attacker, defender);
+			let combat = this.calculateAllCombat(attacker, defender, modifiers);
 			let attackerHits = combat[0];
 			let defenderHits = combat[1];
 
@@ -79,22 +79,19 @@ export class SimulatorService {
 	}
 
 	// Returns the number of successful hits
-	private calculateAllCombat(attacker: Division, defender: Division, modifiers?: CombatModifiers): [number, number] {
+	private calculateAllCombat(attacker: Division, defender: Division, modifiers: CombatModifiers): [number, number] {
 		let attackerHits = 0;
 		let defenderHits = 0;
 		let attackerStats = [attacker.soft_attack, attacker.hard_attack, attacker.breakthrough];
 		let defenderStats = [defender.soft_attack, defender.hard_attack, defender.defense];
 
-		// Apply modifiers
-		if(modifiers != null) {
-			// Apply experience modifiers
-			attackerStats = attackerStats.map(x => x * (1 + this.division.calculateDivisionExperienceModifiers(modifiers.attackerExp)));
-			defenderStats = defenderStats.map(x => x * (1 + this.division.calculateDivisionExperienceModifiers(modifiers.defenderExp)));
+		// Apply experience modifiers
+		attackerStats = attackerStats.map(x => x * (1 + this.division.calculateDivisionExperienceModifiers(modifiers.attackerExp)));
+		defenderStats = defenderStats.map(x => x * (1 + this.division.calculateDivisionExperienceModifiers(modifiers.defenderExp)));
 
-			// Apply terrain modifiers
-			attackerStats = attackerStats.map(x => x * (1 + this.division.calculateDivisionTerrainModifiers(modifiers.terrain, attacker)[0]));
-			defenderStats = defenderStats.map(x => x * (1 + this.division.calculateDivisionTerrainModifiers(modifiers.terrain, defender)[1]));
-		}
+		// Apply terrain modifiers
+		attackerStats = attackerStats.map(x => x * (1 + this.division.calculateDivisionTerrainModifiers(modifiers.terrain, attacker)[0]));
+		defenderStats = defenderStats.map(x => x * (1 + this.division.calculateDivisionTerrainModifiers(modifiers.terrain, defender)[1]));
 
 		// Calculate soft attacks
 		attackerHits += this.calculateSingleCombat(attackerStats[0] * (1 - defender.hardness), defenderStats[2]);

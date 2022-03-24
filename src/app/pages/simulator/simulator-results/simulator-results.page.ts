@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { LoadingController } from '@ionic/angular';
 import { ChartConfiguration, ChartData, ChartType } from 'chart.js';
 import { Division } from 'src/app/models/division.model';
-import { CombatAnalytics, CombatResults, SimulatorService } from 'src/app/services/simulator.service';
+import { CombatAnalytics, CombatModifiers, CombatResults, SimulatorService } from 'src/app/services/simulator.service';
 import { BaseChartDirective } from 'ng2-charts';
 
 
@@ -23,6 +23,7 @@ export class SimulatorResultsPage implements OnInit {
 
 	analytics: CombatAnalytics;
 	results: Array<CombatResults>;
+	options: CombatModifiers;
 
 	// Display stats
 	winPercentage: number;
@@ -85,10 +86,14 @@ export class SimulatorResultsPage implements OnInit {
 			this.route.queryParams.subscribe(params => {
 				this.attacker = JSON.parse(params["attacker"]);
 				this.defender = JSON.parse(params["defender"]);
-				console.log(this.attacker);
+				this.options = JSON.parse(params["options"]);
+				this.options.attackerExp = Number(this.options.attackerExp);
+				this.options.defenderExp = Number(this.options.defenderExp);
+
+				console.log(this.options);
 	
 				// Calculate results
-				let results = simulator.calculateAllCombats(this.attacker, this.defender, this.SIMULATION_COUNT);
+				let results = simulator.calculateAllCombats(this.attacker, this.defender, this.SIMULATION_COUNT, this.options);
 				console.log(results);
 				this.analytics = results[0];
 				this.results = results[1];

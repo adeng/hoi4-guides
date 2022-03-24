@@ -21,9 +21,18 @@
                     "Hermann Göring-Werke"
                 ],
                 "research": [
-                    "Concentrated Industry",
-                    "Construction I",
-                    "Electronic Mechanical Engineering"
+                    {
+                        "name": "Concentrated Industry",
+                        "required": "required"
+                    },
+                    {
+                        "name": "Construction I",
+                        "required": "required"
+                    },
+                    {
+                        "name": "Electronic Mechanical Engineering",
+                        "required": "required"
+                    }
                 ],
                 "allies": ["Italy", "Romania", "Hungary"],
                 "allies_description": "Once WWII starts, Italy will be your best friend. You can also ally Hungary and Romania through focuses.",
@@ -44,9 +53,18 @@
                     "Hermann Göring-Werke"
                 ],
                 "research": [
-                    "Concentrated Industry",
-                    "Construction I",
-                    "Electronic Mechanical Engineering"
+                    {
+                        "name": "Concentrated Industry",
+                        "required": "required"
+                    },
+                    {
+                        "name": "Construction I",
+                        "required": "required"
+                    },
+                    {
+                        "name": "Electronic Mechanical Engineering",
+                        "required": "required"
+                    }
                 ],
                 "allies": ["Italy", "Romania", "Hungary"],
                 "allies_description": "Once WWII starts, Italy will be your best friend. You can also ally Hungary and Romania through focuses.",
@@ -67,9 +85,18 @@
                     "Hermann Göring-Werke"
                 ],
                 "research": [
-                    "Concentrated Industry",
-                    "Construction I",
-                    "Electronic Mechanical Engineering"
+                    {
+                        "name": "Concentrated Industry",
+                        "required": "required"
+                    },
+                    {
+                        "name": "Construction I",
+                        "required": "required"
+                    },
+                    {
+                        "name": "Electronic Mechanical Engineering",
+                        "required": "required"
+                    }
                 ],
                 "allies": ["Italy", "Romania", "Hungary"],
                 "allies_description": "Once WWII starts, Italy will be your best friend. You can also ally Hungary and Romania through focuses.",

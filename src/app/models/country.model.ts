@@ -18,12 +18,17 @@ export class CountryGuide {
     strategies: Array<CountryStrategy>;
 }
 
+export class CountryResearch {
+    name: string;
+    required: string;
+}
+
 export class CountryStrategy {
     name: string;
     description: string;
     flag_name: string;
     focuses: Array<string>;
-    research: Array<string>;
+    research: Array<CountryResearch>;
     allies: Array<string>;
     allies_description: string;
     enemies: Array<string>;

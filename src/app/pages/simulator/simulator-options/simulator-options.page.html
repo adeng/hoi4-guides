@@ -32,7 +32,7 @@
 				</ion-item>
 				<ion-item>
 					<ion-label>Experience</ion-label>
-					<ion-select [disabled]="true" value="1">
+					<ion-select value="1" [(ngModel)]="options.attackerExp">
 						<ion-select-option value="0">Green</ion-select-option>
 						<ion-select-option value="1">Trained</ion-select-option>
 						<ion-select-option value="2">Regular</ion-select-option>
@@ -41,7 +41,7 @@
 					</ion-select>
 				</ion-item>
 			</ion-list>
-			<ion-accordion-group>
+			<!-- <ion-accordion-group>
 				<ion-accordion>
 					<ion-item slot="header">
 						<ion-label>Modifiers</ion-label>
@@ -61,7 +61,7 @@
 						</ion-item>
 					</ion-list>
 				</ion-accordion>
-			</ion-accordion-group>
+			</ion-accordion-group> -->
 		</ion-card-content>
 	</ion-card>
 	
@@ -79,7 +79,7 @@
 				</ion-item>
 				<ion-item>
 					<ion-label>Experience</ion-label>
-					<ion-select [disabled]="true" value="1">
+					<ion-select value="1" [(ngModel)]="options.defenderExp">
 						<ion-select-option value="0">Green</ion-select-option>
 						<ion-select-option value="1">Trained</ion-select-option>
 						<ion-select-option value="2">Regular</ion-select-option>
@@ -99,7 +99,7 @@
 			<ion-list>
 				<ion-item>
 					<ion-label>Terrain</ion-label>
-					<ion-select [disabled]=true>
+					<ion-select [(ngModel)]="options.terrain">
 						<ion-select-option value="forest">Forest</ion-select-option>
 						<ion-select-option value="hills">Hills</ion-select-option>
 						<ion-select-option value="mountain">Mountain</ion-select-option>

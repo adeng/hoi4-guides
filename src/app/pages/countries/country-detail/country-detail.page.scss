@@ -5,6 +5,11 @@
     #image-box {
         display: flex;
         justify-content: center;
+
+        img {
+            border-radius: 6px;
+            border: 2px #555 solid;
+        }
     }
 
     h2 {
@@ -23,6 +28,10 @@
 .checklist-card {
     ion-card-content {
         padding: 0px;
+    }
+
+    ion-item.checklist-text {
+        font-size: small;
     }
 }
 

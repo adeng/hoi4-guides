@@ -43,7 +43,7 @@
 					<ion-item *ngFor="let strategy of currentStrategies; index as i" button [routerLink]="['/countries/', currentTag, i]">
 						<ion-label>{{strategy.name}}</ion-label>
 						<img [src]="'data:image/png;base64,' + countryFlags.get(strategy.flag_name).bitmap"
-							style="transform: scale(0.65)" />
+							style="transform: scale(0.65); border-radius: 8px;" />
 					</ion-item>
 				</ion-list>
 			</ion-content>
