@@ -25,4 +25,15 @@ export class CountryDetailPage implements OnInit {
 	ngOnInit() {
 	}
 
+	getProductionColor(category: string) {
+		switch(category) {
+			case "small_arms":
+				return "secondary";
+			case "armor":
+				return "primary";
+			case "air":
+				return "tertiary";
+		}
+	}
+
 }

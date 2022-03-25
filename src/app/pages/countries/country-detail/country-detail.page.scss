@@ -30,8 +30,29 @@
         padding: 0px;
     }
 
-    ion-item.checklist-text {
+    ion-checkbox {
+        margin-right: 20px;
+    }
+
+    ion-button {
+        height: 30px;
+    }
+}
+
+ion-list {
+    ion-item {
         font-size: small;
+
+        ion-chip {
+            font-size: small;
+        }
+    }
+}
+
+.card-description {
+    p {
+        padding: 2px 20px 20px 20px;
+        font-size: 14px;
     }
 }
 
@@ -47,9 +68,42 @@
     }
 }
 
+.construction-card, .production-card {
+    ion-card-content {
+        padding: 0px;
+    }
+
+    p {
+        margin: 0 20px 10px 20px;
+    }
+
+    ion-accordion-group {
+        margin: 0;
+    }
+
+    strong {
+        margin-left: 10px;
+    }
+}
+
 .countries-card {
     div {
         text-align: center;
         margin-top: 10px;
     }
+}
+
+ion-card {
+    margin: 20px;
+}
+
+.conflicts-card {
+    ion-card-content {
+        padding: 0px;
+    }
+
+    p {
+        margin: 10px;
+        color: #8c8c8c;
+    }    
 }

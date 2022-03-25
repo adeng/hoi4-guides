@@ -10,34 +10,166 @@
             {
                 "name": "Fascist (Historical)",
                 "flag_name": "GER_fascism",
-                "description": "Easy path for beginners. This is a description of what it's like to play Germany.",
+                "description": "An aggressive nation in a great starting position with a focus tree geared towards expansion. Perfect for beginners.",
                 "focuses": [
-                    "Around Maginot",
                     "Rhineland",
                     "Four Year Plan",
-                    "Westwall",
                     "Autarky",
-                    "Anti-Comintern Pact",
-                    "Hermann Göring-Werke"
+                    "Hermann Göring-Werke",
+                    "KdF-Wagen",
+                    "Extra Research Slot",
+                    "Anschluss",
+                    "Army Innovations",
+                    "Treaty with the USSR",
+                    "Demand Sudentenland",
+                    "First Vienna Award",
+                    "Fate of Czechoslovakia",
+                    "Großraumwirtschaft",
+                    "Align Hungary",
+                    "Align Romania",
+                    "Reassert Eastern Claims",
+                    "Reichsautobahn",
+                    "German War Economy",
+                    "Danzig or War"
                 ],
+                "focuses_description": "Pick Rhineland first for the political power (pp). Then rush towards the extra research slot (4 Year Plan > Autarky > Hermann-Goring Werke > KdF-Wagen > Extra Research Slot). Afterwards, your main focuses will be the Anschluss and Demand Sudetenland path down to Alliance with Italy. Since these focuses require a set number of manpower on the field, select the Army Innovations and Treaty with the USSR focuses while in between waiting. In addition, align Romania and Hungary. Danzig or War focus should be selected by the fall of 1939, starting WW2 in the European theater. ",
                 "research": [
+                    "Electronic Mechanical Engineering",
+                    "Basic Machine Tools",
+                    "Construction I",
+                    "MG 08 & leichter Minenwerfer",
+                    "Mechanical Computing",
+                    "Dispersed Industry I",
+                    "Construction II",
+                    "Dispersed Industry 2",
+                    "Improved Machine Tools",
+                    "Excavation I",
+                    "Radio",
+                    "Fuel Refining II",
+                    "Excavation II",
+                    "Interwar Artillery",
+                    "Computing Machine"
+                ],
+                "research_description": "The main tech priorities should be the orange tabs (industry & electronics) and green tabs (infantry, support, armor, and artillery). There is an ahead of time penalty for future techs so stay close to current year research as much as possible. The only notable exception would be the Medium Tank 2 of 1940. Select it immediately after finishing the USSR Treaty focus (Be sure to have the Medium Tank designer and Blitzkrieg Theorist before finishing so the bonuses are applied).",
+                "political_power": [
                     {
-                        "name": "Concentrated Industry",
-                        "required": "required"
+                        "type": "Advisor",
+                        "name": "Silent Workhorse"
                     },
                     {
-                        "name": "Construction I",
-                        "required": "required"
+                        "type": "Advisor",
+                        "name": "First Among Equals"
                     },
                     {
-                        "name": "Electronic Mechanical Engineering",
-                        "required": "required"
+                        "type": "Advisor",
+                        "name": "Silent Workhorse"
+                    },
+                    {
+                        "type": "Chief of Army",
+                        "name": "Army Offense"
+                    },
+                    {
+                        "type": "High Command",
+                        "name": "Armor"
+                    },
+                    {
+                        "type": "High Command",
+                        "name": "Infantry"
+                    },
+                    {
+                        "type": "High Command",
+                        "name": "Army Logistics"
+                    },
+                    {
+                        "type": "Theorist",
+                        "name": "Blitzkrieg Theorist"
+                    },
+                    {
+                        "type": "Economy Law",
+                        "name": "War Economy"
                     }
                 ],
+                "political_power_description": "First priority are the political advisors. Silent Workhorse > First Among Equals > Military Industrialist. Next priority is the military staff, choosing army generals as they give army experience. Chief of Army: Army Offense. Military High Command: Armor > Infantry > Army Logistics. Lastly, choose the Blitzkrieg Theorist as the theorist. When above 50% war support, choose War Economy. Increase conscription laws when running out of available manpower. Don’t worry about any of the decisions. Do not cancel the MEFO Bills.",
+                "enemies_description": "You should acquire Austria through the Anschluss. If your military isn't large enough, they may decline, requiring you to take it by force. Czechoslovakia will be similar - if you have a large enough military, you can annex it through focuses. Poland, the UK, and France will be your first and primary enemies.",
+                "construction": [
+                    {
+                        "type": "Civilian Factories",
+                        "year": "N/A"
+                    },
+                    {
+                        "type": "Military Factories",
+                        "year": "1936"
+                    },
+                    {
+                        "type": "Refineries",
+                        "year": "1938"
+                    }
+                ],
+                "construction_description": "Immediately build military factories. Around late 1938, start to build some synthetic oil refineries for the oil and rubber, 2 raw materials that Germany lacks.",
+                "production": [
+                    {
+                        "name": "Karabiner 98k",
+                        "type": "Infantry Equipment I",
+                        "category": "small_arms",
+                        "number": 6
+                    },
+                    {
+                        "name": "Support Equipment",
+                        "type": "Support Equipment",
+                        "category": "small_arms",
+                        "number": 3
+                    },
+                    {
+                        "name": "10.5 cm LeFH 18",
+                        "type": "Towed Artillery",
+                        "category": "small_arms",
+                        "number": 5
+                    },
+                    {
+                        "name": "Opel Blitz",
+                        "type": "Truck",
+                        "category": "small_arms",
+                        "number": 2
+                    },
+                    {
+                        "name": "Panzer II Ausf. a",
+                        "type": "Light Tank I",
+                        "category": "armor",
+                        "number": 3
+                    },
+                    {
+                        "name": "Ju 87",
+                        "type": "Close Air Support I",
+                        "category": "air",
+                        "number": 5
+                    },
+                    {
+                        "name": "Bf 109",
+                        "type": "Fighter I",
+                        "category": "air",
+                        "number": 3
+                    },
+                    {
+                        "name": "He 111",
+                        "type": "Tactical Bomber I",
+                        "category": "air",
+                        "number": 3
+                    }
+                ],
+                "production_description": "Take some factories off guns and add a majority to artillery and close air support (CAS). The rest put in fighters and support. After having a couple more military factories, start producing anti-air, naval bombers, and transport planes. Continue to put most of the military factories into guns, support, artillery, fighters, and CAS. Once the medium tank 2 has been researched, put lots of factories into that.",
                 "allies": ["Italy", "Romania", "Hungary"],
                 "allies_description": "Once WWII starts, Italy will be your best friend. You can also ally Hungary and Romania through focuses.",
                 "enemies": ["Austria", "Czechoslovakia", "France", "United Kingdom", "Poland", "Soviet Union", "United States"],
-                "enemies_description": "You should acquire Austria through the Anschluss. If your military isn't large enough, they may decline, requiring you to take it by force. Czechoslovakia will be similar - if you have a large enough military, you can annex it through focuses. Poland, the UK, and France will be your first and primary enemies."
+                "conflicts": [
+                    {
+                        "header": "Spanish Civil War",
+                        "text": "Once the Spanish Civil War kicks off, immediately send 2 tank divisions and tactical bombers as ground and air volunteers to Nationalist Spain. Put the tanks under General Heinz Guderian and Field Marshal Gunther von Kluge. Have the tactical bombers fly air support missions to whichever province the tanks are attacking. Practice mircoing the tanks. Finish off the Northern Spain pockets first, and then look for encirclements or places to cut off enemy troops. This is a great way to farm army and air experience. Nationalist Spain should win within a year."
+                    },
+                    {
+                        "header": "Beginning of WW2",
+                        "text": "Do not call in your allies so you can have all war score for the peace conference. Main 3 armies attack Poland, defensive army on French border. Try to capitulate Poland before the Around Maginot focus is completed. Shift all armies and aircraft west and attack the Netherlands, Belgium, and Luxembourg. Once they capitulate, immediately blitzkrieg France, going after Paris, Orleans, and the northern port cities. This should be enough to capitulate France as it still has its surrender limit debuff. Do this quickly or else they will drag troops from the Maginot towards the northern flank. Establish Vichy France. Setup a naval invasion on the UK, and put all aircraft over the English Channel, bombing their ships. Bring over your naval fleet, and put it on invasion support on the English Channel."
+                    }
+                ] 
             },
             {
                 "name": "Democratic",
@@ -52,24 +184,21 @@
                     "Anti-Comintern Pact",
                     "Hermann Göring-Werke"
                 ],
+                "focuses_description": "",
                 "research": [
-                    {
-                        "name": "Concentrated Industry",
-                        "required": "required"
-                    },
-                    {
-                        "name": "Construction I",
-                        "required": "required"
-                    },
-                    {
-                        "name": "Electronic Mechanical Engineering",
-                        "required": "required"
-                    }
                 ],
+                "research_description": "",
+                "political_power": [],
+                "political_power_description": "",
+                "construction": [],
+                "construction_description": "",
+                "production": [],
+                "production_description": "",
                 "allies": ["Italy", "Romania", "Hungary"],
                 "allies_description": "Once WWII starts, Italy will be your best friend. You can also ally Hungary and Romania through focuses.",
                 "enemies": ["Austria", "Czechoslovakia", "France", "United Kingdom", "Poland", "Soviet Union", "United States"],
-                "enemies_description": "You should acquire Austria through the Anschluss. If your military isn't large enough, they may decline, requiring you to take it by force. Czechoslovakia will be similar - if you have a large enough military, you can annex it through focuses. Poland, the UK, and France will be your first and primary enemies."
+                "enemies_description": "You should acquire Austria through the Anschluss. If your military isn't large enough, they may decline, requiring you to take it by force. Czechoslovakia will be similar - if you have a large enough military, you can annex it through focuses. Poland, the UK, and France will be your first and primary enemies.",
+                "conflicts": []
             },
             {
                 "name": "Kaiserreich (Non-Aligned)",
@@ -84,26 +213,32 @@
                     "Anti-Comintern Pact",
                     "Hermann Göring-Werke"
                 ],
+                "focuses_description": "",
                 "research": [
-                    {
-                        "name": "Concentrated Industry",
-                        "required": "required"
-                    },
-                    {
-                        "name": "Construction I",
-                        "required": "required"
-                    },
-                    {
-                        "name": "Electronic Mechanical Engineering",
-                        "required": "required"
-                    }
                 ],
+                "research_description": "",
+                "political_power": [],
+                "political_power_description": "",
+                "construction": [],
+                "construction_description": "",
+                "production": [],
+                "production_description": "",
                 "allies": ["Italy", "Romania", "Hungary"],
                 "allies_description": "Once WWII starts, Italy will be your best friend. You can also ally Hungary and Romania through focuses.",
                 "enemies": ["Austria", "Czechoslovakia", "France", "United Kingdom", "Poland", "Soviet Union", "United States"],
-                "enemies_description": "You should acquire Austria through the Anschluss. If your military isn't large enough, they may decline, requiring you to take it by force. Czechoslovakia will be similar - if you have a large enough military, you can annex it through focuses. Poland, the UK, and France will be your first and primary enemies."
+                "enemies_description": "You should acquire Austria through the Anschluss. If your military isn't large enough, they may decline, requiring you to take it by force. Czechoslovakia will be similar - if you have a large enough military, you can annex it through focuses. Poland, the UK, and France will be your first and primary enemies.",
+                "conflicts": []
             }
         ]
+    },
+    {
+        "tag": "USA",
+        "difficulty": "Easy",
+        "flag_name": "USA_democratic",
+        "tags": [
+            "democratic"
+        ],
+        "strategies": []
     },
     {
         "tag": "JAP",
@@ -111,6 +246,42 @@
         "flag_name": "JAP_fascism",
         "tags": [
             "fascist"
+        ],
+        "strategies": []
+    },
+    {
+        "tag": "ENG",
+        "difficulty": "Medium",
+        "flag_name": "ENG_democratic",
+        "tags": [
+            "democratic"
+        ],
+        "strategies": []
+    },
+    {
+        "tag": "SOV",
+        "difficulty": "Medium",
+        "flag_name": "SOV_communism",
+        "tags": [
+            "fascist"
+        ],
+        "strategies": []
+    },
+    {
+        "tag": "ITA",
+        "difficulty": "Medium",
+        "flag_name": "ITA_fascism",
+        "tags": [
+            "democratic"
+        ],
+        "strategies": []
+    },
+    {
+        "tag": "FRA",
+        "difficulty": "Hard",
+        "flag_name": "FRA_democratic",
+        "tags": [
+            "democratic"
         ],
         "strategies": []
     }

@@ -29,7 +29,7 @@
 				<img [src]="'data:image/png;base64,' + countryFlags.get(guide.flag_name).bitmap" />
 			</div>			
 			<ion-card-title>{{countries.get(guide.tag).country_name}}</ion-card-title>
-			<ion-chip>{{guide.difficulty}}</ion-chip>
+			<ion-chip [color]="getDifficultyColor(guide.difficulty)">{{guide.difficulty}}</ion-chip>
 			<ion-ripple-effect></ion-ripple-effect>
 		</ion-card-header>
 	</ion-card>

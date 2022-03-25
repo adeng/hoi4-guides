@@ -42,3 +42,13 @@ ion-fab {
 .alert-wrapper.ion-overlay-wrapper.sc-ion-alert-md {
     width: 100%;
 }
+
+ion-accordion.ios > ion-item > ion-icon > div.icon-inner {
+    transform: scale(0.8);
+}
+
+ion-note.md {
+    margin: 10px 0px;
+    align-self: unset;
+    font-size: medium;
+}

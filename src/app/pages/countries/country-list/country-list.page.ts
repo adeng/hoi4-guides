@@ -50,5 +50,16 @@ export class CountryListPage implements OnInit {
 		this.countryColor = "'" + this.countries.get(tag).color + "'";
 		this.currentTag = tag;
 	}
+
+	getDifficultyColor(difficulty: string): string {
+		switch(difficulty.toLowerCase()) {
+			case "easy":
+				return "success";
+			case "medium":
+				return "warning";
+			case "hard":
+				return "danger";
+		}
+	}
 }
 
